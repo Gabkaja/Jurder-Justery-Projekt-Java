@@ -1,34 +1,151 @@
-# Murder Mystery Investigation Game
+# Jurder Jystery: DevDoc
 
-Text-based detective game written in Java. Each playthrough generates a unique case with a random killer, weapon, location, and motive. The solution is generated first and all evidence is built around it, so the case is always solvable.
+## Opis gry
+Klon Cluedo - gra kryminalna w Javie.
 
-## How it works
+## Omówienie settingu
+Akcja dzieje się w współczesnym Krakowie. Akcja dzieje się wewnątrz bliżej nieokreślonego dworka/willi. Styl narracyjny lekko humorystyczny. Pewnego jessieniego wieczoru przedstawiciel elity został zamordowany na wystawionym w swoim domu. Twoim zadaniem jest dowiedzieć się, kto go zabił.
 
-The player explores locations, interrogates suspects, and collects evidence. An investigation board tracks every action automatically. Pinning evidence to suspects and building a working hypothesis is done manually by the player. The game ends when the player submits a final accusation or exhausts all locations.
+## Gameplay: Główna pętla
+Rozgrywka to gra typu choose-your-own-adventure jako aplikacja w terminalu. Gracz eksploruje setting poprzez podejmowanie jednej decyzji z kontekstualnego menu. Typowa pętla to coś w stylu tekst/kontekst->decyzja->rezolucja->tekst/kontekst.
 
-## Features
+## Gameplay: Sterowanie
+Gracz steruje używając klawiatury aby wybrać jedną z opcji z menu oraz do kontroli miniger.
 
-- Procedurally generated cases with consistent evidence logic
-- Four playable characters, each with unique investigation skills
-- Four optional minigames that unlock additional clues
-- Non-linear investigation loop with no fixed order of actions
+## Gameplay: Win-condition
+Odnalezienie sprawcy i poprawne sformułowanie finałowego oskarżenia. Gracz nie ma ograniczenia czasowego, może wysunąć oskarżenie w dowolnym momencie, ale win jest tylko przy poprawnym. Sformułowanie przyjmuje formę czterech pytań: kto, gdzie, czym i dlaczego.
 
-## Project structure
+## Gameplay: Mechaniki
+* Eksploracja różnych lokacji.
+* Przesłuchiwanie podejrzanych (system dialogowy)
+* Przeszukiwanie pomieszczenia (aktywowanie minigier)
+* Dziennik zdarzeń, zapisujący co się wydarzyło
+* Formułowanie finalnego oskarżenia
+* Wiele grywalnych postaci
+* Wybór poziomu trudności - różne postaci mają inny poziom trudności
+* Zbieranie dowodów czasami zależne od wejścia do lokacji, czasami siedzące za minigrą
 
-```
-src/
-  engine/       CaseGenerator, EvidenceEngine, LocationManager
-  model/        Case, Suspect, Location, Evidence, Motive
-  actions/      SearchAction, InterrogateAction, ConfrontAction
-  board/        ActionLog, PinBoard, WorkingHypothesis
-  characters/   Character, AlexKowalski, InspectorLis, Tomek, Wrona
-  minigames/    CipherBreak, FingerprintMatch, PhonePin, EventReconstruction
-```
+## Zakres projektu
+### Minimum: gra musi być grywalna, czyli:
+Wszystkie mechaniki muszą być zaimplementowane
+Poprawny win condition
+Wszystkie testy zaliczone poprawnie
+Wyróżnianie kluczowych elementów kolorami
+System wyboru postaci/możliwość grania innymi postaciami
+### Fajnie jeśli:
+GUI
+Rozbudowane dialogi z NPC
+Działający wybór poziomu trudności
+### Na pewno nie:
+Audio
 
-## Requirements
+## Content: Lokacje/mapa
+* Sala balowa
+* Biblioteka
+* Kuchnia
+* Łazienka
+* Ogród (taki mniejszy)
+* Jadalnia
+* Gabinet
+* Garaż
+* Piwnica
+* Sypialnia
+* Przedsionek (lokacja startowa)
 
-Java 17 or higher. No external dependencies.
+## Content: NPC
+* Kamerdyner
+* Hrabina
+* Celebryta
+* Polityk
+* Kucharz
+* Random z ulicy
+* Kochanka/Osoba z elity
 
-## Authors
+## Content: PC
+* Doświadczony detektyw
+* Dziennikarka śledcza
+* Młody prywatny detektyw
+* Technik śledczy
 
-University lab project. Three-person team.
+## Content: minigry
+* Zgadywanie liczby w ograniczonej liczbie prób
+* Rozszyfrowanie słowa szyfrem przestawieniowym
+* Zagadki (ala gollum)
+* Gry zręcznościowe (jeśli się da?)
+* Modyfikowany snake (?)
+
+## UI
+Menu w terminalu z kolorowym wyróżnieniem kluczowych informacji. Ekran czyści się po każdej decyzji/grze.
+
+## Techniczne
+- `src/`
+  - `main/`
+    - `Main.java`
+
+    - `engine/`
+      - `GameEngine.java`
+      - `GameLoop.java`
+      - `SceneManager.java`
+      - `InputHandler.java`
+
+    - `world/`
+      - `Location.java`
+      - `MapGraph.java`
+      - `Evidence.java`
+      - `MurderCase.java`
+      - `EventLog.java`
+
+    - `characters/`
+      - `PlayerCharacter.java`
+      - `NPC.java`
+      - `Suspect.java`
+      - `Detective.java`
+      - `Journalist.java`
+      - `ForensicTech.java`
+      - `YoungDetective.java`
+
+    - `dialogue/`
+      - `Dialogue.java`
+      - `DialogueNode.java`
+      - `DialogueChoice.java`
+      - `DialogueManager.java`
+
+    - `gameplay/`
+      - `InvestigationSystem.java`
+      - `ExplorationSystem.java`
+      - `AccusationSystem.java`
+      - `SearchSystem.java`
+      - `DifficultySystem.java`
+
+    - `minigames/`
+      - `Minigame.java`
+      - `GuessNumberGame.java`
+      - `CipherGame.java`
+      - `RiddleGame.java`
+      - `SnakeGame.java`
+      - `ReflexGame.java`
+
+    - `ui/`
+      - `TerminalUI.java`
+      - `MenuRenderer.java`
+      - `ColorManager.java`
+      - `ScreenCleaner.java`
+
+    - `data/`
+      - `GameDataLoader.java`
+      - `NPCFactory.java`
+      - `LocationFactory.java`
+      - `DialogueFactory.java`
+
+    - `utils/`
+      - `RandomUtils.java`
+      - `TextUtils.java`
+      - `Constants.java`
+
+  - `test/`
+    - `gameplay/`
+    - `minigames/`
+    - `dialogue/`
+    - `world/`
+
+BARDZO WSTĘPNIE, JEŚLI COŚ NIE MA SENSU - KONSULTUJEMY!!!
