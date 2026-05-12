@@ -1,8 +1,5 @@
 # Jurder Jystery: DevDoc
 
-## Po co?
-Ten dokument powinien zagwarantować, że każdy z nas wie jak końcowy efekt ma wyglądać i co ma zrobić aby do niego dojść.
-
 ## Opis gry
 Klon Cluedo - gra kryminalna w Javie.
 
@@ -81,74 +78,74 @@ Audio
 Menu w terminalu z kolorowym wyróżnieniem kluczowych informacji. Ekran czyści się po każdej decyzji/grze.
 
 ## Techniczne
-src/
- ├── main/
- │    ├── Main.java
- │    │
- │    ├── engine/
- │    │     ├── GameEngine.java
- │    │     ├── GameLoop.java
- │    │     ├── SceneManager.java
- │    │     └── InputHandler.java
- │    │
- │    ├── world/
- │    │     ├── Location.java
- │    │     ├── MapGraph.java
- │    │     ├── Evidence.java
- │    │     ├── MurderCase.java
- │    │     └── EventLog.java
- │    │
- │    ├── characters/
- │    │     ├── PlayerCharacter.java
- │    │     ├── NPC.java
- │    │     ├── Suspect.java
- │    │     ├── Detective.java
- │    │     ├── Journalist.java
- │    │     ├── ForensicTech.java
- │    │     └── YoungDetective.java
- │    │
- │    ├── dialogue/
- │    │     ├── Dialogue.java
- │    │     ├── DialogueNode.java
- │    │     ├── DialogueChoice.java
- │    │     └── DialogueManager.java
- │    │
- │    ├── gameplay/
- │    │     ├── InvestigationSystem.java
- │    │     ├── ExplorationSystem.java
- │    │     ├── AccusationSystem.java
- │    │     ├── SearchSystem.java
- │    │     └── DifficultySystem.java
- │    │
- │    ├── minigames/
- │    │     ├── Minigame.java
- │    │     ├── GuessNumberGame.java
- │    │     ├── CipherGame.java
- │    │     ├── RiddleGame.java
- │    │     ├── SnakeGame.java
- │    │     └── ReflexGame.java
- │    │
- │    ├── ui/
- │    │     ├── TerminalUI.java
- │    │     ├── MenuRenderer.java
- │    │     ├── ColorManager.java
- │    │     └── ScreenCleaner.java
- │    │
- │    ├── data/
- │    │     ├── GameDataLoader.java
- │    │     ├── NPCFactory.java
- │    │     ├── LocationFactory.java
- │    │     └── DialogueFactory.java
- │    │
- │    └── utils/
- │          ├── RandomUtils.java
- │          ├── TextUtils.java
- │          └── Constants.java
- │
- └── test/
-      ├── gameplay/
-      ├── minigames/
-      ├── dialogue/
-      └── world/
+- `src/`
+  - `main/`
+    - `Main.java`
+
+    - `engine/`
+      - `GameEngine.java`
+      - `GameLoop.java`
+      - `SceneManager.java`
+      - `InputHandler.java`
+
+    - `world/`
+      - `Location.java`
+      - `MapGraph.java`
+      - `Evidence.java`
+      - `MurderCase.java`
+      - `EventLog.java`
+
+    - `characters/`
+      - `PlayerCharacter.java`
+      - `NPC.java`
+      - `Suspect.java`
+      - `Detective.java`
+      - `Journalist.java`
+      - `ForensicTech.java`
+      - `YoungDetective.java`
+
+    - `dialogue/`
+      - `Dialogue.java`
+      - `DialogueNode.java`
+      - `DialogueChoice.java`
+      - `DialogueManager.java`
+
+    - `gameplay/`
+      - `InvestigationSystem.java`
+      - `ExplorationSystem.java`
+      - `AccusationSystem.java`
+      - `SearchSystem.java`
+      - `DifficultySystem.java`
+
+    - `minigames/`
+      - `Minigame.java`
+      - `GuessNumberGame.java`
+      - `CipherGame.java`
+      - `RiddleGame.java`
+      - `SnakeGame.java`
+      - `ReflexGame.java`
+
+    - `ui/`
+      - `TerminalUI.java`
+      - `MenuRenderer.java`
+      - `ColorManager.java`
+      - `ScreenCleaner.java`
+
+    - `data/`
+      - `GameDataLoader.java`
+      - `NPCFactory.java`
+      - `LocationFactory.java`
+      - `DialogueFactory.java`
+
+    - `utils/`
+      - `RandomUtils.java`
+      - `TextUtils.java`
+      - `Constants.java`
+
+  - `test/`
+    - `gameplay/`
+    - `minigames/`
+    - `dialogue/`
+    - `world/`
 
 BARDZO WSTĘPNIE, JEŚLI COŚ NIE MA SENSU - KONSULTUJEMY!!!
