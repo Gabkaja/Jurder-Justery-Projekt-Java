@@ -1,0 +1,97 @@
+"{
+  \"type\": \"REAKCJA_NA_OSKARZENIE\",
+  \"description\": \"Szablony reakcji na bezposrednie oskarzenie o morderstwo.\",
+  \"templates\": [
+    {
+      \"id\": \"rno_001\",
+      \"template\": \"Oszalał pan? Ja? Morderca?\",
+      \"emotion\": \"ZASKOCZENIE\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"SHOCK\",
+      \"tags\": [\"szok\", \"niedowierzanie\"]
+    },
+    {
+      \"id\": \"rno_002\",
+      \"template\": \"Nie mam zamiaru słuchać takich oskarżeń bez dowodów.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"DEFENSIVE\",
+      \"tags\": [\"obrona\", \"prawne\"]
+    },
+    {
+      \"id\": \"rno_003\",
+      \"template\": \"Ma pan dowody? Bo jeśli nie, to jest to pomówienie.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"CHALLENGE\",
+      \"tags\": [\"wyzwanie\", \"prawne\"]
+    },
+    {
+      \"id\": \"rno_004\",
+      \"template\": \"Proszę bardzo. Niech pan mnie aresztuje. Ale prawda wyjdzie na jaw.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"DEFIANCE\",
+      \"tags\": [\"bunt\", \"pewnosc_siebie\"]
+    },
+    {
+      \"id\": \"rno_005\",
+      \"template\": \"Nie... to nie ja... proszę, niech pan posłucha...\",
+      \"emotion\": \"PANIKA\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"PANIC\",
+      \"tags\": [\"panika\", \"blaganie\"]
+    },
+    {
+      \"id\": \"rno_006\",
+      \"template\": \"Rozumiem, dlaczego pan tak myśli. Ale myli się pan.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"CALM_DENIAL\",
+      \"tags\": [\"spokojna_odmowa\", \"zrozumienie\"]
+    },
+    {
+      \"id\": \"rno_007\",
+      \"template\": \"Zamiast oskarżać niewinnych, proszę sprawdzić {suspect}.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"DEFLECTION\",
+      \"tags\": [\"przekierowanie\", \"oskarżenie_innego\"]
+    },
+    {
+      \"id\": \"rno_008\",
+      \"template\": \"Jeśli naprawdę tak pan uważa, to nic, co powiem, pana nie przekona.\",
+      \"emotion\": \"REZYGNACJA\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"RESIGNATION\",
+      \"tags\": [\"rezygnacja\", \"bezsilnosc\"]
+    },
+    {
+      \"id\": \"rno_009\",
+      \"template\": \"Morderca? Ja? A kto jest następny — kelner? Ogrodnik? To absurd.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"reactionType\": \"RIDICULE\",
+      \"tags\": [\"wysmiewanie\", \"ironia\"]
+    },
+    {
+      \"id\": \"rno_010\",
+      \"template\": \"Niech pan poszuka prawdziwego mordercy zamiast tracić czas na mnie.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"reactionType\": \"DISMISSAL\",
+      \"tags\": [\"odrzucenie\", \"złość\"]
+    }
+  ]
+}
+"

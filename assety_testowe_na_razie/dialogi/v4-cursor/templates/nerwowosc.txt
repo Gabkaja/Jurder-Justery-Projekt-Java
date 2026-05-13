@@ -1,0 +1,115 @@
+"{
+  \"type\": \"NERWOWOSC\",
+  \"description\": \"Szablony nerwowosci — NPC okazuje stres, unika tematu, prosi o zakonczenie rozmowy.\",
+  \"templates\": [
+    {
+      \"id\": \"ner_001\",
+      \"template\": \"Czy naprawdę musimy o tym rozmawiać?\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": -20,
+      \"requiresClue\": false,
+      \"stressLevel\": \"MEDIUM\",
+      \"tags\": [\"unikanie\", \"pytanie\"]
+    },
+    {
+      \"id\": \"ner_002\",
+      \"template\": \"To zaczyna być męczące. Ile razy mam powtarzać to samo?\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -20,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"irytacja\", \"powtarzanie\"]
+    },
+    {
+      \"id\": \"ner_003\",
+      \"template\": \"Powiedziałem już wszystko. Nie mam nic do dodania.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"stressLevel\": \"MEDIUM\",
+      \"tags\": [\"odmowa\", \"zamkniecie\"]
+    },
+    {
+      \"id\": \"ner_004\",
+      \"template\": \"Mogę... mogę usiąść? Niedobrze mi.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"fizyczne\", \"slabość\"]
+    },
+    {
+      \"id\": \"ner_005\",
+      \"template\": \"Dlaczego pan ciągle o to pyta? Czemu akurat mnie?\",
+      \"emotion\": \"PANIKA\",
+      \"minTrust\": -20,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"paranoja\", \"pytanie\"]
+    },
+    {
+      \"id\": \"ner_006\",
+      \"template\": \"Proszę... potrzebuję chwili. To za dużo na jeden wieczór.\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"emocjonalne\", \"przerwa\"]
+    },
+    {
+      \"id\": \"ner_007\",
+      \"template\": \"Nie pytaj pan o to. Proszę. Po prostu nie pytaj.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"stressLevel\": \"CRITICAL\",
+      \"tags\": [\"błaganie\", \"ukrywanie\"]
+    },
+    {
+      \"id\": \"ner_008\",
+      \"template\": \"Mam prawo do adwokata, prawda? Bo zaczynam mieć wrażenie, że jestem przesłuchiwany.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -30,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"prawne\", \"obrona\"]
+    },
+    {
+      \"id\": \"ner_009\",
+      \"template\": \"Ręce mi się trzęsą. Przepraszam. To nie dlatego, że mam coś na sumieniu.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"stressLevel\": \"MEDIUM\",
+      \"tags\": [\"fizyczne\", \"wyjasnienie\"]
+    },
+    {
+      \"id\": \"ner_010\",
+      \"template\": \"Nie chcę o tym rozmawiać. Nie dzisiaj. Nie po tym, co się stało.\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"stressLevel\": \"MEDIUM\",
+      \"tags\": [\"odmowa\", \"emocjonalne\"]
+    },
+    {
+      \"id\": \"ner_011\",
+      \"template\": \"Czuję, że próbuje mnie pan w coś wrobić. Nie podoba mi się ten ton.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -20,
+      \"requiresClue\": false,
+      \"stressLevel\": \"HIGH\",
+      \"tags\": [\"oskarżenie_gracza\", \"paranoja\"]
+    },
+    {
+      \"id\": \"ner_012\",
+      \"template\": \"Zaczynam się gubić we własnych słowach... Przepraszam, jestem zmęczony.\",
+      \"emotion\": \"POCZUCIE_WINY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"stressLevel\": \"MEDIUM\",
+      \"tags\": [\"zagubienie\", \"zmeczenie\"]
+    }
+  ]
+}
+"

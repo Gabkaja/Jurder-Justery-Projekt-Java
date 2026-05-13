@@ -1,0 +1,404 @@
+{
+  "npcId": "wieslawWydra",
+  "npcName": "Wiesław Wydra",
+  "speechStyle": "COLD",
+  "defaultEmotion": "BITTER",
+
+  "fragments": {
+    "openers": [
+      "Słuchaj,",
+      "Nie mam powodów żeby ci kłamać.",
+      "Spędź osiemnaście miesięcy w areszcie, to się nauczysz mówić wprost.",
+      "Mówię ci to raz —",
+      "Nie będę tego owijał w bawełnę."
+    ],
+    "certaintyMarkers": {
+      "high":   ["Wiem to na sto procent.", "Widziałem to na własne oczy.", "Co do tego nie mam żadnych wątpliwości."],
+      "medium": ["Mniej więcej tak.", "Chyba tak to wyglądało.", "Zdaje mi się, że tak."],
+      "low":    ["Nie jestem pewien.", "Mogłem to źle zrozumieć.", "To może być moja interpretacja."]
+    },
+    "closers": [
+      "Tyle.",
+      "Nie mam nic do dodania.",
+      "Zrozum to jak chcesz.",
+      "I nikomu tego nie powtarzaj.",
+      "Mam nadzieję, że to coś znaczy dla ciebie."
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "Pytaj. Nie mam czego ukrywać — przynajmniej nie przed tobą.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Policja już tu była. Powiedzieli mi żebym nie wychodził. Siedzę.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Myślisz, że mi zależy na tym, żeby ktoś go zabił? Żałuję, że ktoś zrobił to przede mną.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nieźle, co? Na imprezę nie zaproszony, a i tak tu stoję.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Przez część wieczoru byłem w ogrodzie. Sam. Nie mam świadków.",
+          "emotion": "COLD",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Chodziłem po willi. Nikt mnie nie zapraszał, ale nikt też nie wyrzucał. Korzystałem z tego.",
+          "emotion": "BITTER",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Byłem blisko {room} przez chwilę. Potem poszedłem gdzie indziej. Nie pamiętam dokładnie kiedy.",
+          "emotion": "EVASIVE",
+          "certainty": 50,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nikt mnie nie obserwował — bo nikt mnie tu nie powinien widzieć. To ogranicza opcje alibi.",
+          "emotion": "RESIGNED",
+          "certainty": 40,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałem {suspect} wchodzącego do {room}. Około {time}. Nie wyszedł przez chwilę.",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś szedł korytarzem dość szybko w kierunku {room}. Twarz — nie widziałem.",
+          "emotion": "FLAT",
+          "certainty": 55,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Byłem w miejscu, gdzie nie powinienem być — i przez to widziałem coś, czego inni nie widzieli. {suspect} i {victim} rozmawiali. Nieprzyjaźnie.",
+          "emotion": "COLD",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Widziałem wiele tej nocy. Część jest użyteczna dla ciebie. Część — dla mnie. Zależy co chcesz wiedzieć.",
+          "emotion": "CALCULATING",
+          "certainty": 90,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Słyszałem kłótnię z {room}. Jeden głos był spokojny. Drugi — nie.",
+          "emotion": "FLAT",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś powiedział coś o dokumentach. Z kierunku {room}. Nie słyszałem wszystkiego.",
+          "emotion": "COLD",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam dobre ucho. Aresztem się wyrabia. Słyszałem więcej niż powinienem tej nocy.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Nic konkretnego. Hałas, głosy. Takie przyjęcia zawsze brzmią podobnie.",
+          "emotion": "FLAT",
+          "certainty": 20,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "{suspect}? Każdy tu ma coś na sumieniu. On nie jest wyjątkiem.",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Arciszewski otaczał się ludźmi, których mógł kontrolować. {suspect} był jednym z nich.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie znam {suspect} dobrze. Wiem tylko, że Andrzej o nim mówił. I to nie były pochwały.",
+          "emotion": "FLAT",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ludzie tacy jak {suspect} nie mordują sami. Ale zlecają — to co innego.",
+          "emotion": "COLD",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Miałem cztery lata żeby myśleć o tym, kto tu kogo skrzywdził. Lista jest długa. Ale jedno nazwisko stoi wyżej.",
+          "emotion": "COLD",
+          "certainty": 75,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Nie oskarżam nikogo. Sam wiem, co to znaczy być oskarżonym bez powodu.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Powiem ci tyle — szukaj pieniędzy. Zawsze prowadzą do miejsca, gdzie chcesz dojść.",
+          "emotion": "CALCULATING",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym wskazał {suspect} — to nie dlatego, że go nie lubię. Ale dlatego, że wiem co wiedziałem wtedy.",
+          "emotion": "COLD",
+          "certainty": 70,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Znam to. I nie będę udawać, że nie.",
+          "emotion": "FLAT",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Skąd to masz? Tego nie powinno tu być.",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To niczego nie dowodzi. Jeszcze.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Patrz — wiedziałem, że to wyjdzie. Prędzej czy później wszystko wychodzi.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Przyszedłem tu przypadkiem. Znajomy powiedział o przyjęciu. Nie wiedziałem, że to Arciszewski.",
+          "emotion": "FLAT",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Torba? Nic szczególnego. Rzeczy osobiste.",
+          "emotion": "EVASIVE",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie próbowałem się z nim kontaktować. Po tym co zrobił — po co miałbym?",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie byłem przy gabinecie. Nie mam powodów tam chodzić.",
+          "emotion": "FLAT",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Nie mam zamiaru odpowiadać na to pytanie.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Skończyłem mówić.",
+          "emotion": "FLAT",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Masz coś konkretnego, czy tylko sugestie? Bo na sugestie mam odporność.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Wiem swoje prawa. Lepiej niż przed aresztem.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "Dobrze. Przyszedłem tu specjalnie. Nie udawajmy już.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Kłamałem w jednej kwestii. Tylko jednej. I nie dlatego że mam coś do ukrycia w tej sprawie.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Byłem w {room}. Tak. Szukałem dokumentów. Nie znalazłem — i nie zdążyłem.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Nie zmieniam zeznań. Precyzuję je.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "Miałem powód. Lepszy niż większość tu obecnych. Ale chciałem dokumenty, nie trupów.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Wiesz co ciekawe? Przez całe osiemnaście miesięcy marzyłem o tym. A jak do tego doszło — mnie tu nie ma.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym to zrobił — siedziałbyś teraz i rozmawiał z kimś, kto już raz spędził rok i pol za kratkami. Czy myślisz, że byłbym tak głupi?",
+          "emotion": "CALCULATING",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie mam nic więcej do powiedzenia bez prawnika.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}

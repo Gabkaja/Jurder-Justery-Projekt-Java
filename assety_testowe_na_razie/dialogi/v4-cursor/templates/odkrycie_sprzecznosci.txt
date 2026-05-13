@@ -1,0 +1,115 @@
+"{
+  \"type\": \"ODKRYCIE_SPRZECZNOSCI\",
+  \"description\": \"Szablony reakcji NPC na wykryta sprzecznosc w zeznaniach. NPC moze sie przyznac, tlumaczvc, dalej klamac lub reagowac emocjonalnie.\",
+  \"templates\": [
+    {
+      \"id\": \"sprz_001\",
+      \"template\": \"Dobrze, skłamałem. Ale miałem ku temu powody.\",
+      \"emotion\": \"REZYGNACJA\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"ADMISSION\",
+      \"tags\": [\"przyznanie\", \"uzasadnienie\"]
+    },
+    {
+      \"id\": \"sprz_002\",
+      \"template\": \"Nie chciałem mieć problemów. Dlatego nie powiedziałem prawdy.\",
+      \"emotion\": \"POCZUCIE_WINY\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"ADMISSION\",
+      \"tags\": [\"przyznanie\", \"strach\"]
+    },
+    {
+      \"id\": \"sprz_003\",
+      \"template\": \"To nie wygląda tak, jak pan myśli. Mogę wyjaśnić.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"EXPLANATION\",
+      \"tags\": [\"tlumaczenie\", \"proba_ratunku\"]
+    },
+    {
+      \"id\": \"sprz_004\",
+      \"template\": \"Myli się pan. To nie jest sprzeczność. Po prostu źle pan to zrozumiał.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"DENIAL\",
+      \"tags\": [\"zaprzeczenie\", \"atak\"]
+    },
+    {
+      \"id\": \"sprz_005\",
+      \"template\": \"Dobrze. Nie byłem tam, gdzie powiedziałem. Ale nie byłem też przy {victim}.\",
+      \"emotion\": \"POCZUCIE_WINY\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"PARTIAL_ADMISSION\",
+      \"tags\": [\"czesciowe_przyznanie\", \"nowe_alibi\"]
+    },
+    {
+      \"id\": \"sprz_006\",
+      \"template\": \"Bałem się powiedzieć prawdę. Cała ta sytuacja... jest przerażająca.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"ADMISSION\",
+      \"tags\": [\"emocjonalne\", \"strach\"]
+    },
+    {
+      \"id\": \"sprz_007\",
+      \"template\": \"Skoro pan to już wie... nie ma sensu dalej kłamać. Ale proszę, niech pan posłucha całej historii.\",
+      \"emotion\": \"REZYGNACJA\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"FULL_REVEAL\",
+      \"tags\": [\"poddanie\", \"gotowy_opowiedziec\"]
+    },
+    {
+      \"id\": \"sprz_008\",
+      \"template\": \"To nie kłamstwo. Po prostu nie powiedziałem panu wszystkiego. To różnica.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"DEFLECTION\",
+      \"tags\": [\"sofistyka\", \"unik\"]
+    },
+    {
+      \"id\": \"sprz_009\",
+      \"template\": \"Próbuję mnie pan złapać na słowie? Rozmawiam z detektywem czy z prokuratorem?\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -20,
+      \"requiresClue\": true,
+      \"responseType\": \"COUNTER_ATTACK\",
+      \"tags\": [\"kontratak\", \"agresja\"]
+    },
+    {
+      \"id\": \"sprz_010\",
+      \"template\": \"Dobrze. Skłamałem. Ale nie dlatego, że zabiłem. Skłamałem, bo chroniłem kogoś.\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": 10,
+      \"requiresClue\": true,
+      \"responseType\": \"ADMISSION_WITH_MOTIVE\",
+      \"tags\": [\"przyznanie\", \"ochrona_innych\"]
+    },
+    {
+      \"id\": \"sprz_011\",
+      \"template\": \"To... nie... Nie potrafię tego wyjaśnić. Nie wiem, co powiedzieć.\",
+      \"emotion\": \"PANIKA\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"responseType\": \"BREAKDOWN\",
+      \"tags\": [\"zalamanie\", \"brak_odpowiedzi\"]
+    },
+    {
+      \"id\": \"sprz_012\",
+      \"template\": \"Okej. Złapał mnie pan. Ale to, co naprawdę robiłem, jest jeszcze bardziej kompromitujące niż kłamstwo.\",
+      \"emotion\": \"POCZUCIE_WINY\",
+      \"minTrust\": 15,
+      \"requiresClue\": true,
+      \"responseType\": \"FULL_REVEAL\",
+      \"tags\": [\"kompromitujace\", \"nowa_informacja\"]
+    }
+  ]
+}
+"

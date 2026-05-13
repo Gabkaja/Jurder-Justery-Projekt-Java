@@ -1,0 +1,136 @@
+"{
+  \"styles\": [
+    {
+      \"id\": \"SPOKOJNY\",
+      \"label\": \"Spokojny\",
+      \"description\": \"Mowi rownym, opanowanym tonem. Nie podnosi glosu. Odpowiedzi sa wywazone i przemyslane.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Cóż...\", \"Wie pan...\", \"Powiem tak —\"],
+        \"suffixes\": [\"...ale to tylko moje zdanie.\", \"...przynajmniej tak to widzę.\", \"...nie wiem, czy to istotne.\"],
+        \"fillers\": [\"...jak sądzę...\", \"...o ile pamiętam...\", \"...jeśli dobrze rozumiem...\"]
+      },
+      \"punctuationStyle\": \"regular\",
+      \"wordComplexity\": \"srednia\"
+    },
+    {
+      \"id\": \"AGRESYWNY\",
+      \"label\": \"Agresywny\",
+      \"description\": \"Mowi ostro, bezposrednio, czasem wulgarnie. Krotkie zdania. Atakuje pytajacego.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Słuchaj —\", \"No dobra,\", \"A co to ma do rzeczy?\"],
+        \"suffixes\": [\"...i nie zamierzam się tłumaczyć.\", \"...koniec tematu.\", \"...i tyle.\"],
+        \"fillers\": [\"...do cholery...\", \"...na litość...\", \"...kurde...\"]
+      },
+      \"punctuationStyle\": \"exclamation_heavy\",
+      \"wordComplexity\": \"niska\"
+    },
+    {
+      \"id\": \"NERWOWY\",
+      \"label\": \"Nerwowy\",
+      \"description\": \"Mowi urywanymi zdaniami, waha sie, powtarza slowa. Widac stres i niepewnosc.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Ja... znaczy...\", \"Nie wiem czy...\", \"To jest... trudne...\"],
+        \"suffixes\": [\"...chyba.\", \"...nie jestem pewien.\", \"...a może się mylę.\"],
+        \"fillers\": [\"...to znaczy...\", \"...nie, czekaj...\", \"...yyy...\"]
+      },
+      \"punctuationStyle\": \"ellipsis_heavy\",
+      \"wordComplexity\": \"niska\"
+    },
+    {
+      \"id\": \"ELEGANCKI\",
+      \"label\": \"Elegancki\",
+      \"description\": \"Mowi wyrafinowanym jezykiem, dlugie zdania, unika wulgarnosci. Formalna skladnia.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Jeśli pan pozwoli...\", \"Pozwolę sobie zauważyć, że...\", \"Z całym należnym szacunkiem...\"],
+        \"suffixes\": [\"...aczkolwiek to jedynie moja obserwacja.\", \"...o ile taka uwaga jest na miejscu.\", \"...ale nie śmiem narzucać swoich wniosków.\"],
+        \"fillers\": [\"...rzecz jasna...\", \"...jak pan zapewne rozumie...\", \"...w istocie...\"]
+      },
+      \"punctuationStyle\": \"complex_sentences\",
+      \"wordComplexity\": \"wysoka\"
+    },
+    {
+      \"id\": \"ZIMNY\",
+      \"label\": \"Zimny\",
+      \"description\": \"Emocjonalnie zdystansowany. Mowi rzeczowo, bez empatii. Fakty, nie uczucia.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Fakty są następujące:\", \"Mogę jedynie stwierdzić, że\", \"Bez zbędnych emocji —\"],
+        \"suffixes\": [\"...to wszystko, co mam do powiedzenia.\", \"...reszta nie należy do moich kompetencji.\", \"...i nie widzę powodu, by to komentować.\"],
+        \"fillers\": [\"...obiektywnie rzecz biorąc...\", \"...ściśle mówiąc...\", \"...z czysto praktycznego punktu widzenia...\"]
+      },
+      \"punctuationStyle\": \"minimal\",
+      \"wordComplexity\": \"wysoka\"
+    },
+    {
+      \"id\": \"BEZPOSREDNI\",
+      \"label\": \"Bezposredni\",
+      \"description\": \"Mowi wprost, bez owijania w bawelne. Krótkie, konkretne zdania. Nie boi sie konfrontacji.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Powiem panu wprost —\", \"Nie będę kluczył:\", \"Bez owijania —\"],
+        \"suffixes\": [\"...i mogę to powtórzyć pod przysięgą.\", \"...tak jest i koniec.\", \"...nie mam powodu, żeby kłamać.\"],
+        \"fillers\": [\"...po prostu...\", \"...zwyczajnie...\", \"...tak czy inaczej...\"]
+      },
+      \"punctuationStyle\": \"short_sentences\",
+      \"wordComplexity\": \"srednia\"
+    },
+    {
+      \"id\": \"DYPLOMATYCZNY\",
+      \"label\": \"Dyplomatyczny\",
+      \"description\": \"Unika jednoznacznych odpowiedzi. Mowi duzo, ale niewiele konkretnego. Profesjonalny unik.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Rozumiem pańskie pytanie i...\", \"To złożona kwestia —\", \"Chciałbym podkreślić, że...\"],
+        \"suffixes\": [\"...choć oczywiście każdy może mieć inną perspektywę.\", \"...ale nie chciałbym nikogo pochopnie osądzać.\", \"...to wymaga szerszego kontekstu.\"],
+        \"fillers\": [\"...by tak rzec...\", \"...w pewnym sensie...\", \"...z jednej strony...\"]
+      },
+      \"punctuationStyle\": \"complex_sentences\",
+      \"wordComplexity\": \"wysoka\"
+    },
+    {
+      \"id\": \"SWOBODNY\",
+      \"label\": \"Swobodny\",
+      \"description\": \"Mowi luźno, potocznie, jakby rozmawial z kumplem. Uzywa slangowych zwrotow.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Okej, więc...\", \"No więc tak —\", \"Słuchaj, to było tak:\"],
+        \"suffixes\": [\"...no i tyle w temacie.\", \"...wiesz, jak to jest.\", \"...serio, nic więcej nie wiem.\"],
+        \"fillers\": [\"...no wiesz...\", \"...w sensie...\", \"...tak jakby...\"]
+      },
+      \"punctuationStyle\": \"casual\",
+      \"wordComplexity\": \"niska\"
+    },
+    {
+      \"id\": \"GORZKI\",
+      \"label\": \"Gorzki\",
+      \"description\": \"Mowi z zalem, ironia, cynizmem. Widac, ze wiele przeszedl i nie ufa nikomu.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"A kogo to obchodzi?\", \"Oczywiście, bo...\", \"Niech zgadnę —\"],
+        \"suffixes\": [\"...ale kogo to obchodzi.\", \"...jak zwykle zresztą.\", \"...nie że to cokolwiek zmieni.\"],
+        \"fillers\": [\"...jak można się było spodziewać...\", \"...bo tak to już jest...\", \"...rzecz jasna...\"]
+      },
+      \"punctuationStyle\": \"ironic\",
+      \"wordComplexity\": \"srednia\"
+    },
+    {
+      \"id\": \"SPOSTRZEGAWCZY\",
+      \"label\": \"Spostrzegawczy\",
+      \"description\": \"Mowi obserwacyjnie, analizujaco. Zwraca uwage na detale, ktore inni pomijaja. Pisarski zmysl.\",
+      \"sentenceModifiers\": {
+        \"prefixes\": [\"Zauważyłam coś ciekawego —\", \"Jeśli zwróci pan uwagę na...\", \"To interesujące, bo...\"],
+        \"suffixes\": [\"...ale to pewnie tylko moja wyobraźnia.\", \"...chociaż, kto wie.\", \"...zwróciłam na to uwagę, bo to nietypowe.\"],
+        \"fillers\": [\"...co ciekawe...\", \"...i to jest właśnie interesujące...\", \"...co mnie uderzyło...\"]
+      },
+      \"punctuationStyle\": \"descriptive\",
+      \"wordComplexity\": \"wysoka\"
+    }
+  ],
+  \"styleCompatibility\": {
+    \"ELEGANCKI\": [\"ZIMNY\", \"SPOKOJNY\", \"DYPLOMATYCZNY\", \"SPOSTRZEGAWCZY\"],
+    \"AGRESYWNY\": [\"BEZPOSREDNI\", \"GORZKI\"],
+    \"NERWOWY\": [\"SWOBODNY\", \"SPOKOJNY\"],
+    \"ZIMNY\": [\"ELEGANCKI\", \"BEZPOSREDNI\"],
+    \"BEZPOSREDNI\": [\"AGRESYWNY\", \"GORZKI\", \"SPOKOJNY\"],
+    \"DYPLOMATYCZNY\": [\"ELEGANCKI\", \"SPOKOJNY\", \"SPOSTRZEGAWCZY\"],
+    \"SWOBODNY\": [\"NERWOWY\", \"BEZPOSREDNI\"],
+    \"GORZKI\": [\"AGRESYWNY\", \"BEZPOSREDNI\", \"ZIMNY\"],
+    \"SPOSTRZEGAWCZY\": [\"ELEGANCKI\", \"SPOKOJNY\", \"DYPLOMATYCZNY\"]
+  }
+}
+"

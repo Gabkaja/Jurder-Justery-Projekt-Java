@@ -1,0 +1,43 @@
+{
+  "characterId": "piotrPawlowski",
+  "speechStyle": "ELEGANT",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "Dzień dobry. Proszę pytać, jako obywatel czuję się w obowiązku pomóc w śledztwie." },
+      { "minTrust": 0, "text": "Mam nadzieję, że {Pan|Pani} szybko znajdzie sprawcę tej niewątpliwej tragedii." },
+      { "minTrust": 10, "text": "Rozmawiajmy szczerze, {Panie Detektywie|Pani Detektyw}. Czas to pieniądz, a ja mam ważne spotkanie." },
+      { "minTrust": 0, "text": "Słucham uważnie. Moja współpraca z {Panem|Panią} jest dla mnie priorytetem." },
+      { "minTrust": 20, "text": "Cenię {Pański|Pani} profesjonalizm. W dzisiejszych czasach to rzadkość." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Zgodnie z moją najlepszą wiedzą, w krytycznym momencie przebywałem w {room}." },
+      { "certainty": 100, "text": "Mój pobyt w {room} był podyktowany potrzebą wykonania kilku służbowych telefonów." },
+      { "certainty": 90, "text": "O ile się nie mylę, nie opuszczałem pomieszczenia: {room} ani na chwilę." },
+      { "certainty": 100, "text": "Cały wieczór spędziłem w {room}. To miejsce gwarantowało mi niezbędny spokój." },
+      { "certainty": 80, "text": "Wydaje mi się, że byłem w {room}, choć w tak dużym domu łatwo stracić orientację." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 100, "text": "Zauważyłem {suspect} w bezpośrednim sąsiedztwie {room}. Zachowywał{em|am} się nienaturalnie." },
+      { "certainty": 70, "text": "Mogę potwierdzić, że widziałem postać przypominającą {suspect} w korytarzu obok {room}." },
+      { "certainty": 100, "text": "To był niewątpliwie {suspect}. Widziałem {go|ją} w {room} tuż przed incydentem." },
+      { "certainty": 50, "text": "Mignął mi ktoś, kto mógł być {suspect}, ale nie chciałbym nikogo fałszywie oskarżać." },
+      { "certainty": 90, "text": "{suspect} trzymał{em|am} coś w dłoni. Czy to był {weapon}? Nie wykluczam tego." }
+    ],
+    "OPINIA_O_INNYCH": [
+      { "text": "{suspect} to postać kontrowersyjna. Moim zdaniem niebezpieczna dla otoczenia." },
+      { "text": "Relacje {suspect} z ofiarą od dawna budziły mój niepokój." },
+      { "text": "Proszę zachować dystans wobec tego, co mówi {suspect}. To mistrz manipulacji." },
+      { "text": "O {suspect} słyszy się wiele rzeczy, niestety większość z nich nie jest pochlebna." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "To istotny dowód. {weapon} rzuca nowe światło na tę niefortunną sprawę." },
+      { "requiresClue": true, "text": "Skąd to {Pan|Pani} ma? Czy to faktycznie narzędzie zbrodni?" },
+      { "requiresClue": true, "text": "To {weapon} widziałem wcześniej w gabinecie Andrzeja. Leżało na widoku." }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      { "text": "To jedynie drobna nieścisłość w moich zeznaniach, wynikająca ze stresu." },
+      { "text": "Przyznaję, nie byłem w {room}. Moja nieobecność tam miała podłoże polityczne." },
+      { "text": "Skoro {Pan|Pani} mnie przycisnął{em|am}... Tak, skłamałem, by chronić wizerunek partii." }
+    ]
+  }
+}

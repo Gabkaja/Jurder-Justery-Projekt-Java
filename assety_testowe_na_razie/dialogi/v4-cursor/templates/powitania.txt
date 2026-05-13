@@ -1,0 +1,142 @@
+"{
+  \"type\": \"POWITANIA\",
+  \"description\": \"Szablony powitalne — reakcja NPC na rozpoczecie rozmowy. Wybor szablonu zalezy od: poziomu zaufania, emocji NPC, czy to pierwsza rozmowa, czy powtorna.\",
+  \"templates\": [
+    {
+      \"id\": \"pow_001\",
+      \"template\": \"W czym mogę pomóc?\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"formalne\", \"neutralne\"]
+    },
+    {
+      \"id\": \"pow_002\",
+      \"template\": \"To okropna tragedia... Nie mogę w to uwierzyć.\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"emocjonalne\", \"smutek\"]
+    },
+    {
+      \"id\": \"pow_003\",
+      \"template\": \"Policja już mnie przesłuchiwała. Nie wiem, co jeszcze mogę dodać.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"niechętne\", \"defensywne\"]
+    },
+    {
+      \"id\": \"pow_004\",
+      \"template\": \"Znowu pan? Powiedziałem już wszystko, co wiedziałem.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -20,
+      \"requiresClue\": false,
+      \"context\": \"REPEATED_VISIT\",
+      \"tags\": [\"poirytowane\", \"powtorne\"]
+    },
+    {
+      \"id\": \"pow_005\",
+      \"template\": \"Cieszę się, że ktoś wreszcie bierze to na poważnie.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 20,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"pozytywne\", \"wspolpracujace\"]
+    },
+    {
+      \"id\": \"pow_006\",
+      \"template\": \"Proszę, niech to się wreszcie skończy. Nie daję rady.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"REPEATED_VISIT\",
+      \"tags\": [\"emocjonalne\", \"zmeczone\"]
+    },
+    {
+      \"id\": \"pow_007\",
+      \"template\": \"Tak, tak, jestem do dyspozycji. Chociaż nie sądzę, żebym mógł pomóc.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"uprzejme\", \"wymijajace\"]
+    },
+    {
+      \"id\": \"pow_008\",
+      \"template\": \"Dziwna noc. Dziwni ludzie. Ale proszę, pytaj pan.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"refleksyjne\", \"otwarte\"]
+    },
+    {
+      \"id\": \"pow_009\",
+      \"template\": \"Nie rozumiem, czemu muszę tu siedzieć. Nie mam z tym nic wspólnego.\",
+      \"emotion\": \"GNIEW\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"defensywne\", \"agresywne\"]
+    },
+    {
+      \"id\": \"pow_010\",
+      \"template\": \"Myślałem, że już pan skończył. Najwyraźniej się myliłem.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"context\": \"REPEATED_VISIT\",
+      \"tags\": [\"ironiczne\", \"powtorne\"]
+    },
+    {
+      \"id\": \"pow_011\",
+      \"template\": \"Biedny {victim}... Kto mógł mu to zrobić?\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"emocjonalne\", \"wspolczujace\"]
+    },
+    {
+      \"id\": \"pow_012\",
+      \"template\": \"Jesteśmy tu wszyscy podejrzani, prawda? Cudownie.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"context\": \"FIRST_MEETING\",
+      \"tags\": [\"ironiczne\", \"gorzkie\"]
+    },
+    {
+      \"id\": \"pow_013\",
+      \"template\": \"Dobrze, że pan przyszedł. Mam coś, co mogłoby pana zainteresować.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 30,
+      \"requiresClue\": false,
+      \"context\": \"TRUST_GAINED\",
+      \"tags\": [\"wspolpracujace\", \"informacyjne\"]
+    },
+    {
+      \"id\": \"pow_014\",
+      \"template\": \"Nie chcę rozmawiać. Nie dzisiaj.\",
+      \"emotion\": \"SMUTEK\",
+      \"minTrust\": -30,
+      \"requiresClue\": false,
+      \"context\": \"LOW_TRUST\",
+      \"tags\": [\"odmowa\", \"emocjonalne\"]
+    },
+    {
+      \"id\": \"pow_015\",
+      \"template\": \"Pan znowu. Ma pan nowe pytania czy te same co poprzednio?\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": -10,
+      \"requiresClue\": false,
+      \"context\": \"REPEATED_VISIT\",
+      \"tags\": [\"podejrzliwe\", \"powtorne\"]
+    }
+  ]
+}
+"

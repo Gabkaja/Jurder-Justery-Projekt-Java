@@ -1,0 +1,404 @@
+{
+  "npcId": "piotrPawlowski",
+  "npcName": "Piotr Pawłowski",
+  "speechStyle": "DIPLOMATIC",
+  "defaultEmotion": "CONTROLLED",
+
+  "fragments": {
+    "openers": [
+      "Proszę zrozumieć,",
+      "Z mojego punktu widzenia —",
+      "To jest kwestia, którą trzeba osadzić w szerszym kontekście.",
+      "Jako osoba publiczna muszę być ostrożny w słowach —",
+      "Chciałbym, żebyśmy rozmawiali konstruktywnie."
+    ],
+    "certaintyMarkers": {
+      "high":   ["Mogę to potwierdzić z całą stanowczością.", "Jestem tego pewny.", "Nie ma tu miejsca na niedomówienia."],
+      "medium": ["O ile pamiętam,", "Zdaje mi się,", "Mam takie wrażenie, choć mogę się mylić."],
+      "low":    ["To oczywiście moja subiektywna ocena,", "Nie chciałbym przesądzać,", "Trudno mi to jednoznacznie ocenić."]
+    },
+    "closers": [
+      "— liczę na pańskie dyskretne podejście do tej sprawy.",
+      "Mam nadzieję, że to wystarczy.",
+      "Proszę traktować to jako informację, a nie deklarację.",
+      "Nie chciałbym być cytowany.",
+      "Tyle mogę powiedzieć oficjalnie."
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "Oczywiście, chętnie porozmawiam. Zależy mi na tym, żeby sprawa została wyjaśniona.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Rozumiem, że musi pan rozmawiać ze wszystkimi. Jestem do dyspozycji.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Tragedia. Naprawdę. Andrzej był człowiekiem skomplikowanym, ale nie zasługiwał na to.",
+          "emotion": "CONTROLLED_SADNESS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę — niech pan zadaje pytania. Mam tylko prośbę o dyskrecję w sprawach, które mogą nie mieć związku z tą sprawą.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Przez zdecydowaną większość wieczoru byłem wśród gości. Rozmawiałem, jak na takim przyjęciu przystało.",
+          "emotion": "CONTROLLED",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Około {time} rozmawiałem z kilkoma osobami w jadalni. Mogą to potwierdzić.",
+          "emotion": "CALM",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie monitorowałem swojego miejsca pobytu z myślą o późniejszym alibi. Nie miałem powodów, żeby to robić.",
+          "emotion": "CONTROLLED",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Byłem tam gdzie większość gości — w zasięgu wzroku wielu osób. Proszę to sprawdzić.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałem {suspect} w pobliżu {room}. Nie wydawało mi się to wówczas istotne.",
+          "emotion": "CONTROLLED",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "O ile pamiętam, {suspect} wychodził z {room} chwilę przed tym, gdy sytuacja stała się... poważna.",
+          "emotion": "CAUTIOUS",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam wrażenie, że widziałem kogoś przy drzwiach do {room}. Nie chciałbym wskazywać osoby bez pewności.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 45,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Powiem tyle — drzwi do {room} były przez chwilę zamknięte od środka. Normalne to nie jest.",
+          "emotion": "OBSERVANT",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Nie mam zwyczaju rozpowszechniać niepotwierdzonych informacji. To zasada zawodowa.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Słyszałem coś z kierunku {room}, ale nie byłem w stanie jednoznacznie tego zinterpretować.",
+          "emotion": "CONTROLLED",
+          "certainty": 55,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś rozmawiał dość głośno niedaleko {room}. Takie rozmowy zdarzają się na przyjęciach.",
+          "emotion": "DISMISSIVE",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Coś słyszałem. Ale wiem też, że kontekst jest kluczowy — bez niego słowa mogą znaczyć cokolwiek.",
+          "emotion": "EVASIVE",
+          "certainty": 70,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "Andrzej i {suspect} mieli... skomplikowane relacje biznesowe. Nie znam szczegółów.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} to człowiek, który potrafi być zarówno sojusznikiem, jak i problemem. Zależy od dnia.",
+          "emotion": "CONTROLLED",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie oceniam innych publicznie. Każdy ma prawo do własnej interpretacji zdarzeń.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Między {victim} a {suspect} narosło coś przez ostatnie miesiące. Tyle mog stwierdzić bez przekraczania granic.",
+          "emotion": "CAUTIOUS",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Nie wskazuję osób bez dowodów. To byłoby nieodpowiedzialne z mojej strony jako osoby publicznej.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym miał wskazać jedną osobę — nie zrobiłbym tego publicznie. Ale prywatnie myślę o {suspect}.",
+          "emotion": "CAUTIOUS",
+          "certainty": 60,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Ta sprawa ma wiele wymiarów. Wymiar finansowy, wymiar osobisty, wymiar towarzyski. Proszę to mieć na uwadze.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Jedyne co mogę powiedzieć — wiele osób miało powody. Ja do nich nie należę.",
+          "emotion": "FIRM",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Ten dokument wymaga kontekstu, który pan na razie pomija.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Skąd pan to ma? To może być objęte ochroną prawną.",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To nie dowodzi niczego, co by mnie obciążało. Proszę nie wyciągać uproszczonych wniosków.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Rozumiem, co pan sugeruje. I rozumiem, że to wygląda niekorzystnie. Niemniej — to nie jest tak, jak wygląda.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Moja relacja z Andrzejem była czysto zawodowa. Żadnych napięć.",
+          "emotion": "CONTROLLED",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie wiem nic o jego sprawach finansowych poza tym, co dotyczy naszej wspólnej inwestycji. A to kwestia standardowa.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie było między nami żadnych nierozwiązanych sporów. Proszę mi wierzyć.",
+          "emotion": "FIRM",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie opuszczałem sali przez cały kluczowy czas wieczoru. Mogę to potwierdzić.",
+          "emotion": "CONTROLLED",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Chciałbym wiedzieć, w jakim charakterze zadaje mi pan te pytania.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę mnie nie pytać o rzeczy, które nie mają związku z tą konkretną sprawą.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Rozumiem, że robi pan swoją pracę. Proszę rozumieć, że ja muszę myśleć o konsekwencjach każdego słowa.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "To pytanie wymaga rozmowy z moim prawnikiem przed udzieleniem odpowiedzi.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "Chciałbym sprecyzować pewną kwestię, którą wcześniej — być może — ująłem zbyt skrótowo.",
+          "emotion": "DIPLOMATIC",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Rozumiem, że te informacje wyglądają sprzecznie. Pozwoli pan, że to wyjaśnię.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Pewne rzeczy pominąłem ze względu na ich wrażliwość, nie dlatego, że mam cokolwiek do ukrycia w tej sprawie.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Byłem w {room}. To prawda. Ale po co tam byłem — to osobna, niezwiązana kwestia.",
+          "emotion": "FIRM",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "To jest bezpodstawne oskarżenie i zdaję sobie sprawę, jakie konsekwencje niesie dla pana.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę pamiętać, że jestem osobą publiczną. Takie słowa mają ciężar, który pan może niedoceniać.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam motyw — nie zaprzeczam. Ale mam też za dużo do stracenia, żeby to zrobić.",
+          "emotion": "FIRM",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mój prawnik będzie do pana dyspozycji jutro rano.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}

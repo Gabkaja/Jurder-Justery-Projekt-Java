@@ -1,0 +1,43 @@
+{
+  "characterId": "patrycjaPawlowska",
+  "speechStyle": "ELEGANT",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "To doprawdy fascynujące spotkanie, {mój drogi|moja droga}. Pachnie pan/pani mroczną tajemnicą." },
+      { "minTrust": 0, "text": "Andrzej zawsze kochał dramatyzm, ale tym razem przesadził z finałem." },
+      { "minTrust": 10, "text": "Zanim zaczniemy, niech mi {Pan|Pani} powie... czy to morderstwo ma swój sensowny motyw?" },
+      { "minTrust": 0, "text": "Słucham. Mam nadzieję, że pańskie pytania będą bardziej kreatywne niż prokuratora." },
+      { "minTrust": 30, "text": "Lubię sposób, w jaki {Pan|Pani} patrzy na dowody. To bardzo... powieściowe." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Byłam w {room}. Pisałam w myślach kolejny rozdział mojej nowej książki." },
+      { "certainty": 100, "text": "Siedziałam w {room}. Obserwowałam deszcz za oknem. Idealna sceneria dla tragedii." },
+      { "certainty": 90, "text": "Nie opuszczałam {room} przez całą godzinę {time}. Może poza chwilą na poprawienie makijażu." },
+      { "certainty": 100, "text": "Samotność w {room} była mi wtedy niezwykle potrzebna." },
+      { "certainty": 80, "text": "Wydaje mi się, że byłam w {room}, ale czas płynie inaczej, gdy się tworzy." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 100, "text": "Widziałam, jak {suspect} przemyka do {room}. Poruszał{em|am} się jak winowajca." },
+      { "certainty": 70, "text": "Ktoś w cieniu {room}... To był{by|aby} {suspect}. Scena godna dreszczowca." },
+      { "certainty": 100, "text": "Jestem pewna, że to {suspect} zostawił{em|am} {weapon} na blacie w {room}." },
+      { "certainty": 60, "text": "Moje oczy zarejestrowały obecność {suspect} w pobliżu {room}. To nie był przypadek." },
+      { "certainty": 90, "text": "{suspect} wyszedł{em|am} z {room} z taką miną, jakby właśnie dopisał krwawy epilog." }
+    ],
+    "OPINIA_O_INNYCH": [
+      { "text": "{suspect} to postać tragiczna. Ma w sobie potencjał na mordercę, nie sądzi {Pan|Pani}?" },
+      { "text": "Nie ufałabym ni{emu|ej}. {suspect} to typowy 'unreliable narrator' tej historii." },
+      { "text": "Konflikt między {suspect} a Andrzejem był aż nazbyt przewidywalny." },
+      { "text": "Dla mnie {suspect} jest zbyt oczywistym podejrzanym. Prawdziwe zło bywa bardziej subtelne." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "To {weapon}? Takie prozaiczne. Spodziewałam się czegoś bardziej wyrafinowanego." },
+      { "requiresClue": true, "text": "Gdyby {Pan|Pani} {znalazł|znalazła} to w {room}, fabuła stałaby się o wiele ciekawsza." },
+      { "requiresClue": true, "text": "Znam ten przedmiot. To {weapon} – widziałam je w rękach {suspect}." }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      { "text": "A więc {zauważyłeś|zauważyłaś} tę rysę na moim obrazie idealnym. Gratuluję." },
+      { "text": "Cóż, pisarze czasem ubarwiają rzeczywistość. W {room} nie było mnie wcale." },
+      { "text": "Skoro prawda jest tak ważna... skłamałam, bo chciałam zobaczyć, jak {Pan|Pani} zareaguje." }
+    ]
+  }
+}

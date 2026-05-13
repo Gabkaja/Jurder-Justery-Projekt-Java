@@ -1,0 +1,432 @@
+{
+  "npcId": "kamilKrakowski",
+  "npcName": "Kamil Krakowski",
+  "speechStyle": "ELEGANT",
+  "defaultEmotion": "CALM",
+
+  "fragments": {
+    "openers": [
+      "Proszę wybaczyć, ale",
+      "Niech pan zrozumie,",
+      "Służę tej rodzinie od dwudziestu dwóch lat i",
+      "Z całym szacunkiem,",
+      "Nie jestem pewien, czy to właściwe pytanie, niemniej"
+    ],
+    "certaintyMarkers": {
+      "high":   ["Z całą pewnością", "Jestem absolutnie pewien,", "Nie ma co do tego wątpliwości —"],
+      "medium": ["O ile dobrze pamiętam,", "Zdaje się,", "Jeśli mnie pamięć nie myli,"],
+      "low":    ["Mogło mi się wydawać,", "Nie jestem w stanie przysiąc,", "To tylko wrażenie, ale"]
+    },
+    "closers": [
+      "— proszę to wziąć pod uwagę.",
+      "Takie są fakty.",
+      "Nie mam w tym żadnego interesu.",
+      "Liczyłem, że ta kwestia nie wypłynie na wierzch.",
+      "Więcej nie mogę powiedzieć."
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "Czym mogę służyć?",
+          "emotion": "CALM",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Policja już raczyła poświęcić mi swój czas. Mam nadzieję, że pan okaże się bardziej zwięzły.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę wybaczyć, że nie powitam pana z należytą serdecznością — ta noc nie jest z łatwych.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Służę tej rodzinie od dwudziestu dwóch lat. Proszę nie traktować mnie jak podejrzanego.",
+          "emotion": "DIGNIFIED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "To okropna tragedia. Proszę — niech pan pyta, co chce wiedzieć.",
+          "emotion": "COMPOSED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Przez większość wieczoru nadzorowałem obsługę. Moje obowiązki nie przewidują przerw.",
+          "emotion": "CALM",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Około {time} sprawdzałem zapasy w piwnicy. Przynajmniej kwadrans, może nieco dłużej.",
+          "emotion": "CALM",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Byłem wszędzie tam, gdzie byłem potrzebny. To nie jest zbrodnia.",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "O której godzinie dokładnie? Wieczór był długi, a obowiązków — niemało.",
+          "emotion": "CAUTIOUS",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nikt mnie nie obserwował — bo nie ma powodu, by obserwować służbę. Ale jeśli pyta pan o dowód, to nie mam.",
+          "emotion": "TENSE",
+          "certainty": 50,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałem {suspect} w pobliżu {room}. Nie przywiązałem do tego wagi — wtedy.",
+          "emotion": "CALM",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Jeśli mnie pamięć nie myli, {suspect} wychodził z {room} niedługo po {time}.",
+          "emotion": "CALM",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Widziałem wiele rzeczy tej nocy. Nie wszystkie zamierzam opisywać bez wyraźnej potrzeby.",
+          "emotion": "EVASIVE",
+          "certainty": 90,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś poruszał się w kierunku {room} — nie widziałem twarzy. Było zbyt ciemno.",
+          "emotion": "CAUTIOUS",
+          "certainty": 40,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Drzwi do {room} były uchylone, kiedy przechodziłem. Normalnie o tej porze powinny być zamknięte.",
+          "emotion": "CALM",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Słyszałem podniesiony głos dochodzący z {room}. Nie rozróżniłem słów.",
+          "emotion": "CALM",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś kłócił się niedaleko {room}. Głos brzmiał znajomo, ale nie przysiągnę.",
+          "emotion": "CAUTIOUS",
+          "certainty": 50,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nauczyłem się przez lata nie wsłuchiwać w rozmowy, które mnie nie dotyczą.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Był jakiś hałas z kierunku {room}. Uznałem, że to goście. Mój błąd.",
+          "emotion": "TENSE",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "Nie mnie oceniać gości. Mogę powiedzieć jedynie, że {suspect} nie wzbudzał we mnie zaufania.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} zachowywał się tej nocy... inaczej niż zwykle. Nie potrafię tego lepiej opisać.",
+          "emotion": "CAUTIOUS",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Między {victim} a {suspect} od dawna istniało pewne napięcie. Nie pytałem o szczegóły.",
+          "emotion": "CALM",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Kamerdyner, który plotkuje o gościach, nie jest kamerdynerem godnym szacunku. Proszę wybaczyć.",
+          "emotion": "DIGNIFIED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Nie jestem tu po to, by oskarżać. Ale gdybym miał wskazać kogoś, kto miał powód — zacząłbym od {suspect}.",
+          "emotion": "COLD",
+          "certainty": 70,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Proszę mnie nie zmuszać do spekulacji. Fakty mówią same za siebie.",
+          "emotion": "EVASIVE",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym miał jedno podejrzenie... i tak zatrzymałbym je dla siebie. Na razie.",
+          "emotion": "CALCULATING",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} miał powody. Nie mówię, że to on — ale powody miał.",
+          "emotion": "CALM",
+          "certainty": 60,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Skąd pan to ma? To... nie powinno się tu znajdować.",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To niczego nie dowodzi.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Widziałem to wcześniej. Ale nie wiem, co to oznacza w tym kontekście.",
+          "emotion": "CAUTIOUS",
+          "certainty": 60,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Proszę odłożyć. To własność prywatna.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Dobrze. Ukrywałem to. Ale nie z powodów, które pan sugeruje.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Nigdy nie byłem w {room} tej nocy bez wyraźnego polecenia.",
+          "emotion": "CALM",
+          "certainty": 95,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Testament? Nie interesowałem się dokumentami pana Arciszewskiego. To nie moja rola.",
+          "emotion": "COLD",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie znam kombinacji sejfu. Nigdy jej nie znałem.",
+          "emotion": "CALM",
+          "certainty": 95,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Moje relacje z panem Arciszewskim były wyłącznie zawodowe. Bez napięć.",
+          "emotion": "DIGNIFIED",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Czy musimy rozmawiać właśnie tutaj?",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Powiedziałem już wszystko, co wiem.",
+          "emotion": "EVASIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę wybaczyć — to był wyjątkowo wyczerpujący wieczór.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Może porozmawiamy kiedy indziej? Mam teraz obowiązki.",
+          "emotion": "EVASIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "Dobrze. Nie byłem do końca szczery. Proszę dać mi chwilę.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To nie wygląda tak, jak pan myśli. Był powód, dla którego to ukryłem.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Zmodyfikowałem pewne fakty. Nie dlatego, że mam coś do ukrycia w tej sprawie — lecz dlatego, że pewne rzeczy mnie kompromitują niezależnie od niej.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Skłamałem. Ale nie w tej kwestii, która pana interesuje.",
+          "emotion": "DIGNIFIED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "To oskarżenie jest absurdalne i nie zamierzam go komentować.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Przez dwadzieścia dwa lata byłem lojalny tej rodzinie. Proszę pamiętać o tym, zanim wyciągnie pan pochopne wnioski.",
+          "emotion": "DIGNIFIED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym chciał go skrzywdzić — miałem do tego tysiąc okazji przez dwie dekady.",
+          "emotion": "CALCULATING",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Żądam rozmowy z prawnikiem, jeśli to jest kierunek tej rozmowy.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}

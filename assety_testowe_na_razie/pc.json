@@ -1,0 +1,51 @@
+[
+  {
+    "id": "dariuszDabrowski",
+    "name": "Dariusz Dąbrowski",
+    "title": "Detektyw",
+    "difficulty": "EASY",
+    "description": "Weteran Komendy Miejskiej Policji w Krakowie, z trzydziestoletnim stażem w służbie. Szerokie barki, wąsy, których nie zgolił od 1994 roku, oraz intuicja warta więcej niż wszystkie laboratoria kryminalistyczne razem wzięte. Dąbrowski widział już wszystko — co oznacza, że trudno go zaskoczyć, a łatwo zlekceważyć. Podejrzani nie traktują starszego pana z teczką poważnie. To ich błąd.",
+    "specialSkills": [
+      "Dostęp do oficjalnych akt policyjnych",
+      "Podejrzani są mniej odporni na bezpośrednie pytania",
+      "Przesłuchania dostarczają więcej informacji już przy pierwszym podejściu"
+    ]
+  },
+  {
+    "id": "dianaDuszynska",
+    "name": "Diana Duszyńska",
+    "title": "Dziennikarka",
+    "difficulty": "MEDIUM",
+    "description": "Reporterka śledcza krakowskiego tygodnika, która zaczynała od kroniki kryminalnej, a skończyła na artykułach wywracających kariery polityków. Diana ma dyktafon ukryty w apaszce, kontakty w połowie redakcji w Polsce oraz umiejętność rozmawiania z każdym w taki sposób, że rozmówca ma wrażenie, jakby rozmawiał z przyjaciółką. Jej notatnik jest bardziej szczegółowy niż baza danych CBŚ.",
+    "specialSkills": [
+      "Podejrzani otwierają się bardziej podczas nieformalnych rozmów",
+      "Dostęp do archiwalnych materiałów prasowych dotyczących postaci",
+      "Możliwość wykorzystania szantażu informacyjnego jako mechaniki dialogowej"
+    ]
+  },
+  {
+    "id": "miloszMakowski",
+    "name": "Miłosz Makowski",
+    "title": "Młody detektyw",
+    "difficulty": "HARD",
+    "description": "Prywatny detektyw z Kazimierza, trzy lata po otwarciu biura i wciąż bez jednej głośnej sprawy na koncie. Nie ma odznaki ani dostępu do akt — ma za to sieć kontaktów. Przez lata kręcenia się po Podgórzu zaprzyjaźnił się z ludźmi, których nikt nie zauważa: osobami w kryzysie bezdomności, nocnymi sprzedawcami i parkingowymi. Nazywa ich nieoficjalnym wydziałem śledczym. Widzą wszystko, ponieważ nikt nie zwraca na nich uwagi. Tej nocy ktoś przy willi coś zauważył.",
+    "specialSkills": [
+      "Unikalna mechanika informatorów — w wybranych momentach może uzyskać informacje z zewnątrz, niedostępne dla żadnej innej postaci",
+      "Wzbudza mniej podejrzeń podczas eksploracji",
+      "Minigry związane z analizą dowodów dostarczają więcej wskazówek"
+    ]
+  },
+  {
+    "id": "arturAdamski",
+    "name": "Artur Adamski",
+    "title": "Analityk",
+    "difficulty": "VERY_HARD",
+    "description": "Biegły sądowy do spraw informatyki śledczej, powołany przez prokuratora do sprawy Arciszewskiego. Artur nie pojawia się na miejscu zbrodni z lupą, lecz z laptopem i zestawem do ekstrakcji danych. Dostrzega wzorce tam, gdzie inni widzą chaos, ale zeznania świadków go nużą, co wyraźnie daje po sobie poznać. Prokuratura go ceni, policja ledwie toleruje, a świadkowie nie wiedzą, jak z nim rozmawiać. Ludzie go nie lubią. Dane go nie zawodzą.",
+    "specialSkills": [
+      "Unikalna analiza cyfrowa — telefony, nagrania z kamer, metadane dokumentów oraz historia logowań",
+      "Rekonstrukcja cyfrowa sceny zbrodni",
+      "Minigry techniczne ujawniają informacje niedostępne dla innych",
+      "NPC są wyraźnie mniej rozmowni — zeznania trzeba wydobywać pośrednio"
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+"{
+  \"type\": \"KLAMSTWA\",
+  \"description\": \"Szablony klamstw — NPC swiadomie mowi nieprawde. Kazde klamstwo ma wewnetrzna logike i moze byc zdemaskowane. Pole 'contradictedBy' wskazuje jaki typ dowodu obala klamstwo.\",
+  \"templates\": [
+    {
+      \"id\": \"klam_001\",
+      \"template\": \"Nie znałem {victim} aż tak dobrze. Widzieliśmy się może dwa razy.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"MINIMALIZACJA_RELACJI\",
+      \"contradictedBy\": [\"SWIADEK_RELACJI\", \"DOKUMENTY\", \"ZDJECIA\"],
+      \"tags\": [\"relacja\", \"minimalizacja\"]
+    },
+    {
+      \"id\": \"klam_002\",
+      \"template\": \"Cały wieczór spędziłem sam w {room}. Nie wychodziłem.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"FALSZYWE_ALIBI\",
+      \"contradictedBy\": [\"SWIADEK_OBSERWACJI\", \"NAGRANIE\", \"BRAK_SLADOW\"],
+      \"tags\": [\"alibi\", \"calkowite_klamstwo\"]
+    },
+    {
+      \"id\": \"klam_003\",
+      \"template\": \"Nigdy nie byłem w {room} tego wieczoru.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"FALSZYWE_ALIBI\",
+      \"contradictedBy\": [\"SWIADEK_OBSERWACJI\", \"SLADY_FIZYCZNE\", \"ODCISKI\"],
+      \"tags\": [\"lokalizacja\", \"proste_klamstwo\"]
+    },
+    {
+      \"id\": \"klam_004\",
+      \"template\": \"Nie mam pojęcia, o czym pan mówi. Pierwszy raz słyszę o tym {weapon}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": true,
+      \"lieType\": \"ZAPRZECZENIE_WIEDZY\",
+      \"contradictedBy\": [\"ODCISKI_PALCOW\", \"SWIADEK\", \"NAGRANIE\"],
+      \"tags\": [\"bron\", \"zaprzeczenie\"]
+    },
+    {
+      \"id\": \"klam_005\",
+      \"template\": \"{suspect} i ja nie rozmawialiśmy tego wieczoru. Nawet się nie widzieliśmy.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"UKRYWANIE_INTERAKCJI\",
+      \"contradictedBy\": [\"SWIADEK_ROZMOWY\", \"ZEZNANIE_DRUGIEJ_STRONY\"],
+      \"tags\": [\"interakcja\", \"zaprzeczenie\"]
+    },
+    {
+      \"id\": \"klam_006\",
+      \"template\": \"Nie miałem żadnych finansowych powiązań z {victim}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"UKRYWANIE_MOTYWU\",
+      \"contradictedBy\": [\"DOKUMENTY_FINANSOWE\", \"UMOWY\", \"SWIADEK\"],
+      \"tags\": [\"finanse\", \"motyw\"]
+    },
+    {
+      \"id\": \"klam_007\",
+      \"template\": \"Nie słyszałem niczego nietypowego. Było spokojnie.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"UKRYWANIE_OBSERWACJI\",
+      \"contradictedBy\": [\"INNY_SWIADEK_SLYSZAL\", \"FIZYCZNE_DOWODY_HALASU\"],
+      \"tags\": [\"dzwieki\", \"ukrywanie\"]
+    },
+    {
+      \"id\": \"klam_008\",
+      \"template\": \"Drzwi do {room} były zamknięte na klucz. Nie miałem jak wejść.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"FALSZYWA_PRZESZKODA\",
+      \"contradictedBy\": [\"KLUCZ_ZNALEZIONY\", \"DRZWI_OTWARTE\", \"UKRYTE_PRZEJSCIE\"],
+      \"tags\": [\"dostep\", \"falszywa_blokada\"]
+    },
+    {
+      \"id\": \"klam_009\",
+      \"template\": \"To {suspect} poprosił mnie, żebym trzymał się z daleka. Nie wiem, dlaczego.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"PRZERZUCANIE_WINY\",
+      \"contradictedBy\": [\"ZEZNANIE_DRUGIEJ_STRONY\", \"BRAK_KONTAKTU\"],
+      \"tags\": [\"przerzucanie\", \"manipulacja\"]
+    },
+    {
+      \"id\": \"klam_010\",
+      \"template\": \"Wyszedłem z {room} na długo przed... przed tym, co się stało.\",
+      \"emotion\": \"NERWOWY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"FALSZYWY_CZAS\",
+      \"contradictedBy\": [\"ZEGAREK\", \"SWIADEK\", \"NAGRANIE\"],
+      \"tags\": [\"czas\", \"przesowanie_chronologii\"]
+    },
+    {
+      \"id\": \"klam_011\",
+      \"template\": \"Nie wiem nic o żadnych dokumentach w gabinecie {victim}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"ZAPRZECZENIE_WIEDZY\",
+      \"contradictedBy\": [\"ODCISKI_NA_DOKUMENTACH\", \"MAIL\", \"SWIADEK\"],
+      \"tags\": [\"dokumenty\", \"zaprzeczenie\"]
+    },
+    {
+      \"id\": \"klam_012\",
+      \"template\": \"Nasze relacje z {victim} były czysto zawodowe. Nic osobistego.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"lieType\": \"MINIMALIZACJA_RELACJI\",
+      \"contradictedBy\": [\"LISTY\", \"SWIADEK\", \"ZDJECIA\", \"ZEZNANIA_INNYCH\"],
+      \"tags\": [\"relacja\", \"ukrywanie_bliskosci\"]
+    }
+  ]
+}
+"

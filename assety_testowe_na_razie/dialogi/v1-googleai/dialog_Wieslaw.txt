@@ -1,0 +1,39 @@
+{
+  "characterId": "wieslawWydra",
+  "speechStyle": "AGGRESSIVE",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "Czego? Nie mam czasu na gadki szmatki." },
+      { "minTrust": 0, "text": "Widzę, że {Pan|Pani} węszy. Uważaj, żeby nosa nie przycięło." },
+      { "minTrust": 0, "text": "Co jest? Przecież już wszystko powiedziałem tym psom z komendy." },
+      { "minTrust": 15, "text": "Dobra, siadaj {Pan|Pani}. Ale szybko, bo zaraz wychodzę." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Byłem w {room}. Siedziałem tam sam i myślałem nad swoimi sprawami." },
+      { "certainty": 80, "text": "W {room} byłem, gapiłem się w ścianę. Co, zabronione?" },
+      { "certainty": 100, "text": "Nigdzie nie łaziłem. Cały czas siedziałem w {room}." },
+      { "certainty": 70, "text": "Chyba byłem w {room}, ale nie patrzyłem na zegarek. Miałem inne rzeczy na głowie." }
+    ],
+    "OPINIA_O_INNYCH": [
+      { "text": "{suspect}? To zwykła szuja. Sprzedał{by|aby} własną matkę za miedziaka." },
+      { "text": "Widziałem, jak {suspect} kręci się wokół sejfu. To mówi wszystko." },
+      { "text": "Nie ufaj {Pan|Pani} {suspect}. Ten typ kłamie nawet jak mówi 'dzień dobry'." },
+      { "text": "{suspect} i Andrzej... To była miłość jak u wilków. Tylko czekali, aż jeden osłabnie." }
+    ],
+    "OBSERWACJA_SLYSZAL": [
+      { "certainty": 90, "text": "Słyszałem, jak {suspect} drze się na kogoś w {room}." },
+      { "certainty": 60, "text": "Coś rypnęło w {room}. Brzmiało jakby ktoś dostał w łeb." },
+      { "certainty": 100, "text": "Ten dźwięk w {room}... to był krzyk Andrzeja. Rozpoznam go wszędzie." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "No i co mi to pokazujesz? Myślisz, że się przestraszę {weapon}?" },
+      { "requiresClue": true, "text": "To {weapon} należy do {suspect}. Widziałem go u ni{ego|ej} w torbie." },
+      { "requiresClue": true, "text": "Gdzie to był{o|a}? W {room}? Ha, no to macie swojego mordercę." }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      { "text": "No i co z tego? Skłamałem. Chciał{em|am} mieć święty spokój." },
+      { "text": "Dobra, nie byłem w {room}. Byłem w gabinecie. Szukałem swoich papierów!" },
+      { "text": "Łapiesz mnie za słówka, a morderca pewnie już zaciera ślady." }
+    ]
+  }
+}

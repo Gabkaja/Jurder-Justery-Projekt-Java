@@ -1,0 +1,123 @@
+"[
+  {
+    \"id\": \"POWITANIA\",
+    \"label\": \"Powitania\",
+    \"category\": \"SYSTEMOWE\",
+    \"description\": \"Reakcje NPC na rozpoczecie rozmowy z graczem. Ton zalezy od relacji, emocji i poziomu zaufania.\",
+    \"triggerCondition\": \"CONVERSATION_START\",
+    \"minTemplates\": 10
+  },
+  {
+    \"id\": \"ALIBI\",
+    \"label\": \"Alibi\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC opisuje gdzie byl i co robil w kluczowych momentach wieczoru. Moze klamac, byc niepewny lub podawac czesciowe informacje.\",
+    \"triggerCondition\": \"PLAYER_ASKS_ALIBI\",
+    \"minTemplates\": 15
+  },
+  {
+    \"id\": \"OBSERWACJE_WZROKOWE\",
+    \"label\": \"Cos widzial\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC opisuje co widzial — osoby, ruchy, zdarzenia. Poziom pewnosci i dokladnosc zaleza od postaci i kontekstu.\",
+    \"triggerCondition\": \"PLAYER_ASKS_OBSERVATIONS\",
+    \"minTemplates\": 15
+  },
+  {
+    \"id\": \"OBSERWACJE_SLUCHOWE\",
+    \"label\": \"Cos slyszal\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC opisuje dzwieki, rozmowy, odglosy. Czesto mniej wiarygodne niz obserwacje wzrokowe.\",
+    \"triggerCondition\": \"PLAYER_ASKS_SOUNDS\",
+    \"minTemplates\": 12
+  },
+  {
+    \"id\": \"OPINIE\",
+    \"label\": \"Opinie o innych\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC wyrazaja zdanie na temat innych postaci — uprzedzenia, sympatie, podejrzenia ogolne.\",
+    \"triggerCondition\": \"PLAYER_ASKS_ABOUT_SUSPECT\",
+    \"minTemplates\": 15
+  },
+  {
+    \"id\": \"PODEJRZENIA\",
+    \"label\": \"Podejrzenia\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC wskazuje kogo podejrzewa i dlaczego. Czesto motywowane wlasnym interesem.\",
+    \"triggerCondition\": \"PLAYER_ASKS_SUSPICIONS\",
+    \"minTemplates\": 12
+  },
+  {
+    \"id\": \"RELACJE\",
+    \"label\": \"Relacje z ofiara\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC opisuje swoja relacje z ofiara — od oficjalnej wersji po ukryte prawdy.\",
+    \"triggerCondition\": \"PLAYER_ASKS_RELATIONSHIP\",
+    \"minTemplates\": 12
+  },
+  {
+    \"id\": \"MOTYWY\",
+    \"label\": \"Motywy\",
+    \"category\": \"INFORMACYJNE\",
+    \"description\": \"NPC odnosi sie do potencjalnych motywow — wlasnych lub cudzych. Czesto minimalizuje wlasne, wyolbrzymia cudze.\",
+    \"triggerCondition\": \"PLAYER_ASKS_MOTIVE\",
+    \"minTemplates\": 12
+  },
+  {
+    \"id\": \"REAKCJA_NA_DOWOD\",
+    \"label\": \"Reakcja na dowod\",
+    \"category\": \"SYSTEMOWE\",
+    \"description\": \"NPC reaguje na przedstawiony dowod. Reakcja zalezy od tego czy dowod go obciaza, czy kogos innego.\",
+    \"triggerCondition\": \"PLAYER_PRESENTS_EVIDENCE\",
+    \"minTemplates\": 15
+  },
+  {
+    \"id\": \"REAKCJA_NA_OSKARZENIE\",
+    \"label\": \"Reakcja na oskarzenie\",
+    \"category\": \"SYSTEMOWE\",
+    \"description\": \"NPC reaguje na bezposrednie oskarzenie o morderstwo.\",
+    \"triggerCondition\": \"PLAYER_ACCUSES\",
+    \"minTemplates\": 10
+  },
+  {
+    \"id\": \"REAKCJA_NA_PRESJE\",
+    \"label\": \"Reakcja na presje\",
+    \"category\": \"SYSTEMOWE\",
+    \"description\": \"NPC reaguje gdy gracz wywiera presje — powtarza pytania, grozi, manipuluje.\",
+    \"triggerCondition\": \"PLAYER_PRESSURES\",
+    \"minTemplates\": 10
+  },
+  {
+    \"id\": \"KLAMSTWA\",
+    \"label\": \"Klamstwa\",
+    \"category\": \"FABULARNE\",
+    \"description\": \"NPC swiadomie mowi nieprawde. Klamstwa maja wewnetrzna logike i moga byc zdemaskowane przez dowody lub zeznania innych.\",
+    \"triggerCondition\": \"NPC_LIES\",
+    \"minTemplates\": 12
+  },
+  {
+    \"id\": \"NERWOWOSC\",
+    \"label\": \"Nerwowosc\",
+    \"category\": \"EMOCJONALNE\",
+    \"description\": \"NPC okazuje zdenerwowanie — unika tematu, prosi o zakonczenie rozmowy, reaguje emocjonalnie.\",
+    \"triggerCondition\": \"NPC_STRESS_HIGH\",
+    \"minTemplates\": 10
+  },
+  {
+    \"id\": \"ODKRYCIE_SPRZECZNOSCI\",
+    \"label\": \"Odkrycie sprzecznosci\",
+    \"category\": \"FABULARNE\",
+    \"description\": \"NPC reaguje gdy gracz wskazuje sprzecznosc w jego zeznaniach.\",
+    \"triggerCondition\": \"PLAYER_FINDS_CONTRADICTION\",
+    \"minTemplates\": 10
+  },
+  {
+    \"id\": \"SEKRETY\",
+    \"label\": \"Sekrety\",
+    \"category\": \"FABULARNE\",
+    \"description\": \"NPC ujawnia lub odnosi sie do ukrywanych informacji — wlasnych lub cudzych.\",
+    \"triggerCondition\": \"TRUST_THRESHOLD_MET\",
+    \"minTemplates\": 10
+  }
+]
+"

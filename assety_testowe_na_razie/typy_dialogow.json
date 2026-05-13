@@ -1,0 +1,10 @@
+[
+  { "id": "WIE_COS",        "label": "Wie coś" },
+  { "id": "SLYSZALO_COS",   "label": "Słyszało coś" },
+  { "id": "WIDZIALO_COS",   "label": "Widziało coś" },
+  { "id": "PODEJRZEWA",     "label": "Podejrzewa kogoś" },
+  { "id": "MA_ALIBI",       "label": "Ma alibi" },
+  { "id": "KLAMIE",         "label": "Kłamie" },
+  { "id": "UKRYWA_COS",     "label": "Ukrywa coś" },
+  { "id": "NIE_WIE_NIC",    "label": "Nie wie nic" }
+]

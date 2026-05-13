@@ -1,0 +1,388 @@
+"{
+  \"npcId\": \"kamilKrakowski\",
+  \"name\": \"Kamil Krakowski\",
+  \"title\": \"Kamerdyner\",
+  \"speechProfile\": {
+    \"primaryStyle\": \"ELEGANCKI\",
+    \"secondaryStyle\": \"ZIMNY\",
+    \"defaultEmotion\": \"NEUTRALNY\",
+    \"speakingTraits\": [\"formalny\", \"precyzyjny\", \"powściągliwy\", \"dystansowy\", \"rzeczowy\"],
+    \"vocabulary\": \"wysoki\",
+    \"verbosity\": \"niska\",
+    \"quirks\": [
+      \"Zawsze mowi 'pan/pani', nigdy po imieniu\",
+      \"Unika bezposrednich odpowiedzi — woli aluzje\",
+      \"Pedantycznie poprawna polszczyzna\",
+      \"Dlugie pauzy przed odpowiedzia\",
+      \"Czasem odpowiada pytaniem na pytanie\"
+    ]
+  },
+  \"uniqueDialogues\": {
+    \"POWITANIA\": [
+      {
+        \"id\": \"kamil_pow_001\",
+        \"text\": \"Dobry wieczór. Jestem do dyspozycji, choć przyznam, że okoliczności są wyjątkowo nieprzyjemne.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"kamil_pow_002\",
+        \"text\": \"Witam. Proszę pytać — odpowiem na wszystko, co leży w granicach mojej wiedzy i kompetencji.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"kamil_pow_003\",
+        \"text\": \"Znowu pan. Mam nadzieję, że tym razem pańskie pytania będą bardziej precyzyjne.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"REPEATED_VISIT\"
+      },
+      {
+        \"id\": \"kamil_pow_004\",
+        \"text\": \"Proszę wejść. Herbata czy kawa? Nawet w takich okolicznościach standardy muszą być zachowane.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"kamil_pow_005\",
+        \"text\": \"Dwadzieścia dwa lata służby w tym domu, a nigdy nie sądziłem, że doczekam czegoś takiego.\",
+        \"emotion\": \"SMUTEK\",
+        \"context\": \"FIRST_MEETING\"
+      }
+    ],
+    \"ALIBI\": [
+      {
+        \"id\": \"kamil_ali_001\",
+        \"text\": \"Przez większość wieczoru pełniłem obowiązki w {room}. Przyjęcie nie obsługuje się samo.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 85
+      },
+      {
+        \"id\": \"kamil_ali_002\",
+        \"text\": \"O {time} sprawdzałem stan zastawy w {room}. Rutynowa czynność.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 90
+      },
+      {
+        \"id\": \"kamil_ali_003\",
+        \"text\": \"Między kolacją a deserem przeszedłem do {room}, aby przygotować tace. Nikt mi nie towarzyszył.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_ali_004\",
+        \"text\": \"Znam każdy kąt tej willi lepiej niż własne mieszkanie. Tamtego wieczoru poruszałem się po niej jak zawsze — cicho i sprawnie.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 95
+      },
+      {
+        \"id\": \"kamil_ali_005\",
+        \"text\": \"Przyznaję, że na kilkanaście minut zniknąłem z pola widzenia gości. Wychodziłem do {room} po dodatkowe kieliszki.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"kamil_ali_006\",
+        \"text\": \"Kamerdyner jest wszędzie i nigdzie. Taka natura tej pracy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      }
+    ],
+    \"OBSERWACJE_WZROKOWE\": [
+      {
+        \"id\": \"kamil_obs_w_001\",
+        \"text\": \"Zauważyłem, że {suspect} opuścił {room} mniej więcej kwadrans przed północą. Wyglądał na spiętego.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"kamil_obs_w_002\",
+        \"text\": \"{suspect} wymieniał coś z {victim} w {room}. Dokumenty, o ile mogłem dostrzec.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"kamil_obs_w_003\",
+        \"text\": \"Drzwi do {room} były uchylone, co jest niezwykłe. Pan Arciszewski zawsze dbał o zamknięte drzwi w gabinecie.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 90
+      },
+      {
+        \"id\": \"kamil_obs_w_004\",
+        \"text\": \"Serwowałem drinki i zauważyłem, że {suspect} rozlał na siebie wino. Tyle że to nie wyglądało na wino.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"kamil_obs_w_005\",
+        \"text\": \"Widziałem {suspect} w korytarzu prowadzącym do {room}. Szedł szybko, z pochyloną głową.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_obs_w_006\",
+        \"text\": \"Ktoś przestawił jeden z posążków w {room}. Zauważam takie rzeczy — to moja praca.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 95
+      },
+      {
+        \"id\": \"kamil_obs_w_007\",
+        \"text\": \"{suspect} rozmawiał przez telefon w {room}. Nie podsłuchiwałem, ale wyraz jego twarzy mówił wystarczająco dużo.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      }
+    ],
+    \"OBSERWACJE_SLUCHOWE\": [
+      {
+        \"id\": \"kamil_obs_s_001\",
+        \"text\": \"Słyszałem podniesione głosy z {room}. Jeden z nich należał niewątpliwie do pana Arciszewskiego.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_obs_s_002\",
+        \"text\": \"Około {time} usłyszałem trzaśnięcie drzwi. Wyraźne, zdecydowane. Z kierunku {room}.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"kamil_obs_s_003\",
+        \"text\": \"Kamerdyner słyszy więcej, niż ludzie sądzą. Ściany w tej willi nie są tak grube, jak się wydaje.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"kamil_obs_s_004\",
+        \"text\": \"{suspect} mówił do kogoś szeptem w {room}. Nie rozróżniłem słów, ale ton był nerwowy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"kamil_obs_s_005\",
+        \"text\": \"Klucz w zamku {room} przekręcił się dwukrotnie. O tej porze nikt nie powinien zamykać tego pokoju.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 85
+      }
+    ],
+    \"OPINIE\": [
+      {
+        \"id\": \"kamil_opi_001\",
+        \"text\": \"{suspect}? Służba nie komentuje gości. Ale gdybym miał... powiedziałbym, że to człowiek o nadmiernych ambicjach i zbyt małych skrupułach.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"kamil_opi_002\",
+        \"text\": \"Pan Arciszewski nie był łatwym pracodawcą. Ale nie był też złym człowiekiem. Przynajmniej nie wobec wszystkich.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_opi_003\",
+        \"text\": \"{suspect} zachowywał się tego wieczoru jak ktoś, kto wie, że coś się wydarzy. A może to moja nadinterpretacja.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 45
+      },
+      {
+        \"id\": \"kamil_opi_004\",
+        \"text\": \"W tym domu każdy ma swoją maskę. {suspect} po prostu nosił ją nieco krzywo.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"kamil_opi_005\",
+        \"text\": \"Przez dwadzieścia dwa lata nauczyłem się jednego: ludzie z pieniędzmi nie mają przyjaciół. Mają wspólników.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 90
+      }
+    ],
+    \"PODEJRZENIA\": [
+      {
+        \"id\": \"kamil_pod_001\",
+        \"text\": \"Nie jest moją rolą wskazywanie podejrzanych. Ale jeśli pan pyta... {suspect} miał tego wieczoru bardzo konkretny cel.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"kamil_pod_002\",
+        \"text\": \"Proszę zwrócić uwagę na to, kto miał klucz do {room}. Lista jest krótsza, niż pan myśli.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_pod_003\",
+        \"text\": \"Kamerdyner nie oskarża. Kamerdyner obserwuje. A to, co zaobserwowałem w przypadku {suspect}... jest niepokojące.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      }
+    ],
+    \"RELACJE\": [
+      {
+        \"id\": \"kamil_rel_001\",
+        \"text\": \"Służyłem rodzinie Arciszewskich dwadzieścia dwa lata. To więcej niż połowa mojego dorosłego życia. Czy to czyni mnie rodziną? Wątpię.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 95
+      },
+      {
+        \"id\": \"kamil_rel_002\",
+        \"text\": \"Pan Arciszewski traktował mnie jak... cenne narzędzie. Niezastąpione, ale wciąż narzędzie.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 85
+      },
+      {
+        \"id\": \"kamil_rel_003\",
+        \"text\": \"Nasza relacja opierała się na zaufaniu. Przynajmniej tak sądziłem do niedawna.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 70
+      }
+    ],
+    \"MOTYWY\": [
+      {
+        \"id\": \"kamil_mot_001\",
+        \"text\": \"Motyw? Dwadzieścia dwa lata bezwzględnej lojalności i ani słowa w testamencie. Czy to wystarczający motyw? Nie w moim przypadku.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"kamil_mot_002\",
+        \"text\": \"Gdybym miał zabijać każdego, kto mnie upokorzył, ta willa byłaby znacznie mniej zaludniona.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 90
+      }
+    ],
+    \"REAKCJA_NA_DOWOD\": [
+      {
+        \"id\": \"kamil_rnd_001\",
+        \"text\": \"Interesujące. Proszę mi powiedzieć, gdzie pan to znalazł. Z zawodowej ciekawości.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"kamil_rnd_002\",
+        \"text\": \"Ten przedmiot znajdował się w {room}. Wiem, bo ja go tam umieściłem. Na polecenie pana Arciszewskiego.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"kamil_rnd_003\",
+        \"text\": \"Nie zamierzam komentować czegoś, czego kontekstu nie znam. Panie detektywie, to pańska praca, nie moja.\",
+        \"emotion\": \"ZIMNY\"
+      }
+    ],
+    \"KLAMSTWA\": [
+      {
+        \"id\": \"kamil_klam_001\",
+        \"text\": \"Nie wiem nic o żadnym testamencie. Nie moja sprawa.\",
+        \"lieType\": \"UKRYWANIE_WIEDZY\",
+        \"contradictedBy\": [\"DOKUMENTY_TESTAMENTOWE\", \"SWIADEK_PRAWNIK\"]
+      },
+      {
+        \"id\": \"kamil_klam_002\",
+        \"text\": \"Nie wchodziłem do {room} od tygodni. Nie miałem powodu.\",
+        \"lieType\": \"FALSZYWE_ALIBI\",
+        \"contradictedBy\": [\"ODCISKI_PALCOW\", \"NAGRANIE_KAMERY\"]
+      },
+      {
+        \"id\": \"kamil_klam_003\",
+        \"text\": \"Moje relacje z panem Arciszewskim były nienaganne aż do końca.\",
+        \"lieType\": \"MINIMALIZACJA_KONFLIKTU\",
+        \"contradictedBy\": [\"SWIADEK_UPOKORZENIA\", \"ZEZNANIE_INNEGO_NPC\"]
+      }
+    ],
+    \"NERWOWOSC\": [
+      {
+        \"id\": \"kamil_ner_001\",
+        \"text\": \"Proszę wybaczyć, ale zaczynam mieć wrażenie, że ta rozmowa zmierza w kierunku, który mi się nie podoba.\",
+        \"emotion\": \"GNIEW\",
+        \"stressLevel\": \"MEDIUM\"
+      },
+      {
+        \"id\": \"kamil_ner_002\",
+        \"text\": \"Odpowiedziałem na pańskie pytania. Kilkakrotnie. Nie sądzę, żeby kolejne powtórzenie cokolwiek zmieniło.\",
+        \"emotion\": \"GNIEW\",
+        \"stressLevel\": \"HIGH\"
+      }
+    ],
+    \"ODKRYCIE_SPRZECZNOSCI\": [
+      {
+        \"id\": \"kamil_sprz_001\",
+        \"text\": \"Pominąłem pewne szczegóły. Celowo. Nie z powodów, o których pan myśli, lecz z pobudek... osobistych.\",
+        \"emotion\": \"POCZUCIE_WINY\",
+        \"responseType\": \"PARTIAL_ADMISSION\"
+      },
+      {
+        \"id\": \"kamil_sprz_002\",
+        \"text\": \"Dobrze. Ma pan rację — to się nie zgadza. Pozwolę sobie wyjaśnić, aczkolwiek pełna prawda jest bardziej skomplikowana, niż pan zakłada.\",
+        \"emotion\": \"REZYGNACJA\",
+        \"responseType\": \"FULL_REVEAL\"
+      }
+    ],
+    \"SEKRETY\": [
+      {
+        \"id\": \"kamil_sek_001\",
+        \"text\": \"Znam tę willę lepiej niż ktokolwiek. Łącznie z przejściami, o których pan Arciszewski nie informował gości.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"minTrust\": 35
+      },
+      {
+        \"id\": \"kamil_sek_002\",
+        \"text\": \"Widziałem dokumenty, których nie powinienem widzieć. Podpisywałem paczki, których zawartość budziła wątpliwości. Dwadzieścia dwa lata to długi czas na zbieranie wiedzy.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 45
+      },
+      {
+        \"id\": \"kamil_sek_003\",
+        \"text\": \"Sfałszowałem kiedyś podpis pana Arciszewskiego. On się dowiedział. Od tamtej pory trzymał mnie na krótkiej smyczy.\",
+        \"emotion\": \"POCZUCIE_WINY\",
+        \"minTrust\": 50
+      }
+    ],
+    \"REAKCJA_NA_OSKARZENIE\": [
+      {
+        \"id\": \"kamil_rno_001\",
+        \"text\": \"Proszę. Pański wybór. Ale jeśli aresztuje pan kamerdynera, prawdziwy morderca będzie miał czas na ucieczkę.\",
+        \"emotion\": \"ZIMNY\"
+      },
+      {
+        \"id\": \"kamil_rno_002\",
+        \"text\": \"Dwadzieścia dwa lata nienagannej służby, a pan stawia mi taki zarzut. Fascynujące.\",
+        \"emotion\": \"POGARDA\"
+      }
+    ],
+    \"REAKCJA_NA_PRESJE\": [
+      {
+        \"id\": \"kamil_rnp_001\",
+        \"text\": \"Proszę na mnie nie podnosić głosu. Nie jestem przyzwyczajony do takiego traktowania. A raczej — jestem, ale nie zamierzam tego dalej tolerować.\",
+        \"emotion\": \"GNIEW\"
+      },
+      {
+        \"id\": \"kamil_rnp_002\",
+        \"text\": \"Mogę siedzieć tutaj do rana. Moje odpowiedzi nie zmienią się od powtarzania pytań.\",
+        \"emotion\": \"NEUTRALNY\"
+      }
+    ]
+  },
+  \"personalFragments\": {
+    \"openers\": [
+      \"Jeśli pan pozwoli...\",
+      \"Z całym szacunkiem...\",
+      \"Jako osoba odpowiedzialna za dom...\",
+      \"Nie chciałbym się wymądrzać, ale...\",
+      \"Pozwolę sobie zauważyć...\",
+      \"Proszę mi wybaczyć bezpośredniość, ale...\"
+    ],
+    \"fillers\": [
+      \"...rzecz jasna...\",
+      \"...jak pan rozumie...\",
+      \"...o ile wolno mi to skomentować...\",
+      \"...w ramach moich kompetencji...\",
+      \"...nie mnie to oceniać, ale...\"
+    ],
+    \"closers\": [
+      \"Czy mogę jeszcze w czymś pomóc?\",
+      \"Będę w służbówce, gdyby pan potrzebował.\",
+      \"To wszystko, co mogę powiedzieć na ten temat.\",
+      \"Reszta nie leży w mojej gestii.\",
+      \"Proszę nie oczekiwać ode mnie więcej, niż mogę dać.\"
+    ]
+  }
+}
+"

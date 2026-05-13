@@ -1,0 +1,14 @@
+Jak to obsłużyć w kodzie (przykład w JS):
+code
+JavaScript
+function formatText(text, gender) {
+    // gender = 'M' lub 'F'
+    const regex = /\{([^|]+)\|([^}]+)\}/g;
+    return text.replace(regex, (match, mPart, fPart) => {
+        return gender === 'M' ? mPart : fPart;
+    });
+}
+
+// Przykład:
+// formatText("W czym mogę służyć {Panu|Pani}?", 'F') 
+// -> "W czym mogę służyć Pani?"

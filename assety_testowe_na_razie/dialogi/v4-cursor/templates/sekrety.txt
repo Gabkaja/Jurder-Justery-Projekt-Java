@@ -1,0 +1,115 @@
+"{
+  \"type\": \"SEKRETY\",
+  \"description\": \"Szablony zwiazane z sekretami — NPC ujawnia lub odnosi sie do ukrywanych informacji. Wymagaja wysokiego poziomu zaufania lub odpowiedniego dowodu.\",
+  \"templates\": [
+    {
+      \"id\": \"sek_001\",
+      \"template\": \"Jest coś, o czym nikt nie wie. Ale nie wiem, czy panu mogę zaufać.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 30,
+      \"requiresClue\": false,
+      \"revealType\": \"TEASE\",
+      \"tags\": [\"zapowiedz\", \"budowanie_zaufania\"]
+    },
+    {
+      \"id\": \"sek_002\",
+      \"template\": \"Powiem panu coś, co może zmienić bieg tego śledztwa. Ale potrzebuję gwarancji.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 40,
+      \"requiresClue\": false,
+      \"revealType\": \"CONDITIONAL\",
+      \"tags\": [\"negocjacje\", \"warunek\"]
+    },
+    {
+      \"id\": \"sek_003\",
+      \"template\": \"{victim} nie był tym, za kogo się podawał. Nie w tym domu.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": 20,
+      \"requiresClue\": false,
+      \"revealType\": \"PARTIAL\",
+      \"tags\": [\"ofiara\", \"demaskacja\"]
+    },
+    {
+      \"id\": \"sek_004\",
+      \"template\": \"Jest przejście, o którym mało kto wie. Łączy {room} z innym pomieszczeniem.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 35,
+      \"requiresClue\": false,
+      \"revealType\": \"LOCATION_SECRET\",
+      \"tags\": [\"lokacja\", \"ukryte_przejscie\"]
+    },
+    {
+      \"id\": \"sek_005\",
+      \"template\": \"W {room} jest coś, co {victim} chciał ukryć przed wszystkimi. Sprawdź za obrazem.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 40,
+      \"requiresClue\": false,
+      \"revealType\": \"CLUE_HINT\",
+      \"tags\": [\"wskazowka\", \"ukryty_przedmiot\"]
+    },
+    {
+      \"id\": \"sek_006\",
+      \"template\": \"{suspect} i {victim} mieli ze sobą coś, o czym oficjalnie nikt nie wie.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 25,
+      \"requiresClue\": false,
+      \"revealType\": \"RELATIONSHIP\",
+      \"tags\": [\"relacja\", \"tajna\"]
+    },
+    {
+      \"id\": \"sek_007\",
+      \"template\": \"Wiem, kto jeszcze miał klucz do {room}. I nie był to tylko {victim}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 30,
+      \"requiresClue\": false,
+      \"revealType\": \"ACCESS\",
+      \"tags\": [\"dostep\", \"klucz\"]
+    },
+    {
+      \"id\": \"sek_008\",
+      \"template\": \"{victim} prowadził podwójne życie. Dokumenty w sejfie to udowodnią.\",
+      \"emotion\": \"POGARDA\",
+      \"minTrust\": 35,
+      \"requiresClue\": false,
+      \"revealType\": \"MAJOR\",
+      \"tags\": [\"ofiara\", \"podwojne_zycie\"]
+    },
+    {
+      \"id\": \"sek_009\",
+      \"template\": \"Nie powinienem tego mówić... ale {suspect} był tu wcześniej niż twierdzi. Widziałem go.\",
+      \"emotion\": \"POCZUCIE_WINY\",
+      \"minTrust\": 25,
+      \"requiresClue\": false,
+      \"revealType\": \"TIMELINE\",
+      \"tags\": [\"chronologia\", \"klamstwo_innego\"]
+    },
+    {
+      \"id\": \"sek_010\",
+      \"template\": \"Ktoś w tym domu prał pieniądze. I to nie od wczoraj.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 30,
+      \"requiresClue\": false,
+      \"revealType\": \"FINANCIAL\",
+      \"tags\": [\"finanse\", \"przestepstwo\"]
+    },
+    {
+      \"id\": \"sek_011\",
+      \"template\": \"Tej nocy ktoś otworzył sejf. Zanim znaleźliśmy ciało. Wiem to, bo usłyszałem kod.\",
+      \"emotion\": \"STRACH\",
+      \"minTrust\": 40,
+      \"requiresClue\": false,
+      \"revealType\": \"CRITICAL\",
+      \"tags\": [\"sejf\", \"chronologia\"]
+    },
+    {
+      \"id\": \"sek_012\",
+      \"template\": \"Są zdjęcia. {victim} je trzymał jako polisę ubezpieczeniową. Wiem, gdzie są.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 45,
+      \"requiresClue\": false,
+      \"revealType\": \"EVIDENCE\",
+      \"tags\": [\"zdjecia\", \"szantaz\"]
+    }
+  ]
+}
+"

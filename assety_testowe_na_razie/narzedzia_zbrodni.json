@@ -1,0 +1,23 @@
+{
+  "byLocation": [
+    { "locationId": "przedsionek",  "locationName": "Przedsionek",  "weapons": ["Laska", "Wieszak", "Świecznik"] },
+    { "locationId": "salaBelowa",   "locationName": "Sala Balowa",   "weapons": ["Lina od kotary", "Rozbita butelka"] },
+    { "locationId": "biblioteka",   "locationName": "Biblioteka",    "weapons": ["Ciężka książka", "Posążek"] },
+    { "locationId": "kuchnia",      "locationName": "Kuchnia",       "weapons": ["Nóż kuchenny", "Tasak", "Trucizna"] },
+    { "locationId": "lazienka",     "locationName": "Łazienka",      "weapons": ["Żyletka", "Środki chemiczne", "Kabel od suszarki"] },
+    { "locationId": "ogrod",        "locationName": "Ogród",         "weapons": ["Łopata", "Grabie", "Sekator"] },
+    { "locationId": "jadalnia",     "locationName": "Jadalnia",      "weapons": ["Widelec do mięsa", "Zatrute wino"] },
+    { "locationId": "gabinet",      "locationName": "Gabinet",       "weapons": ["Pistolet", "Nożyk do listów", "Popielniczka"] },
+    { "locationId": "garaz",        "locationName": "Garaż",         "weapons": ["Klucz francuski", "Kanister", "Łańcuch"] },
+    { "locationId": "piwnica",      "locationName": "Piwnica",       "weapons": ["Młotek", "Lina", "Kilof"] },
+    { "locationId": "sypialnia",    "locationName": "Sypialnia",     "weapons": ["Poduszka", "Pasek", "Tabletki nasenne"] }
+  ],
+  "byType": [
+    { "type": "OSTRE",              "typeName": "Ostre",             "weapons": ["Nóż kuchenny", "Tasak", "Żyletka", "Sekator", "Nożyk do listów"] },
+    { "type": "TĘPE",               "typeName": "Tępe",              "weapons": ["Świecznik", "Ciężka książka", "Posążek", "Łopata", "Popielniczka", "Młotek"] },
+    { "type": "DUSZĄCE",            "typeName": "Duszące",           "weapons": ["Lina od kotary", "Kabel od suszarki", "Łańcuch", "Lina", "Poduszka", "Pasek"] },
+    { "type": "TRUJĄCE_CHEMICZNE",  "typeName": "Trujące/chemiczne", "weapons": ["Trucizna", "Środki chemiczne", "Zatrute wino", "Tabletki nasenne", "Kanister"] },
+    { "type": "MECHANICZNE",        "typeName": "Mechaniczne",       "weapons": ["Pistolet", "Klucz francuski", "Kilof"] },
+    { "type": "IMPROWIZOWANE",      "typeName": "Improwizowane",     "weapons": ["Laska", "Wieszak", "Rozbita butelka", "Grabie", "Widelec do mięsa"] }
+  ]
+}

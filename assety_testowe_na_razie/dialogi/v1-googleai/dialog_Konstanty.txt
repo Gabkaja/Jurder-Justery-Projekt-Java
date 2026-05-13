@@ -1,0 +1,30 @@
+{
+  "characterId": "konstantyKulczycki",
+  "speechStyle": "NORMAL",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "Mam sos na ogniu, więc streszczaj się {Pan|Pani}." },
+      { "minTrust": 0, "text": "Czego szukasz w kuchni? Tu się pracuje, a nie przesłuchuje." },
+      { "minTrust": 10, "text": "Chcesz {Pan|Pani} spróbować pieczeni? Nie? To po co głowę zawracasz?" }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Cały czas siedziałem w {room}. Kucharz nie zostawia swoich garnków." },
+      { "certainty": 100, "text": "W {room} byłem, przygotowywałem deser. Każdy z pomocników widział." },
+      { "certainty": 90, "text": "Byłem w {room}, wycierałem noże. To uspokaja." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 95, "text": "Widziałem {suspect} w {room}. Wyglądał{em|am}, jakby połknął{em|am} cytrynę." },
+      { "certainty": 70, "text": "Ktoś się kręcił przy wejściu do {room}. To był{by|aby} {suspect}." },
+      { "certainty": 100, "text": "{suspect} wyszedł{em|am} z {room} z brudnymi rękami. Dosłownie." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "To mój {weapon}! Kto go ukradł z kuchni?!" },
+      { "requiresClue": true, "text": "Taki {weapon} to marna broń. Tępy jak dowcipy {suspect}." },
+      { "requiresClue": true, "text": "Widziałem, jak {suspect} trzymał{em|am} to w {room}." }
+    ],
+    "NERWOWOSC": [
+      { "text": "Zaczynasz mi działać na nerwy. Wynocha z mojej kuchni!" },
+      { "text": "Pytasz mnie, jakbym to ja był na talerzu. Odczep się!" }
+    ]
+  }
+}

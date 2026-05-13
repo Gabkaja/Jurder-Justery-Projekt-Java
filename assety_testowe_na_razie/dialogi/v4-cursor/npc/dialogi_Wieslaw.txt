@@ -1,0 +1,353 @@
+"{
+  \"npcId\": \"wieslawWydra\",
+  \"name\": \"Wiesław Wydra\",
+  \"title\": \"Wspólnik\",
+  \"speechProfile\": {
+    \"primaryStyle\": \"GORZKI\",
+    \"secondaryStyle\": \"AGRESYWNY\",
+    \"defaultEmotion\": \"GNIEW\",
+    \"speakingTraits\": [\"cyniczny\", \"gorzki\", \"bezposredni\", \"zraniony\", \"nieufny\"],
+    \"vocabulary\": \"srednia\",
+    \"verbosity\": \"umiarkowana\",
+    \"quirks\": [
+      \"Mowi z zalem i ironia — widac, ze wiele przeszedl\",
+      \"Nie ufa nikomu — szczegolnie ludziom w garniturach\",
+      \"Odwoluje sie do pobytu w areszcie\",
+      \"Cyniczny humor jako mechanizm obronny\",
+      \"Zna brudne sekrety — i daje to do zrozumienia\"
+    ]
+  },
+  \"uniqueDialogues\": {
+    \"POWITANIA\": [
+      {
+        \"id\": \"wiesl_pow_001\",
+        \"text\": \"Przesłuchanie? Jasne. Nie moja pierwsza rozmowa z człowiekiem, który ma odznakę.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"wiesl_pow_002\",
+        \"text\": \"Arciszewski nie żyje. Powiem panu coś — nie jestem zaskoczony. Zdziwiony, ale nie zaskoczony.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"wiesl_pow_003\",
+        \"text\": \"Znowu pan. Nudzi się pan, czy szuka pan kozła ofiarnego? Bo jeśli drugie — jestem przyzwyczajony.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"REPEATED_VISIT\"
+      },
+      {
+        \"id\": \"wiesl_pow_004\",
+        \"text\": \"Pytaj pan. Nie mam nic do ukrycia. Wszystko, co miałem, zabrano mi dawno temu.\",
+        \"emotion\": \"REZYGNACJA\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"wiesl_pow_005\",
+        \"text\": \"Nie wchodziłem na tę imprezę przez przypadek. Ale o tym porozmawiamy, kiedy pan będzie gotowy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      }
+    ],
+    \"ALIBI\": [
+      {
+        \"id\": \"wiesl_ali_001\",
+        \"text\": \"Kręciłem się po {room}. Sam. Bez zaproszenia do saloniku dla VIPów — nie należę do tego klubu.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"wiesl_ali_002\",
+        \"text\": \"O {time} stałem w {room}. Piłem whisky, którą ukradłem z barku. Nie pytano, więc nie informowałem.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"wiesl_ali_003\",
+        \"text\": \"Nie mam świadków, bo nikt tu ze mną nie rozmawia. Byłem sam w {room}. Jak zwykle.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"wiesl_ali_004\",
+        \"text\": \"Przeszedłem do {room}, szukając Arciszewskiego. Chciałem z nim porozmawiać. Nie znalazłem go. A potem się okazało dlaczego.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"wiesl_ali_005\",
+        \"text\": \"Mój wieczór? Nuda, alkohol, ściany, które pamiętam z lepszych czasów. Byłem w {room}. Potem w innym. Potem usłyszałem krzyk.\",
+        \"emotion\": \"REZYGNACJA\",
+        \"certainty\": 55
+      }
+    ],
+    \"OBSERWACJE_WZROKOWE\": [
+      {
+        \"id\": \"wiesl_obs_w_001\",
+        \"text\": \"{suspect} poszedł do {room} około {time}. Wiem, bo go śledziłem wzrokiem. Stare nawyki.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"wiesl_obs_w_002\",
+        \"text\": \"Widziałem jak {suspect} chowa coś do kieszeni. Mam oko do takich ruchów — w areszcie uczysz się obserwować.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"wiesl_obs_w_003\",
+        \"text\": \"{suspect} rozmawiał z {victim} w {room}. Wyglądało to jak negocjacja — nie jak pogawędka przy winie.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"wiesl_obs_w_004\",
+        \"text\": \"Ktoś wszedł do {room} i wyszedł po pięciu minutach. Był blady. Nie rozpoznałem go — za daleko.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 35
+      },
+      {
+        \"id\": \"wiesl_obs_w_005\",
+        \"text\": \"Drzwi do gabinetu Arciszewskiego były otwarte. Ktoś tam był. Widziałem światło.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 60
+      }
+    ],
+    \"OBSERWACJE_SLUCHOWE\": [
+      {
+        \"id\": \"wiesl_obs_s_001\",
+        \"text\": \"Słyszałem, jak Arciszewski podnosi głos. Nie pierwszy raz. Ale tym razem ton był inny. Groźniejszy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"wiesl_obs_s_002\",
+        \"text\": \"Z {room} dobiegał hałas. Szuflady, papiery, może ktoś przeszukiwał pokój.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"wiesl_obs_s_003\",
+        \"text\": \"Ktoś powiedział: 'Nie zrobisz mi tego'. Nie wiem kto. Ale ton nie pozostawiał wątpliwości.\",
+        \"emotion\": \"STRACH\",
+        \"certainty\": 45
+      },
+      {
+        \"id\": \"wiesl_obs_s_004\",
+        \"text\": \"Usłyszałem trzask. Jeden. Krótki. Z kierunku {room}. Mogło to być cokolwiek. Ale teraz, po fakcie, mogę zgadywać.\",
+        \"emotion\": \"STRACH\",
+        \"certainty\": 50
+      }
+    ],
+    \"OPINIE\": [
+      {
+        \"id\": \"wiesl_opi_001\",
+        \"text\": \"Arciszewski? Człowiek, który zniszczył mi życie i poszedł na przyjęcie. Dosłownie. Na swoje własne przyjęcie.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 100
+      },
+      {
+        \"id\": \"wiesl_opi_002\",
+        \"text\": \"{suspect}? Kolejny człowiek, który korzystał z Arciszewskiego i udaje zaskoczonego. Znam ten typ.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"wiesl_opi_003\",
+        \"text\": \"Wszyscy tu udają, że go lubili. Ja przynajmniej jestem szczery — nienawidziłem go. Ale go nie zabiłem.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 90
+      },
+      {
+        \"id\": \"wiesl_opi_004\",
+        \"text\": \"{suspect} gra tę samą grę co Arciszewski. Uśmiech, uścisk dłoni, nóż za plecami.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 55
+      }
+    ],
+    \"PODEJRZENIA\": [
+      {
+        \"id\": \"wiesl_pod_001\",
+        \"text\": \"Kto go zabił? Ktoś, komu Arciszewski zrobił to samo co mnie. Tyle że ta osoba miała mniej cierpliwości.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"wiesl_pod_002\",
+        \"text\": \"{suspect} miał powód. I okazję. I torbę, w której mogło być cokolwiek. Tak jak ja — tyle że ja swoją torbę pokazuję.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"wiesl_pod_003\",
+        \"text\": \"Niech pan sprawdzi, kto ostatnio przeglądał dokumenty w gabinecie. Bo ktoś tam był. Przed morderstwem.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      }
+    ],
+    \"RELACJE\": [
+      {
+        \"id\": \"wiesl_rel_001\",
+        \"text\": \"Byłem jego człowiekiem. Wykonywałem brudną robotę. Kiedy się posypało, poszedłem siedzieć. On — na kolację do ambasady.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 95
+      },
+      {
+        \"id\": \"wiesl_rel_002\",
+        \"text\": \"Osiemnaście miesięcy w areszcie za coś, co było jego pomysłem. Moje małżeństwo, mieszkanie, nazwisko — wszystko przepadło.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 100
+      },
+      {
+        \"id\": \"wiesl_rel_003\",
+        \"text\": \"Obiecał mi zabezpieczenie finansowe po wyjściu. Nie dostałem nawet telefonu. Cztery lata milczenia.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 95
+      }
+    ],
+    \"MOTYWY\": [
+      {
+        \"id\": \"wiesl_mot_001\",
+        \"text\": \"Czy miałem motyw? Proszę pana — miałem motyw, okazję i osiemnaście miesięcy odosobnienia, żeby to zaplanować. Ale nie zrobiłem tego.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 90
+      },
+      {
+        \"id\": \"wiesl_mot_002\",
+        \"text\": \"Chciałem odzyskać dokumenty. Nie życie Arciszewskiego. Dokumenty, które mogą oczyścić moje nazwisko. To wszystko.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      }
+    ],
+    \"REAKCJA_NA_DOWOD\": [
+      {
+        \"id\": \"wiesl_rnd_001\",
+        \"text\": \"Widzę, co pan znalazł. I tak — wiem, co to jest. Ale to nie zmienia mojej wersji. Wprost przeciwnie — ją potwierdza.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"wiesl_rnd_002\",
+        \"text\": \"Niech pan się nie boi tego dotknąć. To tylko papier. Ale papier, który może spalić kilka karier.\",
+        \"emotion\": \"POGARDA\"
+      }
+    ],
+    \"KLAMSTWA\": [
+      {
+        \"id\": \"wiesl_klam_001\",
+        \"text\": \"Nie przyniosłem ze sobą niczego. Przyszedłem z pustymi rękami.\",
+        \"lieType\": \"UKRYWANIE_PRZEDMIOTU\",
+        \"contradictedBy\": [\"TORBA_ZNALEZIONA\", \"SWIADEK_WIDZIAL_TORBE\"]
+      },
+      {
+        \"id\": \"wiesl_klam_002\",
+        \"text\": \"Nie szukałem Arciszewskiego. Nie miałem z nim żadnej sprawy do załatwienia tego wieczoru.\",
+        \"lieType\": \"UKRYWANIE_CELU\",
+        \"contradictedBy\": [\"ZEZNANIE_OCHRONIARZA\", \"WIADOMOSC_SMS\"]
+      },
+      {
+        \"id\": \"wiesl_klam_003\",
+        \"text\": \"Nie mam żadnych kopii dokumentów Arciszewskiego. Wszystko zostało w sądzie.\",
+        \"lieType\": \"UKRYWANIE_DOWODU\",
+        \"contradictedBy\": [\"PENDRIVE\", \"KOPIE_W_TORBIE\"]
+      }
+    ],
+    \"NERWOWOSC\": [
+      {
+        \"id\": \"wiesl_ner_001\",
+        \"text\": \"Myśli pan, że mnie to rusza? Siedziałem w areszcie osiemnaście miesięcy. To jest piknik.\",
+        \"emotion\": \"POGARDA\",
+        \"stressLevel\": \"MEDIUM\"
+      },
+      {
+        \"id\": \"wiesl_ner_002\",
+        \"text\": \"Dobrze, już dobrze. Nie lubię, kiedy ktoś zadaje te same pytania trzy razy. To mi przypomina gorsze czasy.\",
+        \"emotion\": \"GNIEW\",
+        \"stressLevel\": \"HIGH\"
+      }
+    ],
+    \"ODKRYCIE_SPRZECZNOSCI\": [
+      {
+        \"id\": \"wiesl_sprz_001\",
+        \"text\": \"Złapałeś mnie na kłamstwie? Brawo. Ale w moim świecie kłamstwo to strategia przetrwania, nie zbrodnia.\",
+        \"emotion\": \"POGARDA\",
+        \"responseType\": \"ADMISSION\"
+      },
+      {
+        \"id\": \"wiesl_sprz_002\",
+        \"text\": \"Okej. Nie powiedziałem całej prawdy. Bo całą prawdę zostawiam sobie na wypadek, gdybym potrzebował karty przetargowej.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"responseType\": \"PARTIAL_ADMISSION\"
+      }
+    ],
+    \"SEKRETY\": [
+      {
+        \"id\": \"wiesl_sek_001\",
+        \"text\": \"Mam pendrive'a. Schowanego poza Krakowem. Na nim jest wystarczająco dużo, żeby wysadzić w powietrze kilka karier. Łącznie z karierą martwego człowieka.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"minTrust\": 40
+      },
+      {
+        \"id\": \"wiesl_sek_002\",
+        \"text\": \"Wiem, co Arciszewski robił z pieniędzmi fundacji. Wiem, gdzie szły — i do kogo wracały. Chce pan usłyszeć?\",
+        \"emotion\": \"NEUTRALNY\",
+        \"minTrust\": 45
+      },
+      {
+        \"id\": \"wiesl_sek_003\",
+        \"text\": \"W mojej torbie są rzeczy, których nie powinienem mieć na przyjęciu. Ale przyszedłem tu po dokumenty, nie po krew.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 50
+      }
+    ],
+    \"REAKCJA_NA_OSKARZENIE\": [
+      {
+        \"id\": \"wiesl_rno_001\",
+        \"text\": \"Morderca? Ja? Spędziłem osiemnaście miesięcy w areszcie za cudze grzechy. Myśli pan, że chcę tam wrócić?\",
+        \"emotion\": \"GNIEW\"
+      },
+      {
+        \"id\": \"wiesl_rno_002\",
+        \"text\": \"Oczywiście. Były więzień, bez pieniędzy, bez reputacji — idealny kozioł ofiarny. Jak zwykle.\",
+        \"emotion\": \"POGARDA\"
+      }
+    ],
+    \"REAKCJA_NA_PRESJE\": [
+      {
+        \"id\": \"wiesl_rnp_001\",
+        \"text\": \"Straszysz mnie? Siedziałem w celi z ludźmi, którzy naprawdę potrafią straszyć. Pan jest amatorem.\",
+        \"emotion\": \"POGARDA\"
+      },
+      {
+        \"id\": \"wiesl_rnp_002\",
+        \"text\": \"Chce pan prawdy? To proszę: prawda jest taka, że każdy w tym domu kłamie. Łącznie ze mną. Ale ja kłamię mniejszą skalę.\",
+        \"emotion\": \"REZYGNACJA\"
+      }
+    ]
+  },
+  \"personalFragments\": {
+    \"openers\": [
+      \"Niech zgadnę —\",
+      \"Oczywiście, bo...\",
+      \"A kogo to obchodzi?\",
+      \"W areszcie mówili mi tak —\",
+      \"Powiem panu coś, czego nikt tu nie powie:\",
+      \"Skoro już pytasz...\"
+    ],
+    \"fillers\": [
+      \"...jak można się było spodziewać...\",
+      \"...bo tak to już jest...\",
+      \"...a kogo to obchodzi...\",
+      \"...jak zwykle zresztą...\",
+      \"...co pewnie nikogo nie dziwi...\"
+    ],
+    \"closers\": [
+      \"...ale kogo to obchodzi.\",
+      \"...jak zwykle.\",
+      \"...nie że to cokolwiek zmieni.\",
+      \"...i tyle w tym temacie. Nie mam zamiaru się powtarzać.\",
+      \"...ale to moje problemy, nie pańskie.\"
+    ]
+  }
+}
+"

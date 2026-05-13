@@ -1,0 +1,123 @@
+"{
+  \"levels\": [
+    {
+      \"id\": \"PEWNY\",
+      \"range\": [85, 100],
+      \"label\": \"Pewny\",
+      \"description\": \"NPC jest przekonany o tym co mowi. Zdania twierdzace, bez wahaania.\",
+      \"prefixModifiers\": [
+        \"Na pewno\",
+        \"Jestem tego pewien —\",
+        \"Bez wątpienia\",
+        \"Widziałem to na własne oczy —\",
+        \"Mogę przysiąc, że\",
+        \"Z całą pewnością\",
+        \"Absolutnie —\",
+        \"Nie mam co do tego żadnych wątpliwości:\"
+      ],
+      \"suffixModifiers\": [
+        \"— jestem tego absolutnie pewien.\",
+        \"— nie mam co do tego wątpliwości.\",
+        \"— na sto procent.\",
+        \"— mogę to potwierdzić.\",
+        \"— ręczę za to.\",
+        \"— pamiętam to doskonale.\"
+      ]
+    },
+    {
+      \"id\": \"RACZEJ_PEWNY\",
+      \"range\": [60, 84],
+      \"label\": \"Raczej pewny\",
+      \"description\": \"NPC jest w miare pewny, ale zostawia margines bledu.\",
+      \"prefixModifiers\": [
+        \"Raczej jestem pewien, że\",
+        \"O ile dobrze pamiętam,\",
+        \"Prawie na pewno\",
+        \"Z tego co wiem,\",
+        \"Jestem niemal pewien, że\",
+        \"Wygląda na to, że\",
+        \"Sądzę, że\"
+      ],
+      \"suffixModifiers\": [
+        \"— przynajmniej tak to pamiętam.\",
+        \"— choć nie przysiągłbym.\",
+        \"— ale mogę się mylić co do szczegółów.\",
+        \"— jestem tego niemal pewien.\",
+        \"— chociaż nie dam sobie ręki uciąć.\"
+      ]
+    },
+    {
+      \"id\": \"NIEPEWNY\",
+      \"range\": [35, 59],
+      \"label\": \"Niepewny\",
+      \"description\": \"NPC nie jest pewny. Moze miec racje, moze nie. Wahanie w glosie.\",
+      \"prefixModifiers\": [
+        \"Chyba\",
+        \"Wydaje mi się, że\",
+        \"Nie jestem pewien, ale\",
+        \"Być może\",
+        \"Możliwe, że\",
+        \"Nie przysięgnę, ale chyba\",
+        \"O ile się nie mylę,\"
+      ],
+      \"suffixModifiers\": [
+        \"— ale nie jestem pewien.\",
+        \"— chyba.\",
+        \"— choć mogę się mylić.\",
+        \"— ale proszę tego nie traktować jako fakt.\",
+        \"— nie wiem na pewno.\",
+        \"— to tylko moje wrażenie.\"
+      ]
+    },
+    {
+      \"id\": \"WATPLIWY\",
+      \"range\": [15, 34],
+      \"label\": \"Watpliwy\",
+      \"description\": \"NPC ma duze watpliwosci. Informacja moze byc calkowicie bledna.\",
+      \"prefixModifiers\": [
+        \"Mogło mi się wydawać, ale\",
+        \"Nie chcę nikogo oskarżać, ale chyba\",
+        \"Bardzo mgliście pamiętam, że\",
+        \"To było ciemno i nie jestem pewien, ale\",
+        \"Ledwie to pamiętam —\",
+        \"Nie postawiłbym na to pieniędzy, ale\"
+      ],
+      \"suffixModifiers\": [
+        \"— ale to naprawdę mogło mi się przywidzieć.\",
+        \"— chociaż mogę to sobie wymyślać.\",
+        \"— ale jest równie prawdopodobne, że się mylę.\",
+        \"— nie wiem, czy to wiarygodne.\",
+        \"— ale pamięć mnie ostatnio zawodzi.\"
+      ]
+    },
+    {
+      \"id\": \"SPEKULACJA\",
+      \"range\": [0, 14],
+      \"label\": \"Spekulacja\",
+      \"description\": \"NPC zgaduje, spekuluje, powtarza plotki. Zerowa pewnosc.\",
+      \"prefixModifiers\": [
+        \"To tylko plotka, ale\",
+        \"Ktoś mi mówił, że\",
+        \"Nie wiem, czy to prawda, ale słyszałem, że\",
+        \"To pewnie bzdura, ale\",
+        \"Nie mam na to żadnego dowodu, ale\",
+        \"Ludzie mówią, że\"
+      ],
+      \"suffixModifiers\": [
+        \"— ale to pewnie kompletna bzdura.\",
+        \"— chociaż nie wiem, skąd to się wzięło.\",
+        \"— proszę tego nie brać na poważnie.\",
+        \"— to raczej plotka niż fakt.\",
+        \"— ale kto wie, może coś w tym jest.\"
+      ]
+    }
+  ],
+  \"certaintyFactors\": {
+    \"timeOfDay\": \"Im pozniej w nocy, tym nizszy poziom pewnosci obserwacji.\",
+    \"lighting\": \"Ciemne pomieszczenia obnizaja pewnosc obserwacji wzrokowych.\",
+    \"alcohol\": \"Alkohol obniza pewnosc wszystkich obserwacji.\",
+    \"emotionalState\": \"Silne emocje obnizaja pewnosc ale zwiekszaja szczegolowosc.\",
+    \"personalBias\": \"Uprzedzenia wobec osoby zwiekszaja skrajnosc ocen.\"
+  }
+}
+"

@@ -1,0 +1,97 @@
+"{
+  \"emotions\": [
+    {
+      \"id\": \"NEUTRALNY\",
+      \"label\": \"Neutralny\",
+      \"description\": \"Brak wyraznej emocji. NPC mowi rzeczowo, bez zabarwienia emocjonalnego.\",
+      \"intensityRange\": [0, 30],
+      \"bodyLanguage\": [\"spokojny wyraz twarzy\", \"rece zlaczone\", \"kontakt wzrokowy\"],
+      \"voiceModifiers\": [\"rowny ton\", \"umiarkowane tempo\"]
+    },
+    {
+      \"id\": \"STRACH\",
+      \"label\": \"Strach\",
+      \"description\": \"NPC boi sie — o siebie, o ujawnienie sekretu, o konsekwencje.\",
+      \"intensityRange\": [30, 100],
+      \"bodyLanguage\": [\"rozszerzone zrenice\", \"cofniecie sie\", \"nerwowe ruchy rak\"],
+      \"voiceModifiers\": [\"drżący głos\", \"przyspieszony oddech\", \"cichszy ton\"]
+    },
+    {
+      \"id\": \"GNIEW\",
+      \"label\": \"Gniew\",
+      \"description\": \"NPC jest zly — na gracza, na sytuacje, na inna postac.\",
+      \"intensityRange\": [30, 100],
+      \"bodyLanguage\": [\"zaciśnięte szczęki\", \"nachylenie do przodu\", \"zmrużone oczy\"],
+      \"voiceModifiers\": [\"podniesiony głos\", \"szybkie tempo\", \"ostre słowa\"]
+    },
+    {
+      \"id\": \"SMUTEK\",
+      \"label\": \"Smutek\",
+      \"description\": \"NPC jest zasmucony — smiercia ofiary, wlasna sytuacja, wspomnieniami.\",
+      \"intensityRange\": [20, 80],
+      \"bodyLanguage\": [\"opuszczony wzrok\", \"spowolnione ruchy\", \"westchnienie\"],
+      \"voiceModifiers\": [\"cichy głos\", \"wolne tempo\", \"pauzy\"]
+    },
+    {
+      \"id\": \"PANIKA\",
+      \"label\": \"Panika\",
+      \"description\": \"NPC traci kontrole — czuje sie osaczony, boi sie aresztowania.\",
+      \"intensityRange\": [70, 100],
+      \"bodyLanguage\": [\"chaotyczne ruchy\", \"cofanie się\", \"rozglądanie się\"],
+      \"voiceModifiers\": [\"piskliwy głos\", \"urywane zdania\", \"szybkie mówienie\"]
+    },
+    {
+      \"id\": \"POGARDA\",
+      \"label\": \"Pogarda\",
+      \"description\": \"NPC patrzy z gory — na gracza, na pytanie, na inna postac.\",
+      \"intensityRange\": [20, 80],
+      \"bodyLanguage\": [\"uniesiony podbródek\", \"zmrużone oczy\", \"skrzyżowane ramiona\"],
+      \"voiceModifiers\": [\"ironiczny ton\", \"przeciąganie samogłosek\", \"powolne tempo\"]
+    },
+    {
+      \"id\": \"REZYGNACJA\",
+      \"label\": \"Rezygnacja\",
+      \"description\": \"NPC poddaje sie — nie widzi sensu w dalszym ukrywaniu, jest zmeczony.\",
+      \"intensityRange\": [40, 90],
+      \"bodyLanguage\": [\"opadnięte ramiona\", \"głęboki oddech\", \"zamknięcie oczu\"],
+      \"voiceModifiers\": [\"monotonny głos\", \"wolne tempo\", \"cisza przed odpowiedzią\"]
+    },
+    {
+      \"id\": \"PODEJRZLIWOSC\",
+      \"label\": \"Podejrzliwosc\",
+      \"description\": \"NPC nie ufa graczowi — bada jego intencje, odpowiada pytaniem na pytanie.\",
+      \"intensityRange\": [20, 70],
+      \"bodyLanguage\": [\"zmrużone oczy\", \"odchylenie do tyłu\", \"skrzyżowane ramiona\"],
+      \"voiceModifiers\": [\"wolne, ostrożne mówienie\", \"intonacja pytająca\", \"pauzy przed odpowiedzią\"]
+    },
+    {
+      \"id\": \"ZASKOCZENIE\",
+      \"label\": \"Zaskoczenie\",
+      \"description\": \"NPC jest zaskoczony informacja, dowodem lub pytaniem.\",
+      \"intensityRange\": [30, 90],
+      \"bodyLanguage\": [\"cofnięcie głowy\", \"rozszerzone oczy\", \"otwarte usta\"],
+      \"voiceModifiers\": [\"nagłe zatrzymanie\", \"podniesiony ton\", \"szybka odpowiedź\"]
+    },
+    {
+      \"id\": \"POCZUCIE_WINY\",
+      \"label\": \"Poczucie winy\",
+      \"description\": \"NPC czuje sie winny — niekoniecznie morderstwa, ale czegokolwiek co ukrywa.\",
+      \"intensityRange\": [20, 80],
+      \"bodyLanguage\": [\"unikanie wzroku\", \"dotykanie twarzy\", \"wiercenie się\"],
+      \"voiceModifiers\": [\"cichy głos\", \"wahanie\", \"niedokończone zdania\"]
+    }
+  ],
+  \"emotionTransitions\": {
+    \"NEUTRALNY\": [\"STRACH\", \"GNIEW\", \"PODEJRZLIWOSC\", \"ZASKOCZENIE\"],
+    \"STRACH\": [\"PANIKA\", \"REZYGNACJA\", \"GNIEW\"],
+    \"GNIEW\": [\"POGARDA\", \"REZYGNACJA\", \"PANIKA\"],
+    \"SMUTEK\": [\"REZYGNACJA\", \"GNIEW\", \"POCZUCIE_WINY\"],
+    \"PANIKA\": [\"REZYGNACJA\", \"GNIEW\"],
+    \"POGARDA\": [\"GNIEW\", \"ZIMNY\"],
+    \"REZYGNACJA\": [\"SMUTEK\", \"NEUTRALNY\"],
+    \"PODEJRZLIWOSC\": [\"GNIEW\", \"STRACH\", \"POGARDA\"],
+    \"ZASKOCZENIE\": [\"STRACH\", \"GNIEW\", \"PANIKA\"],
+    \"POCZUCIE_WINY\": [\"STRACH\", \"REZYGNACJA\", \"SMUTEK\"]
+  }
+}
+"

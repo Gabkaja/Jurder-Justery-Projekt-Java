@@ -1,0 +1,404 @@
+{
+  "npcId": "konstantyKulczycki",
+  "npcName": "Konstanty Kulczycki",
+  "speechStyle": "AGGRESSIVE",
+  "defaultEmotion": "IRRITATED",
+
+  "fragments": {
+    "openers": [
+      "Słuchaj pan,",
+      "Powiem prosto z mostu:",
+      "Nie mam czasu na owijanie w bawełnę —",
+      "Trzydzieści lat w kuchni nauczyło mnie jednego:",
+      "Nie jestem dyplomatą i nie zamierzam nim być."
+    ],
+    "certaintyMarkers": {
+      "high":   ["Na sto procent.", "Ręczę za to głową.", "Widziałem na własne oczy, nie mam wątpliwości."],
+      "medium": ["Mniej więcej.", "Zdaje mi się.", "Chyba tak, choć nie patrzyłem na zegarek."],
+      "low":    ["Mogę się mylić.", "Nie byłem wtedy skupiony.", "Gdzieś mi się kręciło po głowie, że"]
+    },
+    "closers": [
+      "I tyle.",
+      "Koniec, kropka.",
+      "Tak to widziałem i przy tym stoję.",
+      "Nie mam nic więcej do dodania.",
+      "Jak chcesz to sprawdzić — sprawdzaj. Będę tu."
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "No to pytaj. Mam ziemniaki do obrania i nieobrane się nie obrabiają.",
+          "emotion": "IRRITATED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Policja już mnie miała. Powiedziałem co wiedziałem. Jeśli chcesz więcej — pytaj, ale krótko.",
+          "emotion": "IMPATIENT",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Okropna sprawa. I co? Kelner gotuje, goście giną. Cały wieczór do niczego.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Słuchaj pan — ja tutaj pracuję. Chcesz gadać, gadamy. Ale nie będę stał tu do rana.",
+          "emotion": "BLUNT",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Byłem w kuchni. Cały czas. To jest moje miejsce pracy, nie salony.",
+          "emotion": "FIRM",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Kuchnia, piwnica, znowu kuchnia. Mam tam wszystko. Po co miałbym gdziekolwiek łazić?",
+          "emotion": "BLUNT",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Około {time} wychodziłem do ogrodu po chwili oddechu. Pięć minut, może dziesięć. Potem z powrotem.",
+          "emotion": "IRRITATED",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Masz świadków? Nie? Bo ja nie. Nikt nie patrzy na kucharza kiedy gotuje. To mnie ratuje albo gubi.",
+          "emotion": "RESIGNED",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałem {suspect} koło {room}. Wyglądał jak ktoś, kto nie powinien tam być.",
+          "emotion": "BLUNT",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Przez okno kuchni widać sporo. Widziałem {suspect} — chodził tam i z powrotem jakby coś planował.",
+          "emotion": "OBSERVANT",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś wchodził do {room}. Nie widziałem kto, ale drzwi były za chwilę zamknięte na klucz. Słyszałem klik.",
+          "emotion": "CERTAIN",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mijałem {suspect} na korytarzu. Nic nie mówił. Normalnie przynajmniej kiwa głową — tamtej nocy nie.",
+          "emotion": "SUSPICIOUS",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Kłótnia. Dochodziła z {room}. Głos był jak Andrzeja — ale wkurwiony, nie normalnie wyniosły.",
+          "emotion": "BLUNT",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Słyszałem coś tłuczonego. Może szklankę, może coś cięższego. Z kierunku {room}.",
+          "emotion": "SERIOUS",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Głosy. Dwa albo trzy. Nie rozumiałem słów — za dużo hałasu z kuchni. Ale intonacja nie była przyjazna.",
+          "emotion": "IRRITATED",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nic nie słyszałem konkretnego. Za dużo się działo w kuchni żebym miał słuchać ścian.",
+          "emotion": "BLUNT",
+          "certainty": 30,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "{suspect}? Nie podoba mi się ten typ. Ale to jest moje prywatne zdanie i nie płacą mi za opinie.",
+          "emotion": "BLUNT",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Arciszewski lubił trzymać ludzi za gardło. {suspect} nie był wyjątkiem. Wiedziałem to.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} i {victim} — między nimi coś było. Nie moja sprawa, ale widziałem jak na siebie patrzyli.",
+          "emotion": "OBSERVANT",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam do {suspect} szacunek albo go nie mam — zależy od dnia. Tej nocy go nie miałem.",
+          "emotion": "IRRITATED",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Moim zdaniem to {suspect}. Mówię wprost bo tak mam.",
+          "emotion": "BLUNT",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym miał wskazać jedną osobę — wskazałbym i nie owijał w bawełnę. {suspect}.",
+          "emotion": "DIRECT",
+          "certainty": 60,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Kilka osób miało powody. Ale jeden miał szczególnie konkretny. Powiem ci kto — jak mi powiesz, że to poufne.",
+          "emotion": "CAUTIOUS",
+          "certainty": 80,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Nie wiem kto to zrobił. Ale wiem kto nie opłakuje. I to jest dobry punkt startowy.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Skąd to wziąłeś? To było w mojej kuchni.",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Znam to. I nie zamierzam udawać, że nie.",
+          "emotion": "FIRM",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To niczego nie dowodzi sam przez się.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Widziałem to wcześniej. Nie pytałem co to jest. Nie moja rola pytać.",
+          "emotion": "EVASIVE",
+          "certainty": 80,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Przez całą noc byłem w kuchni. Ani kroku dalej.",
+          "emotion": "FIRM",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie obchodziły mnie zaległe płatności. To kwestia zawodowa, nie osobista.",
+          "emotion": "CONTROLLED",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie miałem żadnej kłótni z ofiarą. Przynajmniej nie tej nocy.",
+          "emotion": "BLUNT",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie wiem co było w tych potrawach specjalnych. Gotowałem to co mi powiedziano. Tyle.",
+          "emotion": "EVASIVE",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Dobra, wystarczy. Powiedziałem co wiedziałem.",
+          "emotion": "AGITATED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Znowu to samo pytanie? Słyszałeś odpowiedź za pierwszym razem?",
+          "emotion": "IRRITATED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie lubię jak ktoś mnie naciska. Efekt jest odwrotny do zamierzonego.",
+          "emotion": "AGGRESSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Mam tu robotę. Jak chcesz rozmawiać — jutro. Jak chcesz zeznań — jest policja.",
+          "emotion": "BLUNT",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "No dobra! Wyszedłem z kuchni. Raz. Na dziesięć minut. Zadowolony?",
+          "emotion": "EXPLOSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Skłamałem w jednej rzeczy. Ale tylko żeby nie komplikować. Nie dlatego, że coś zrobiłem.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Tak, byłem blisko {room}. Ale to nie znaczy, że byłem w środku.",
+          "emotion": "FIRM",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Przepraszam. Rzadko to mówię, ale — przepraszam. Nie byłem szczery.",
+          "emotion": "RESIGNED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "Ja?! Słuchaj — gdybym chciał kogoś uśmiercić, to bym mu po prostu nie zapłacił. Jak on mnie.",
+          "emotion": "ANGRY",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Trzydzieści lat karmo ludziom. Nigdy nikt nie wyszedł z mojej kuchni ranny. To moja reputacja.",
+          "emotion": "INSULTED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Miałem powód? Tak. Ale każdy kucharz ma powody żeby kogoś nienawidzić. To jeszcze nie zbrodnia.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Powiedz mi kto to według ciebie zrobił. I dlaczego. Bo słucham — ale chcę konkrety, nie sugestie.",
+          "emotion": "AGGRESSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}

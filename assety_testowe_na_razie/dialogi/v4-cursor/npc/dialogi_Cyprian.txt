@@ -1,0 +1,353 @@
+"{
+  \"npcId\": \"cyprianCzerwinski\",
+  \"name\": \"Cyprian Czerwiński\",
+  \"title\": \"Celebryta\",
+  \"speechProfile\": {
+    \"primaryStyle\": \"SWOBODNY\",
+    \"secondaryStyle\": \"NERWOWY\",
+    \"defaultEmotion\": \"NEUTRALNY\",
+    \"speakingTraits\": [\"potoczny\", \"chaotyczny\", \"chwiejny\", \"charyzmatyczny\", \"niepewny_pod_fasadą\"],
+    \"vocabulary\": \"srednia\",
+    \"verbosity\": \"wysoka\",
+    \"quirks\": [
+      \"Mowi duzo, ale niewiele konkretnego\",
+      \"Uzywa slangowych zwrotow i anglicyzmow\",
+      \"Probuje byc zaprzyjazniony z kazdym\",
+      \"Pod presja traci swobode i zaczyna sie jąkac\",
+      \"Czesto odwoluje sie do social mediow i publicznego wizerunku\"
+    ]
+  },
+  \"uniqueDialogues\": {
+    \"POWITANIA\": [
+      {
+        \"id\": \"cypr_pow_001\",
+        \"text\": \"O, pan detektyw. Okej, okej, jestem do dyspozycji. Serio, cokolwiek pan potrzebuje.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"cypr_pow_002\",
+        \"text\": \"Wie pan, co jest najgorsze? Że cały wieczór nagrywałem stories, a teraz żałuję, że nie nagrałem więcej.\",
+        \"emotion\": \"SMUTEK\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"cypr_pow_003\",
+        \"text\": \"Znowu pan? Słuchaj, nie mam nic nowego. Chyba że chce pan mnie zasubskrybować — tam mam więcej contentu.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"REPEATED_VISIT\"
+      },
+      {
+        \"id\": \"cypr_pow_004\",
+        \"text\": \"To jest... surrealistyczne. Przyjęcie roku zamienia się w scenariusz do true crime'a. Nieprawdopodobne.\",
+        \"emotion\": \"ZASKOCZENIE\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"cypr_pow_005\",
+        \"text\": \"Proszę, proszę. Pytaj pan. Ale uprzedzam — nie jestem dobry w byciu przesłuchiwanym. Zwykle to ja zadaję pytania.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      }
+    ],
+    \"ALIBI\": [
+      {
+        \"id\": \"cypr_ali_001\",
+        \"text\": \"Byłem w {room}, robiłem zdjęcia dekoracji. Serio, mam je na telefonie — mogę pokazać timestampy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"cypr_ali_002\",
+        \"text\": \"Okej, więc... przez większość wieczoru kręciłem się między {room} a resztą. Networking, wie pan. Tak się żyje w tej branży.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"cypr_ali_003\",
+        \"text\": \"O {time}? Hmm... chyba gadałem z kimś przy barze. Albo w {room}. Nie, czekaj — przy barze. Tak, przy barze.\",
+        \"emotion\": \"NERWOWY\",
+        \"certainty\": 35
+      },
+      {
+        \"id\": \"cypr_ali_004\",
+        \"text\": \"Wyszedłem do {room} na chwilę. Potrzebowałem zasięgu — w środku telefon łapał fatalnie.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"cypr_ali_005\",
+        \"text\": \"Cały czas byłem na widoku. 380 tysięcy followersów — nie mogę sobie pozwolić na zniknięcie z radaru. Nawet na sekundę.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"cypr_ali_006\",
+        \"text\": \"No dobra, na jakieś piętnaście minut zniknąłem. Wyszedłem do {room} zadzwonić. Prywatna sprawa.\",
+        \"emotion\": \"NERWOWY\",
+        \"certainty\": 60
+      }
+    ],
+    \"OBSERWACJE_WZROKOWE\": [
+      {
+        \"id\": \"cypr_obs_w_001\",
+        \"text\": \"{suspect} wyglądał na mega spiętego. W sensie, ja bym tego nie wrzucił na Insta — taka twarz nie sprzedaje.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"cypr_obs_w_002\",
+        \"text\": \"Widziałem jak {suspect} wchodzi do {room}. Sam. O dziwnej porze. Nie mówię, że to podejrzane, ale... no, trochę podejrzane.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"cypr_obs_w_003\",
+        \"text\": \"{suspect} szeptał coś do {victim} i obaj wyglądali, jakby zaraz mieli się pozabijać. Yyy, niefortunne słowo, ale wiecie co mam na myśli.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"cypr_obs_w_004\",
+        \"text\": \"Robiłem selfie przy {room} i kątem oka widziałem kogoś wychodzącego tylnymi drzwiami. Szybko. Za szybko.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 40
+      },
+      {
+        \"id\": \"cypr_obs_w_005\",
+        \"text\": \"{suspect} zmieniał buty. Serio. Widziałem jak wyjmuje inne buty z torby. Kto robi coś takiego na przyjęciu?\",
+        \"emotion\": \"ZASKOCZENIE\",
+        \"certainty\": 55
+      }
+    ],
+    \"OBSERWACJE_SLUCHOWE\": [
+      {
+        \"id\": \"cypr_obs_s_001\",
+        \"text\": \"Nagrywałem dźwięk do podcastu i chyba złapałem jakąś kłótnię w tle. Muszę sprawdzić plik.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 45
+      },
+      {
+        \"id\": \"cypr_obs_s_002\",
+        \"text\": \"Słyszałem jak ktoś rzuca przedmiotami w {room}. Głośno. Agresywnie. Jakby demolował pomieszczenie.\",
+        \"emotion\": \"STRACH\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"cypr_obs_s_003\",
+        \"text\": \"Arciszewski krzyczał na kogoś. Nie wiem na kogo, ale ton był... no, nie był to ton, w którym zamawiasz catering.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"cypr_obs_s_004\",
+        \"text\": \"Ktoś płakał w {room}. Cicho, ale słyszałem. Byłem za drzwiami — nie podsłuchiwałem, po prostu szedłem korytarzem.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 50
+      }
+    ],
+    \"OPINIE\": [
+      {
+        \"id\": \"cypr_opi_001\",
+        \"text\": \"{suspect}? No... jest okej. W sensie, na imprezie jest zabawny. Ale czy ufam mu? Hm. Definiuj 'ufam'.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 40
+      },
+      {
+        \"id\": \"cypr_opi_002\",
+        \"text\": \"Arciszewski był jak algorytm — dawał ci zasięgi, dopóki byłeś mu potrzebny. Potem cię wycinał.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"cypr_opi_003\",
+        \"text\": \"{suspect} to typ, który uśmiecha się do kamery, a za plecami robi ci kuku. Znam takich. Sam pewnie tak wyglądam dla innych.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"cypr_opi_004\",
+        \"text\": \"W tym towarzystwie każdy gra. Ja przynajmniej gram otwarcie. {suspect}? Gra pod stołem.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 60
+      }
+    ],
+    \"PODEJRZENIA\": [
+      {
+        \"id\": \"cypr_pod_001\",
+        \"text\": \"Nie chcę nikogo cancelować na ślepo, ale {suspect} zachowywał się jak ktoś, kto ma coś na sumieniu.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"cypr_pod_002\",
+        \"text\": \"Gdybym kręcił true crime'a — a nie mówię, że go kręcę — to {suspect} byłby moim głównym podejrzanym.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"cypr_pod_003\",
+        \"text\": \"Proszę sprawdzić telefon {suspect}. Serio. W naszych czasach telefon mówi więcej niż zeznania.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      }
+    ],
+    \"RELACJE\": [
+      {
+        \"id\": \"cypr_rel_001\",
+        \"text\": \"Arciszewski był moim... no, trudno to nazwać. Sponsor? Nie. Znajomy z benefitami biznesowymi? Coś w tym stylu.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"cypr_rel_002\",
+        \"text\": \"Dwa lata temu Arciszewski próbował mnie zniszczyć. Anonimowe konta, hejt, przecieki. Wiedzieliście? Pewnie nie.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"cypr_rel_003\",
+        \"text\": \"Chciałem być jak on. Stare pieniądze, kontakty, szacunek. Potem zrozumiałem, że za tymi drzwiami jest bagno.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 70
+      }
+    ],
+    \"MOTYWY\": [
+      {
+        \"id\": \"cypr_mot_001\",
+        \"text\": \"Motyw? Jasne, Arciszewski mi trochę namieszał. Ale zabijać? Za lajki na true crime'ie? Bez sensu.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"cypr_mot_002\",
+        \"text\": \"Mam długi. Arciszewski o nich wiedział. Ale morderstwo nie spłaca długów — robi nowe.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      }
+    ],
+    \"REAKCJA_NA_DOWOD\": [
+      {
+        \"id\": \"cypr_rnd_001\",
+        \"text\": \"O kurde. Skąd pan to ma? To jest... okej, to wygląda źle, ale mogę wytłumaczyć.\",
+        \"emotion\": \"PANIKA\"
+      },
+      {
+        \"id\": \"cypr_rnd_002\",
+        \"text\": \"Czekaj, czekaj, czekaj. To nie jest to, na co wygląda. Serio. Dam sobie rękę uciąć.\",
+        \"emotion\": \"STRACH\"
+      }
+    ],
+    \"KLAMSTWA\": [
+      {
+        \"id\": \"cypr_klam_001\",
+        \"text\": \"Nie mam żadnych nagrań Arciszewskiego. Skąd ten pomysł?\",
+        \"lieType\": \"UKRYWANIE_DOWODU\",
+        \"contradictedBy\": [\"PENDRIVE\", \"ZEZNANIE_WSPÓLNIKA\", \"HISTORIA_CHMURY\"]
+      },
+      {
+        \"id\": \"cypr_klam_002\",
+        \"text\": \"Moja współpraca z Arciszewskim? Czysto medialna. Robiłem mu PR, on dawał mi content. Nic więcej.\",
+        \"lieType\": \"MINIMALIZACJA_RELACJI\",
+        \"contradictedBy\": [\"DOKUMENTY_SPOLKI\", \"PRZELEWY\", \"ZEZNANIE_PARTNERA\"]
+      },
+      {
+        \"id\": \"cypr_klam_003\",
+        \"text\": \"Nie wychodziłem z {room} aż do momentu, kiedy usłyszałem krzyk. Byłem w środku cały czas.\",
+        \"lieType\": \"FALSZYWE_ALIBI\",
+        \"contradictedBy\": [\"NAGRANIE_TELEFONU\", \"SWIADEK_NA_KORYTARZU\"]
+      }
+    ],
+    \"NERWOWOSC\": [
+      {
+        \"id\": \"cypr_ner_001\",
+        \"text\": \"Hej, hej, spokojnie. Nie trzeba tak naskakiwać. Jestem po tej samej stronie co pan.\",
+        \"emotion\": \"STRACH\",
+        \"stressLevel\": \"MEDIUM\"
+      },
+      {
+        \"id\": \"cypr_ner_002\",
+        \"text\": \"Okej, zaczynam się trochę stresować i chyba widać. Ale to normalne, nie? Ktoś tu umarł, na litość.\",
+        \"emotion\": \"PANIKA\",
+        \"stressLevel\": \"HIGH\"
+      }
+    ],
+    \"ODKRYCIE_SPRZECZNOSCI\": [
+      {
+        \"id\": \"cypr_sprz_001\",
+        \"text\": \"Dobra, dobra, złapałeś mnie. Nie byłem do końca szczery. Ale nie dlatego, że zabiłem — dlatego, że robiłem coś głupiego.\",
+        \"emotion\": \"POCZUCIE_WINY\",
+        \"responseType\": \"ADMISSION\"
+      },
+      {
+        \"id\": \"cypr_sprz_002\",
+        \"text\": \"Okej, to się nie zgadza, wiem. Pogmatwałem. Ale pod presją każdy gmatwa, nie?\",
+        \"emotion\": \"NERWOWY\",
+        \"responseType\": \"EXPLANATION\"
+      }
+    ],
+    \"SEKRETY\": [
+      {
+        \"id\": \"cypr_sek_001\",
+        \"text\": \"Mój kanał jest częściowo finansowany z pieniędzy powiązanych z Arciszewskim. Gdyby to wyszło... koniec kariery.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 40
+      },
+      {
+        \"id\": \"cypr_sek_002\",
+        \"text\": \"Mam nagranie. Rozmowę Arciszewskiego, która jest warta fortunę. Albo wyrok. Zależy, kto ją usłyszy.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 50
+      }
+    ],
+    \"REAKCJA_NA_OSKARZENIE\": [
+      {
+        \"id\": \"cypr_rno_001\",
+        \"text\": \"Ja?! Morderca?! Mam 380 tysięcy followersów — naprawdę myślisz, że ryzykowałbym wszystko? Za co?!\",
+        \"emotion\": \"PANIKA\"
+      },
+      {
+        \"id\": \"cypr_rno_002\",
+        \"text\": \"To jest absurdalne. Totalnie absurdalne. Nie mam siły, żeby kogoś zabić — ledwie mam siłę na poranki.\",
+        \"emotion\": \"ZASKOCZENIE\"
+      }
+    ],
+    \"REAKCJA_NA_PRESJE\": [
+      {
+        \"id\": \"cypr_rnp_001\",
+        \"text\": \"Hej, hej! Spokojnie! Nie jestem jakimś kryminalistą! Jestem content creatorem, na miłość boską!\",
+        \"emotion\": \"PANIKA\"
+      },
+      {
+        \"id\": \"cypr_rnp_002\",
+        \"text\": \"Okej, wie pan co? Nagrywam to. Dla bezpieczeństwa. Mam prawo.\",
+        \"emotion\": \"GNIEW\"
+      }
+    ]
+  },
+  \"personalFragments\": {
+    \"openers\": [
+      \"Okej, więc...\",
+      \"Słuchaj, to było tak —\",
+      \"Nie uwierzysz, ale...\",
+      \"No więc, w skrócie...\",
+      \"Serio, to jest dziwne, ale...\",
+      \"Wiesz co, powiem ci...\"
+    ],
+    \"fillers\": [
+      \"...w sensie...\",
+      \"...no wiesz...\",
+      \"...serio...\",
+      \"...tak jakby...\",
+      \"...nie żebym się bał, ale...\"
+    ],
+    \"closers\": [
+      \"...i tyle. Serio, nic więcej.\",
+      \"...no i to byłoby na tyle.\",
+      \"...okej? Okej.\",
+      \"...ale proszę, nie cytuj mnie.\",
+      \"...i proszę, niech to zostanie między nami.\"
+    ]
+  }
+}
+"

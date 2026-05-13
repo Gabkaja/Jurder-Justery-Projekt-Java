@@ -1,0 +1,43 @@
+{
+  "characterId": "cyprianCzerwinski",
+  "speechStyle": "NORMAL",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "Siemano {Panie Detektywie|Pani Detektyw}. Straszna drama, co nie? Cały mój stream o tym huczy." },
+      { "minTrust": 0, "text": "Słuchaj, ja tu tylko wpadłem na parę shotów. Nie chcę mieć nic wspólnego z tą całą akcją." },
+      { "minTrust": 10, "text": "Masz może ładowarkę? Mój telefon pada, a muszę wrzucić update o tym morderstwie." },
+      { "minTrust": 0, "text": "Ej, tylko bez ostrych pytań, okej? Mam słaby vibe dzisiaj." },
+      { "minTrust": 25, "text": "Wydajesz się spoko. Może zrobimy kiedyś podcast o tej sprawie? Wykręcimy rekordy." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Przecież mówię – siedziałem w {room} i sprawdzałem statystyki. Mam logi z Instagrama na dowód." },
+      { "certainty": 100, "text": "Byłem w {room}. Robiłem sobie selfie w tym lustrze, co tam wisi. Bardzo dobre światło." },
+      { "certainty": 80, "text": "Chyba byłem w {room}, ale głowy nie dam. Może wyszedłem na chwilę na balkon?" },
+      { "certainty": 100, "text": "Siedziałem w {room} i odpisywałem na maile od sponsorów. Nuda, nie?" },
+      { "certainty": 90, "text": "Byłem sam w {room}. Żadnego towarzystwa, tylko ja i moje zasięgi." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 90, "text": "Widziałem, jak {suspect} kręci się przy {room}. Wyglądał{em|am}, jakby {mu|jej} odcięło prąd." },
+      { "certainty": 70, "text": "Ktoś wchodził do {room} z czymś, co wyglądało jak {weapon}. Nie dam głowy, że to {suspect}." },
+      { "certainty": 100, "text": "Mój obiektyw nie kłamie. Widziałem {suspect} wychodząc{ego|ą} z {room} w totalnym popłochu." },
+      { "certainty": 40, "text": "Mignął mi ktoś w {room}. Sylwetka pasowała do {suspect}, ale serio, wzrok mam słaby." },
+      { "certainty": 80, "text": "{suspect} i {weapon}? Widziałem ich razem w {room}. To był bardzo dziwny zestaw." }
+    ],
+    "OPINIA_O_INNYCH": [
+      { "text": "{suspect} to totalny boomer. Nie ogarnia rzeczywistości, a co dopiero morderstwa." },
+      { "text": "Nie ufałbym {suspect}. Ma w oczach coś takiego... bardzo nie-cool." },
+      { "text": "Widziałem, jak {suspect} kłóci się z Andrzejem. Szły takie bluzgi, że aż mi telefon zatrząsł." },
+      { "text": "Dla mnie {suspect} to główny kandydat do czarnego charakteru w tej historii." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "Co to za złom? {weapon}? Wygląda jak rekwizyt z taniego horroru." },
+      { "requiresClue": true, "text": "Ej, {znalazłeś|znalazłaś} to w {room}? Gruba akcja, zaraz to opiszę." },
+      { "requiresClue": true, "text": "To {weapon} należy do {suspect}. Widziałem to u ni{ego|ej} na biurku." }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      { "text": "No dobra, złapał{eś|aś} mnie. Nie byłem w {room}, tylko podglądałem w korytarzu." },
+      { "text": "Dobra, skłamałem z tymi logami. Chciałem po prostu wyjść na bardziej zajętego." },
+      { "text": "Ej, no sorki! Pamięć mi szwankuje od tego stresu. Prawda jest taka..." }
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+"{
+  \"type\": \"OBSERWACJE_WZROKOWE\",
+  \"description\": \"Szablony obserwacji wzrokowych — NPC opisuje co widzial. Placeholdery: {suspect}, {room}, {weapon}, {time}, {victim}.\",
+  \"templates\": [
+    {
+      \"id\": \"obs_w_001\",
+      \"template\": \"Widziałem {suspect} w pobliżu {room}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [50, 100],
+      \"tags\": [\"osoba_w_miejscu\"]
+    },
+    {
+      \"id\": \"obs_w_002\",
+      \"template\": \"Ktoś wychodził z {room}, ale było zbyt ciemno, żeby rozpoznać twarz.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [10, 40],
+      \"tags\": [\"niezidentyfikowana_osoba\", \"ciemnosc\"]
+    },
+    {
+      \"id\": \"obs_w_003\",
+      \"template\": \"Zauważyłem, że {suspect} bardzo się denerwował.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [50, 80],
+      \"tags\": [\"zachowanie\", \"emocje\"]
+    },
+    {
+      \"id\": \"obs_w_004\",
+      \"template\": \"{suspect} wszedł do {room} i zamknął za sobą drzwi. Wyraźnie nie chciał towarzystwa.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 10,
+      \"requiresClue\": false,
+      \"certaintyRange\": [60, 90],
+      \"tags\": [\"podejrzane_zachowanie\"]
+    },
+    {
+      \"id\": \"obs_w_005\",
+      \"template\": \"Widziałem jak {suspect} rozmawia z {victim}. Wyglądali na zdenerwowanych obydwoje.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [50, 85],
+      \"tags\": [\"interakcja\", \"napiety\"]
+    },
+    {
+      \"id\": \"obs_w_006\",
+      \"template\": \"Mignęła mi jakaś postać przy {room}, ale nie zdążyłem zobaczyć kto to.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [5, 30],
+      \"tags\": [\"niezidentyfikowana_osoba\", \"migawka\"]
+    },
+    {
+      \"id\": \"obs_w_007\",
+      \"template\": \"{suspect} trzymał coś w ręku, kiedy wychodził z {room}. Nie widziałem co.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 10,
+      \"requiresClue\": false,
+      \"certaintyRange\": [40, 70],
+      \"tags\": [\"podejrzany_przedmiot\"]
+    },
+    {
+      \"id\": \"obs_w_008\",
+      \"template\": \"Widziałem {suspect} w {room} mniej więcej o {time}.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [60, 90],
+      \"tags\": [\"precyzyjne\", \"czas\"]
+    },
+    {
+      \"id\": \"obs_w_009\",
+      \"template\": \"{suspect} miał plamy na rękawach. Nie wiem, od czego.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 10,
+      \"requiresClue\": false,
+      \"certaintyRange\": [50, 80],
+      \"tags\": [\"fizyczny_dowod\", \"ubranie\"]
+    },
+    {
+      \"id\": \"obs_w_010\",
+      \"template\": \"Drzwi do {room} były uchylone. Wcześniej były zamknięte.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [60, 90],
+      \"tags\": [\"otoczenie\", \"zmiana\"]
+    },
+    {
+      \"id\": \"obs_w_011\",
+      \"template\": \"Widziałem, jak {suspect} chowa coś do kieszeni. Szybko, jakby nie chciał, żeby ktokolwiek zauważył.\",
+      \"emotion\": \"PODEJRZLIWOSC\",
+      \"minTrust\": 15,
+      \"requiresClue\": false,
+      \"certaintyRange\": [40, 75],
+      \"tags\": [\"ukrywanie\", \"podejrzane\"]
+    },
+    {
+      \"id\": \"obs_w_012\",
+      \"template\": \"{suspect} wychodził z {room} w pośpiechu. Prawie mnie potrącił.\",
+      \"emotion\": \"ZASKOCZENIE\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [70, 95],
+      \"tags\": [\"pospiech\", \"ruch\"]
+    },
+    {
+      \"id\": \"obs_w_013\",
+      \"template\": \"Światło w {room} zgasło na chwilę. Kiedy wróciło, {suspect} już tam nie było.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [30, 60],
+      \"tags\": [\"tajemnicze\", \"swiatlo\"]
+    },
+    {
+      \"id\": \"obs_w_014\",
+      \"template\": \"{suspect} stał przy oknie w {room} i wyglądał, jakby na kogoś czekał.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [40, 70],
+      \"tags\": [\"zachowanie\", \"oczekiwanie\"]
+    },
+    {
+      \"id\": \"obs_w_015\",
+      \"template\": \"Na podłodze w {room} leżało coś, co wcześniej tam nie było. Nie przyjrzałem się bliżej.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 0,
+      \"requiresClue\": false,
+      \"certaintyRange\": [30, 60],
+      \"tags\": [\"przedmiot\", \"nowy_element\"]
+    },
+    {
+      \"id\": \"obs_w_016\",
+      \"template\": \"{suspect} szeptał coś do {victim} tuż przed kolacją. Obydwoje wyglądali na spiętych.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 5,
+      \"requiresClue\": false,
+      \"certaintyRange\": [50, 80],
+      \"tags\": [\"interakcja\", \"szept\"]
+    },
+    {
+      \"id\": \"obs_w_017\",
+      \"template\": \"Widziałem {weapon} leżący w {room}. Nie powinien tam być.\",
+      \"emotion\": \"ZASKOCZENIE\",
+      \"minTrust\": 10,
+      \"requiresClue\": true,
+      \"certaintyRange\": [60, 90],
+      \"tags\": [\"bron\", \"nie_na_miejscu\"]
+    },
+    {
+      \"id\": \"obs_w_018\",
+      \"template\": \"{suspect} wrócił z {room} blady jak ściana. Zapytałem czy wszystko w porządku — nic nie odpowiedział.\",
+      \"emotion\": \"NEUTRALNY\",
+      \"minTrust\": 5,
+      \"requiresClue\": false,
+      \"certaintyRange\": [60, 85],
+      \"tags\": [\"zachowanie\", \"emocje\", \"reakcja\"]
+    }
+  ]
+}
+"

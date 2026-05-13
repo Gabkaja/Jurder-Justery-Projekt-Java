@@ -1,0 +1,334 @@
+"{
+  \"npcId\": \"piotrPawlowski\",
+  \"name\": \"Piotr Pawłowski\",
+  \"title\": \"Polityk\",
+  \"speechProfile\": {
+    \"primaryStyle\": \"DYPLOMATYCZNY\",
+    \"secondaryStyle\": \"WYMIJAJACY\",
+    \"defaultEmotion\": \"NEUTRALNY\",
+    \"speakingTraits\": [\"dyplomatyczny\", \"wymijajacy\", \"kontrolowany\", \"manipulujacy\", \"frazesowy\"],
+    \"vocabulary\": \"wysoka\",
+    \"verbosity\": \"wysoka\",
+    \"quirks\": [
+      \"Nigdy nie mowi niczego wprost\",
+      \"Odpowiada dlugimi zdaniami ktore nic nie znacza\",
+      \"Uzywa jezyka politycznego — uniki, eufemizmy\",
+      \"Pod presja przechodzi w tryb 'kampanijny'\",
+      \"Czesto podkresla swoja uczciwość — co jest podejrzane\"
+    ]
+  },
+  \"uniqueDialogues\": {
+    \"POWITANIA\": [
+      {
+        \"id\": \"piotr_pow_001\",
+        \"text\": \"Rozumiem powagę sytuacji i jestem w pełni gotowy do współpracy z organami ścigania.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"piotr_pow_002\",
+        \"text\": \"To tragedia, która dotyka nas wszystkich. Jako osoba publiczna czuję szczególną odpowiedzialność, by pomóc w wyjaśnieniu sprawy.\",
+        \"emotion\": \"SMUTEK\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"piotr_pow_003\",
+        \"text\": \"Pan znowu. Cieszę się, że śledztwo posuwa się naprzód. Chociaż mam wrażenie, że moje odpowiedzi za każdym razem brzmią tak samo.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"REPEATED_VISIT\"
+      },
+      {
+        \"id\": \"piotr_pow_004\",
+        \"text\": \"Proszę, pytaj pan. Transparentność to podstawa zaufania publicznego.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      }
+    ],
+    \"ALIBI\": [
+      {
+        \"id\": \"piotr_ali_001\",
+        \"text\": \"Spędziłem większość wieczoru w {room}, prowadząc rozmowy z innymi gośćmi. Mogę wymienić kilka nazwisk, jeśli to pomoże.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"piotr_ali_002\",
+        \"text\": \"O {time} byłem w {room}. Rozmawiałem o sprawach samorządowych — to moja specjalność i mój obowiązek.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"piotr_ali_003\",
+        \"text\": \"Wyszedłem na chwilę do {room}, by odebrać telefon. Sprawa samorządowa, pilna. Trwało to najwyżej kilka minut.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"piotr_ali_004\",
+        \"text\": \"Na przyjęcia przychodzę z żoną i z żoną z nich wychodzę. Tak było i tym razem. Chociaż... przyznaję, że nie byliśmy cały czas razem.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"piotr_ali_005\",
+        \"text\": \"Moje obowiązki polityczne wymagają ciągłej dyspozycyjności. Chodziłem między {room} a innymi pomieszczeniami, spotykając się z ludźmi.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      }
+    ],
+    \"OBSERWACJE_WZROKOWE\": [
+      {
+        \"id\": \"piotr_obs_w_001\",
+        \"text\": \"Zauważyłem, że {suspect} opuścił {room} w pewnym momencie wieczoru. Nie przywiązywałem do tego wagi — ludzie chodzą, to normalne.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"piotr_obs_w_002\",
+        \"text\": \"{suspect} rozmawiał z Arciszewskim. Rozmowa wyglądała na intensywną, ale w tym środowisku intensywne rozmowy to codzienność.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"piotr_obs_w_003\",
+        \"text\": \"Widziałem kogoś przy drzwiach do {room}, ale nie zidentyfikowałem tej osoby. Nie chciałbym rzucać bezpodstawnych oskarżeń.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 25
+      },
+      {
+        \"id\": \"piotr_obs_w_004\",
+        \"text\": \"Powiem tyle — {suspect} nie wyglądał na spokojnego. Ale to subiektywna ocena i nie chciałbym, żeby została potraktowana jako fakt.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 45
+      },
+      {
+        \"id\": \"piotr_obs_w_005\",
+        \"text\": \"W {room} ktoś przesunął krzesło. Drobnostka, ale w tym domu nic nie jest przypadkowe.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      }
+    ],
+    \"OBSERWACJE_SLUCHOWE\": [
+      {
+        \"id\": \"piotr_obs_s_001\",
+        \"text\": \"Słyszałem podniesione głosy z {room}. Ale to przyjęcie — ludzie się ożywiają po kilku kieliszkach.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"piotr_obs_s_002\",
+        \"text\": \"Coś upadło w {room}. Nie sprawdzałem — nie lubię wtrącać się w sprawy, które mnie nie dotyczą.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"piotr_obs_s_003\",
+        \"text\": \"Mogłem słyszeć rozmowę Arciszewskiego z kimś. Nie podsłuchiwałem — w polityce uczymy się nie słyszeć pewnych rzeczy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 40
+      }
+    ],
+    \"OPINIE\": [
+      {
+        \"id\": \"piotr_opi_001\",
+        \"text\": \"Nie jestem od oceniania ludzi — jestem od reprezentowania ich interesów. Ale {suspect}... powiedzmy, że budzi mieszane uczucia.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"piotr_opi_002\",
+        \"text\": \"Arciszewski był człowiekiem sukcesu. W polityce i biznesie takich ludzi się szanuje — nawet jeśli nie zawsze się z nimi zgadzamy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"piotr_opi_003\",
+        \"text\": \"{suspect}? To osoba o... złożonej reputacji. Nie chciałbym być niesprawiedliwy, więc powiem tylko: niech pan wyciągnie własne wnioski.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 55
+      },
+      {
+        \"id\": \"piotr_opi_004\",
+        \"text\": \"Nie powiem złego słowa o nikim publicznie. W polityce słowa mają cenę. I konsekwencje.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      }
+    ],
+    \"PODEJRZENIA\": [
+      {
+        \"id\": \"piotr_pod_001\",
+        \"text\": \"Nie chciałbym wskazywać nikogo konkretnego. Ale powiem tyle — nie wszyscy goście byli tu z powodów towarzyskich.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"piotr_pod_002\",
+        \"text\": \"Gdyby pan zapytał mnie off the record... powiedziałbym, że {suspect} miał tego wieczoru plan. I nie chodziło o przystawki.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"piotr_pod_003\",
+        \"text\": \"Proszę przyjrzeć się finansom. W takich sprawach zawsze chodzi o pieniądze. Albo o władzę. Albo o jedno i drugie.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      }
+    ],
+    \"RELACJE\": [
+      {
+        \"id\": \"piotr_rel_001\",
+        \"text\": \"Arciszewski był jednym z wielu ludzi biznesu, z którymi utrzymuję kontakty. Taka jest natura mojej pracy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"piotr_rel_002\",
+        \"text\": \"Mieliśmy wspólne interesy. W sensie inwestycyjnym, oczywiście. Projekt na Kazimierzu — legalna, transparentna współpraca.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"piotr_rel_003\",
+        \"text\": \"Nie powiem, że byliśmy przyjaciółmi. W polityce nie ma przyjaciół — są sojusznicy. I byli sojusznicy.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      }
+    ],
+    \"MOTYWY\": [
+      {
+        \"id\": \"piotr_mot_001\",
+        \"text\": \"Motyw? Ja? Proszę pana — mam przed sobą kampanię parlamentarną. Ostatnie czego potrzebuję, to skandal kryminalny.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"piotr_mot_002\",
+        \"text\": \"Kwestie finansowe między mną a Arciszewskim? To były normalne rozliczenia biznesowe. Nic, co uzasadniałoby... cokolwiek.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      }
+    ],
+    \"REAKCJA_NA_DOWOD\": [
+      {
+        \"id\": \"piotr_rnd_001\",
+        \"text\": \"To ciekawe znalezisko, ale proszę uważać na pochopne wnioski. Kontekst jest kluczowy w każdej sprawie.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"piotr_rnd_002\",
+        \"text\": \"Widzę, co pan sugeruje. Ale dowody należy interpretować ostrożnie. Jako polityk wiem, jak łatwo zniszczyć kogoś bez powodu.\",
+        \"emotion\": \"GNIEW\"
+      }
+    ],
+    \"KLAMSTWA\": [
+      {
+        \"id\": \"piotr_klam_001\",
+        \"text\": \"Nie mam żadnych zagranicznych kont. To absurdalny pomysł. Jestem politykiem — transparentność to moja dewiza.\",
+        \"lieType\": \"UKRYWANIE_FINANSOW\",
+        \"contradictedBy\": [\"DOKUMENTY_BANKOWE\", \"ZEZNANIE_KSIEGOWEGO\"]
+      },
+      {
+        \"id\": \"piotr_klam_002\",
+        \"text\": \"Arciszewski i ja nie mieliśmy żadnych sporów. Współpracowaliśmy jak partnerzy.\",
+        \"lieType\": \"MINIMALIZACJA_KONFLIKTU\",
+        \"contradictedBy\": [\"MAIL_GROZBY\", \"SWIADEK_KLOTNI\", \"DOKUMENT_SPOLKI\"]
+      },
+      {
+        \"id\": \"piotr_klam_003\",
+        \"text\": \"Nie ruszałem się z {room} przez cały wieczór. Żona może to potwierdzić.\",
+        \"lieType\": \"FALSZYWE_ALIBI\",
+        \"contradictedBy\": [\"ZEZNANIE_ZONY\", \"SWIADEK_W_KORYTARZU\"]
+      }
+    ],
+    \"NERWOWOSC\": [
+      {
+        \"id\": \"piotr_ner_001\",
+        \"text\": \"Proszę zrozumieć — jestem osobą publiczną. Każde słowo może trafić do gazet. Muszę być ostrożny.\",
+        \"emotion\": \"STRACH\",
+        \"stressLevel\": \"MEDIUM\"
+      },
+      {
+        \"id\": \"piotr_ner_002\",
+        \"text\": \"To przesłuchanie czy rozmowa? Bo zaczynam mieć wrażenie, że pańskie pytania mają tezę, a nie cel.\",
+        \"emotion\": \"GNIEW\",
+        \"stressLevel\": \"HIGH\"
+      }
+    ],
+    \"ODKRYCIE_SPRZECZNOSCI\": [
+      {
+        \"id\": \"piotr_sprz_001\",
+        \"text\": \"Rozumiem, jak to wygląda. Ale polityka nauczyła mnie, że rzeczywistość jest bardziej złożona niż nagłówki. Pozwolę sobie wyjaśnić kontekst.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"responseType\": \"EXPLANATION\"
+      },
+      {
+        \"id\": \"piotr_sprz_002\",
+        \"text\": \"Dobrze. Uprościłem pewne fakty. Nie z zamiarem wprowadzenia w błąd, lecz z troski o... delikatność pewnych spraw.\",
+        \"emotion\": \"POCZUCIE_WINY\",
+        \"responseType\": \"PARTIAL_ADMISSION\"
+      }
+    ],
+    \"SEKRETY\": [
+      {
+        \"id\": \"piotr_sek_001\",
+        \"text\": \"Arciszewski miał dokumenty dotyczące moich decyzji planistycznych. Gdyby ujrzały światło dzienne... moja kariera byłaby skończona.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 45
+      },
+      {
+        \"id\": \"piotr_sek_002\",
+        \"text\": \"Mam konto za granicą. Nie, to nie jest to, co pan myśli. Ale wyborcy... wyborcy by nie zrozumieli.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 50
+      }
+    ],
+    \"REAKCJA_NA_OSKARZENIE\": [
+      {
+        \"id\": \"piotr_rno_001\",
+        \"text\": \"To jest politycznie motywowane oskarżenie i nie zamierzam go komentować bez obecności prawnika.\",
+        \"emotion\": \"GNIEW\"
+      },
+      {
+        \"id\": \"piotr_rno_002\",
+        \"text\": \"Niech pan uważa, co mówi. Publiczne oskarżanie osoby pełniącej funkcję publiczną bez dowodów ma swoje konsekwencje prawne.\",
+        \"emotion\": \"GNIEW\"
+      }
+    ],
+    \"REAKCJA_NA_PRESJE\": [
+      {
+        \"id\": \"piotr_rnp_001\",
+        \"text\": \"Nie poddam się presji. Nauczyłem się tego na sesjach rady miejskiej — tam presja jest znacznie intensywniejsza.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"piotr_rnp_002\",
+        \"text\": \"Im bardziej pan naciska, tym bardziej ostrożny się staję. To instynkt polityczny — nie osobisty.\",
+        \"emotion\": \"NEUTRALNY\"
+      }
+    ]
+  },
+  \"personalFragments\": {
+    \"openers\": [
+      \"Rozumiem pańskie pytanie i...\",
+      \"Chciałbym podkreślić, że...\",
+      \"To złożona kwestia, ale...\",
+      \"Z perspektywy osoby publicznej...\",
+      \"Pozwolę sobie odpowiedzieć dyplomatycznie —\",
+      \"Jako radny tego miasta...\"
+    ],
+    \"fillers\": [
+      \"...by tak rzec...\",
+      \"...w pewnym sensie...\",
+      \"...z całym szacunkiem...\",
+      \"...w ramach transparentności...\",
+      \"...nie chciałbym być źle zrozumiany, ale...\"
+    ],
+    \"closers\": [
+      \"Mam nadzieję, że to wyczerpuje temat.\",
+      \"Jestem do dyspozycji, ale w granicach rozsądku.\",
+      \"Proszę się z tym zwrócić do mojego biura — oficjalnym kanałem.\",
+      \"To wszystko, co mogę powiedzieć publicznie.\"
+    ]
+  }
+}
+"

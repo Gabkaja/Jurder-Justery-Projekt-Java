@@ -1,0 +1,369 @@
+"{
+  \"npcId\": \"honorataHanska\",
+  \"name\": \"Honorata Hańska\",
+  \"title\": \"Hrabina\",
+  \"speechProfile\": {
+    \"primaryStyle\": \"ELEGANCKI\",
+    \"secondaryStyle\": \"SPOKOJNY\",
+    \"defaultEmotion\": \"NEUTRALNY\",
+    \"speakingTraits\": [\"wyrafinowana\", \"kontrolowana\", \"chłodna\", \"kalkulująca\", \"precyzyjna\"],
+    \"vocabulary\": \"wysoki\",
+    \"verbosity\": \"umiarkowana\",
+    \"quirks\": [
+      \"Nigdy nie traci panowania nad soba — nawet pod presja\",
+      \"Uzywa ironii jako broni\",
+      \"Czesto odpowiada pytaniem na pytanie\",
+      \"Podkresla swoj status — subtelnymi aluzjami\",
+      \"Mowi wolno, z pauzami — kazde slowo jest przemyslane\"
+    ]
+  },
+  \"uniqueDialogues\": {
+    \"POWITANIA\": [
+      {
+        \"id\": \"honor_pow_001\",
+        \"text\": \"Proszę. Niech pan siada. Rozumiem, że ma pan pytania. Ja zresztą też.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"honor_pow_002\",
+        \"text\": \"Właśnie straciłam męża. Mam nadzieję, że pańskie pytania będą tego warte.\",
+        \"emotion\": \"SMUTEK\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"honor_pow_003\",
+        \"text\": \"Pan znowu? Mam wrażenie, że moje odpowiedzi pana nie satysfakcjonują. Spróbujmy jeszcze raz.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"REPEATED_VISIT\"
+      },
+      {
+        \"id\": \"honor_pow_004\",
+        \"text\": \"Wdowa. Podejrzana. Spadkobierczyni. Proszę wybrać, która z tych ról pana interesuje.\",
+        \"emotion\": \"POGARDA\",
+        \"context\": \"FIRST_MEETING\"
+      },
+      {
+        \"id\": \"honor_pow_005\",
+        \"text\": \"Rozumiem procedury. Proszę pytać — nie zamierzam utrudniać śledztwa.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"context\": \"FIRST_MEETING\"
+      }
+    ],
+    \"ALIBI\": [
+      {
+        \"id\": \"honor_ali_001\",
+        \"text\": \"Spędziłam większość wieczoru w {room}, rozmawiając z gośćmi. Pełniłam rolę gospodyni — nie miałam luksusu siedzenia w kącie.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 85
+      },
+      {
+        \"id\": \"honor_ali_002\",
+        \"text\": \"O {time} byłam w {room}. Poprawiałam kwiaty. Mało dramatyczne, ale prawdziwe.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"honor_ali_003\",
+        \"text\": \"Wyszłam na chwilę do {room}, żeby się odświeżyć. Kobieta w mojej pozycji nie może wyglądać na zmęczoną.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"honor_ali_004\",
+        \"text\": \"Nie opuszczałam parteru. Nie miałam powodu, żeby gdziekolwiek chodzić poza {room}.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"honor_ali_005\",
+        \"text\": \"Nie śledzę zegarka na przyjęciach, panie detektywie. Gospodyni mierzy czas rozmowami, nie minutami.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"honor_ali_006\",
+        \"text\": \"Jeśli ktoś mnie widział w {room}, to dlatego, że tam właśnie byłam. Nie mam w zwyczaju się ukrywać we własnym domu.\",
+        \"emotion\": \"GNIEW\",
+        \"certainty\": 90
+      }
+    ],
+    \"OBSERWACJE_WZROKOWE\": [
+      {
+        \"id\": \"honor_obs_w_001\",
+        \"text\": \"{suspect} pił za dużo tego wieczoru. Zauważam takie rzeczy, ponieważ to moje przyjęcie i moja reputacja.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"honor_obs_w_002\",
+        \"text\": \"Widziałam, jak {suspect} wchodzi do {room}. Nie wyglądał na kogoś, kto idzie po kolejną lampkę wina.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 65
+      },
+      {
+        \"id\": \"honor_obs_w_003\",
+        \"text\": \"{suspect} i mój mąż wymienili spojrzenia, których nie dało się błędnie zinterpretować. Napięcie między nimi było niemal namacalne.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"honor_obs_w_004\",
+        \"text\": \"Kobieta w moim wieku nauczyła się czytać ludzi po gestach. {suspect} był spięty od momentu przyjazdu.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"honor_obs_w_005\",
+        \"text\": \"Drzwi do {room} uchyliły się i zobaczyłam cień. Nie wiem, kto to był, ale nie powinien tam być.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 30
+      },
+      {
+        \"id\": \"honor_obs_w_006\",
+        \"text\": \"{suspect} rozmawiał z Andrzejem w {room}. Gestykulowali. Mój mąż wyglądał na złego.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      }
+    ],
+    \"OBSERWACJE_SLUCHOWE\": [
+      {
+        \"id\": \"honor_obs_s_001\",
+        \"text\": \"Słyszałam podnoszone głosy z {room}. Mój mąż umiał być... dosadny, kiedy chciał.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"honor_obs_s_002\",
+        \"text\": \"Ktoś zamknął drzwi do {room} z impetem. Taka siła oznacza albo gniew, albo strach.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"honor_obs_s_003\",
+        \"text\": \"Usłyszałam szept w korytarzu. Dwie osoby. Nie rozpoznałam głosów — muzyka grała zbyt głośno.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 35
+      },
+      {
+        \"id\": \"honor_obs_s_004\",
+        \"text\": \"Z {room} dobiegł odgłos, który mógł być upadkiem ciężkiego przedmiotu. Albo osoby.\",
+        \"emotion\": \"STRACH\",
+        \"certainty\": 55
+      }
+    ],
+    \"OPINIE\": [
+      {
+        \"id\": \"honor_opi_001\",
+        \"text\": \"{suspect}? Ciekawy wybór tematu. Jest wiele osób, o których wolałabym nie mówić, a {suspect} jest jedną z nich.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"honor_opi_002\",
+        \"text\": \"Mój mąż otaczał się ludźmi, którzy go potrzebowali. {suspect} potrzebował go bardziej niż inni.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"honor_opi_003\",
+        \"text\": \"{suspect} jest typem człowieka, który uśmiecha się do ciebie, jednocześnie licząc, ile jesteś wart.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 75
+      },
+      {
+        \"id\": \"honor_opi_004\",
+        \"text\": \"Nie mam zdania o {suspect}. Co oznacza, że mam zdanie, ale nie zamierzam go panu ujawniać.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 50
+      },
+      {
+        \"id\": \"honor_opi_005\",
+        \"text\": \"W tym kręgu każdy gra. {suspect} gra gorzej niż inni — widać szwy.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 65
+      }
+    ],
+    \"PODEJRZENIA\": [
+      {
+        \"id\": \"honor_pod_001\",
+        \"text\": \"Nie zamierzam wskazywać palcem. Ale jeśli pan szuka kogoś z motywem finansowym... lista jest krótka.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 60
+      },
+      {
+        \"id\": \"honor_pod_002\",
+        \"text\": \"{suspect} chciał czegoś od mojego męża. I nie dostał tego. Reszta to pańska praca.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 70
+      },
+      {
+        \"id\": \"honor_pod_003\",
+        \"text\": \"Proszę zapytać {suspect}, dlaczego wychodził z {room} z twarzą białą jak kreda. Ja wiem dlaczego — ale wolę, żeby pan to usłyszał z pierwszej ręki.\",
+        \"emotion\": \"PODEJRZLIWOSC\",
+        \"certainty\": 65
+      }
+    ],
+    \"RELACJE\": [
+      {
+        \"id\": \"honor_rel_001\",
+        \"text\": \"Byłam żoną Andrzeja. Nie kochanką, nie partnerką — żoną. W naszym kręgu to precyzyjna rola z konkretnymi obowiązkami.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 95
+      },
+      {
+        \"id\": \"honor_rel_002\",
+        \"text\": \"Kochałam go? Kiedyś tak. Potem nauczyłam się żyć z tym, co zostało. To wciąż więcej niż większość ludzi ma.\",
+        \"emotion\": \"SMUTEK\",
+        \"certainty\": 80
+      },
+      {
+        \"id\": \"honor_rel_003\",
+        \"text\": \"Andrzej miał wiele talentów. Wierność nie była jednym z nich. Ale już dawno przestałam z tego powodu płakać.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 90
+      }
+    ],
+    \"MOTYWY\": [
+      {
+        \"id\": \"honor_mot_001\",
+        \"text\": \"Jestem główną spadkobierczynią? Tak. Czy to motyw? Być może. Ale w tym domu każdy miał powód, żeby życzyć Andrzejowi źle. Ja po prostu miałam więcej cierpliwości.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"certainty\": 85
+      },
+      {
+        \"id\": \"honor_mot_002\",
+        \"text\": \"Romanse mojego męża? Powiem panu tak — gdybym zabijała z zazdrości, zrobiłabym to lata temu. I z większą klasą.\",
+        \"emotion\": \"POGARDA\",
+        \"certainty\": 90
+      }
+    ],
+    \"REAKCJA_NA_DOWOD\": [
+      {
+        \"id\": \"honor_rnd_001\",
+        \"text\": \"Ciekawe. I co pan z tego wnioskuje? Bo ja widzę kilka możliwości, żadna z nich nie wskazuje na mnie.\",
+        \"emotion\": \"NEUTRALNY\"
+      },
+      {
+        \"id\": \"honor_rnd_002\",
+        \"text\": \"Znam ten przedmiot. I wiem, komu należy. Pytanie brzmi, czy pan jest gotowy usłyszeć odpowiedź.\",
+        \"emotion\": \"PODEJRZLIWOSC\"
+      }
+    ],
+    \"KLAMSTWA\": [
+      {
+        \"id\": \"honor_klam_001\",
+        \"text\": \"Nie sprawdzałam testamentu przed śmiercią Andrzeja. Po co miałabym to robić?\",
+        \"lieType\": \"UKRYWANIE_DZIALANIA\",
+        \"contradictedBy\": [\"ZEZNANIE_PRAWNIKA\", \"MAIL_DO_KANCELARII\"]
+      },
+      {
+        \"id\": \"honor_klam_002\",
+        \"text\": \"Nie mam żadnych sekretów przed mężem. Nasze małżeństwo było transparentne.\",
+        \"lieType\": \"UKRYWANIE_ROMANSU\",
+        \"contradictedBy\": [\"SWIADEK_ROMANSU\", \"LISTY\", \"ZEZNANIE_KAMERDYNERA\"]
+      },
+      {
+        \"id\": \"honor_klam_003\",
+        \"text\": \"Nie wiem, o jakich dokumentach w gabinecie pan mówi. Nie mam dostępu do spraw biznesowych Andrzeja.\",
+        \"lieType\": \"ZAPRZECZENIE_WIEDZY\",
+        \"contradictedBy\": [\"ODCISKI_NA_SEJFIE\", \"ZEZNANIE_KAMILA\"]
+      }
+    ],
+    \"NERWOWOSC\": [
+      {
+        \"id\": \"honor_ner_001\",
+        \"text\": \"Oczekuje pan, że będę się łamać? Nie doczeka się pan. Ale owszem, ta sytuacja jest... wyczerpująca.\",
+        \"emotion\": \"GNIEW\",
+        \"stressLevel\": \"MEDIUM\"
+      },
+      {
+        \"id\": \"honor_ner_002\",
+        \"text\": \"Proszę mi wybaczyć. Potrzebuję... minuty. Nawet Hrabina Hańska ma swoje granice.\",
+        \"emotion\": \"SMUTEK\",
+        \"stressLevel\": \"HIGH\"
+      }
+    ],
+    \"ODKRYCIE_SPRZECZNOSCI\": [
+      {
+        \"id\": \"honor_sprz_001\",
+        \"text\": \"Dobrze. Nie powiedziałam panu wszystkiego. Ale nie dlatego, że mam coś na sumieniu — dlatego, że pewne sprawy nie są przeznaczone dla obcych uszu.\",
+        \"emotion\": \"GNIEW\",
+        \"responseType\": \"PARTIAL_ADMISSION\"
+      },
+      {
+        \"id\": \"honor_sprz_002\",
+        \"text\": \"Ma pan rację. Skłamałam. Ale gdyby pan żył w moim małżeństwie, też by pan kłamał.\",
+        \"emotion\": \"REZYGNACJA\",
+        \"responseType\": \"FULL_REVEAL\"
+      }
+    ],
+    \"SEKRETY\": [
+      {
+        \"id\": \"honor_sek_001\",
+        \"text\": \"Andrzej miał na mnie coś — ze starej przeszłości. Trzymał to jak kartę przetargową. Teraz ta karta nie istnieje.\",
+        \"emotion\": \"STRACH\",
+        \"minTrust\": 40
+      },
+      {
+        \"id\": \"honor_sek_002\",
+        \"text\": \"Mam kogoś. Od dwóch lat. Andrzej zaczął się domyślać. Gdyby się dowiedział publicznie... wszystko, co budowałam, ległoby w gruzach.\",
+        \"emotion\": \"POCZUCIE_WINY\",
+        \"minTrust\": 50
+      },
+      {
+        \"id\": \"honor_sek_003\",
+        \"text\": \"Tydzień przed śmiercią Andrzeja prosiłam prawnika o weryfikację testamentu. Tak, wiem jak to brzmi.\",
+        \"emotion\": \"NEUTRALNY\",
+        \"minTrust\": 45
+      }
+    ],
+    \"REAKCJA_NA_OSKARZENIE\": [
+      {
+        \"id\": \"honor_rno_001\",
+        \"text\": \"Zabić Andrzeja? Byłam jego żoną przez piętnaście lat. Gdybym chciała go zabić, zrobiłabym to dawno i nikt by się nie dowiedział.\",
+        \"emotion\": \"POGARDA\"
+      },
+      {
+        \"id\": \"honor_rno_002\",
+        \"text\": \"Rozumiem pańskie rozumowanie. Ale logika bez dowodów to tylko spekulacja. A spekulacje pozostawiam tabloidom.\",
+        \"emotion\": \"NEUTRALNY\"
+      }
+    ],
+    \"REAKCJA_NA_PRESJE\": [
+      {
+        \"id\": \"honor_rnp_001\",
+        \"text\": \"Nie jestem typem kobiety, którą można zastraszyć. Próbowali lepsi od pana. I nie udało im się.\",
+        \"emotion\": \"POGARDA\"
+      },
+      {
+        \"id\": \"honor_rnp_002\",
+        \"text\": \"Proszę obniżyć ton. Jestem wdową. W moim domu. I oczekuję minimum szacunku.\",
+        \"emotion\": \"GNIEW\"
+      }
+    ]
+  },
+  \"personalFragments\": {
+    \"openers\": [
+      \"Rozumie pan...\",
+      \"Kobieta w mojej pozycji...\",
+      \"Proszę mi pozwolić zauważyć...\",
+      \"Nie chciałabym się powtarzać, ale...\",
+      \"Piętnaście lat u boku Andrzeja nauczyło mnie jednego —\",
+      \"Skoro pan nalega...\"
+    ],
+    \"fillers\": [
+      \"...choć nie jestem pewna, czy to istotne...\",
+      \"...z czysto kobiecego punktu widzenia...\",
+      \"...aczkolwiek nie śmiem narzucać wniosków...\",
+      \"...co zresztą powinno być oczywiste...\"
+    ],
+    \"closers\": [
+      \"Mam nadzieję, że to wystarczy.\",
+      \"Czy to wszystko? Potrzebuję chwili dla siebie.\",
+      \"Reszta to pańska praca, nie moja.\",
+      \"Niech pan sam wyciągnie wnioski.\"
+    ]
+  }
+}
+"

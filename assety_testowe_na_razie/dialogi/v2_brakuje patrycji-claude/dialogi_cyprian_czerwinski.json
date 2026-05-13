@@ -1,0 +1,425 @@
+{
+  "npcId": "cyprianCzerwinski",
+  "npcName": "Cyprian Czerwiński",
+  "speechStyle": "NERVOUS",
+  "defaultEmotion": "FORCED_CASUAL",
+
+  "fragments": {
+    "openers": [
+      "Słuchaj, powiem ci szczerze —",
+      "Bez owijania w bawełnę,",
+      "Wiesz co? To dobre pytanie.",
+      "Dobra, okay,",
+      "Nie rób z tego większej sprawy, bo"
+    ],
+    "certaintyMarkers": {
+      "high":   ["Stuprocentowo,", "Na sto procent,", "Absolutnie, byłem tam."],
+      "medium": ["Chyba tak,", "Zdaje mi się,", "Mniej więcej tak to wyglądało."],
+      "low":    ["Mogę się mylić,", "Nie byłem skupiony w tamtej chwili,", "Gdzieś słyszałem, że"]
+    },
+    "closers": [
+      "— masz to zapisane?",
+      "Serio, tak to było.",
+      "Nie wiem, co więcej mam powiedzieć.",
+      "To nie jest tak skomplikowane, jak to wygląda.",
+      "Możemy przejść dalej?"
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "Hej, jasne, pogadajmy. Chociaż to trochę niereal, co? Takie rzeczy zdarzają się w serialach.",
+          "emotion": "FORCED_CASUAL",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Okej, słucham. I tak nie śpię, więc czemu nie.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Chętnie pomogę — tylko od razu mówię, że wiem mniej, niż myślisz.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Policja już ze mną rozmawiała. Powiedziałem to samo co mówię wszystkim. Mam alibi.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Straszna sprawa. Andrzej był... cóż, był. Teraz nie jest. Pytaj.",
+          "emotion": "FORCED_CASUAL",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Byłem na sali, gadałem z ludźmi. To przyjęcie, nie areszt — nikt nie notuje, gdzie kto jest.",
+          "emotion": "DEFENSIVE",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Około {time} byłem przy barze. Przez długo. Pytaj barmana, jak tu jest barman.",
+          "emotion": "NERVOUS",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Chodziłem po willi, bo to moja robota — jestem współprowadzącym medialnie. Obserwuję.",
+          "emotion": "FORCED_CASUAL",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Byłem w wielu miejscach. Takie mam zlecenie. Być wszędzie i o wszystkim gadać.",
+          "emotion": "DEFENSIVE",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałem {suspect} przy {room}. Wyglądał dziwnie — nerwowo, jakby na coś czekał.",
+          "emotion": "NERVOUS",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś wychodził z {room} szybko. Nie widziałem twarzy, ale sylwetka... mogło być {suspect}.",
+          "emotion": "CAUTIOUS",
+          "certainty": 45,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Chyba widziałem {suspect} w pobliżu {room}, ale nie śledziłem go. Mam swoje sprawy.",
+          "emotion": "EVASIVE",
+          "certainty": 55,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Coś tam było. Ktoś coś. Słuchaj, byłem trochę... rozkojarzony tamtej nocy.",
+          "emotion": "NERVOUS",
+          "certainty": 30,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam pamięć do twarzy — zawodowe wymaganie. {suspect} był w {room}. Jestem tego pewny.",
+          "emotion": "CONFIDENT",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Słyszałem coś w stylu kłótni z kierunku {room}. Myślałem, że to między gośćmi — takie rzeczy na przyjęciach.",
+          "emotion": "CASUAL",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś powiedział coś głośno niedaleko {room}. Nie chciałem podsłuchiwać, ale słyszałem ton — nieprzyjemny.",
+          "emotion": "NERVOUS",
+          "certainty": 55,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mogłem coś słyszeć. Albo nie. Muzyka grała dosyć głośno.",
+          "emotion": "EVASIVE",
+          "certainty": 25,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Usłyszałem czyjeś imię wymawiane głośno. Nie powiem czyje bez dowodów. Zasada.",
+          "emotion": "DEFENSIVE",
+          "certainty": 80,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "{suspect}? Spoko ziom. Znaczy — nie znamy się super blisko, ale zawsze okej.",
+          "emotion": "FORCED_CASUAL",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Między {victim} a {suspect} było dziwnie. Taka napięta atmosfera, wiesz? Starałem się nie wchodzić w to.",
+          "emotion": "NERVOUS",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} to typ, który zawsze coś kombinuje. Nie mówię że to źle — sam takim jestem.",
+          "emotion": "CASUAL",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Szczerość? {suspect} nie lubił ofiary. I ofiara nie lubiła jego. To wiedział każdy.",
+          "emotion": "DIRECT",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Nie będę wskazywał palcem. Mam zasadę — nie mówię niczego, czego nie mogę udowodnić.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Gdybym miał strzelać — {suspect}. Ale to tylko intuicja, nie mam dowodów.",
+          "emotion": "NERVOUS",
+          "certainty": 50,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Jest kilka osób, które miały powody. Nie ja jeden to widzę.",
+          "emotion": "EVASIVE",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Moim zdaniem to mógł być {suspect}. Ale na pewno nie ja. To ważne żeby podkreślić.",
+          "emotion": "DEFENSIVE",
+          "certainty": 55,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Okej, dobra, widziałem to. Ale to nie znaczy, co myślisz.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Skąd to masz? Serio, skąd?",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Tego wcześniej nie widziałem. Na pewno.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Aha. Rozumiem. Myślisz, że to moje? To skomplikowane.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Dobra, znam to. Ale znajomość czegoś to nie to samo co sprawstwo.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Znałem Andrzeja powierzchownie. Biznesowe znajomości. Nic głębszego.",
+          "emotion": "CASUAL",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Całą noc byłem na sali. Nie ruszałem się stamtąd. Możecie sprawdzić.",
+          "emotion": "FIRM",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie nagrywałem nikogo tej nocy. Telefon miałem przez cały czas w kieszeni.",
+          "emotion": "NERVOUS",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie wiedziałem nic o jego interesach. Jestem influencerem, nie finansistą.",
+          "emotion": "CASUAL",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Słuchaj, to był ciężki wieczór. Mogę iść?",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Okay, już powiedziałem co wiedziałem. Naprawdę.",
+          "emotion": "TENSE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Zaraz. Chwila. Daj mi sekundę.",
+          "emotion": "PANICKED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Nie rozumiem, dlaczego wracamy do tego samego pytania.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "Dobra, okay. Skłamałem w jednej kwestii. Ale tylko w jednej.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To nie wygląda tak, jak myślisz. Mam nagranie, tak — ale nie dlatego, co sądzisz.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Chciałem mieć ubezpieczenie. Każdy by tak zrobił na moim miejscu.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Znałem go lepiej, niż mówiłem. I on mnie też. To jednak nie czyni ze mnie mordercy.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "Co?! Serio? Myślisz, że ja? Naprawdę?",
+          "emotion": "SHOCKED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Mam 380 tysięcy obserwujących i robię kariery przez content — nie przez zbrodnie.",
+          "emotion": "DEFENSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Okej. Chcesz mnie oskarżyć — to idź do prawdziwej policji. Ja mam prawo do milczenia.",
+          "emotion": "ANGRY",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Miałem motyw — przyznję. Ale motyw to nie zbrodnia. Połowa sali miała motyw.",
+          "emotion": "NERVOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}

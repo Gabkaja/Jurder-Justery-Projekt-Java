@@ -1,0 +1,40 @@
+{
+  "characterId": "honorataHanska",
+  "speechStyle": "ELEGANT",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "Ach, to {Pan|Pani}. Mam nadzieję, że ma {Pan|Pani} do powiedzenia coś ciekawszego niż policja." },
+      { "minTrust": 0, "text": "Bądźmy krótko – śmierć Andrzeja jest wystarczająco uciążliwa bez tych pytań." },
+      { "minTrust": 10, "text": "Wygląda {Pan|Pani} na kogoś inteligentnego. Może wreszcie ktoś tu zacznie myśleć." },
+      { "minTrust": 0, "text": "Słucham, moje drogie dziecko. Tylko proszę nie zanudzać mnie detalami." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Byłam w {room}. Piłam koniak i zastanawiałam się, dlaczego moje życie stało się taką farsą." },
+      { "certainty": 100, "text": "Cały wieczór spędziłam w {room}. Nie miałam nastroju na towarzystwo." },
+      { "certainty": 90, "text": "O ile dobrze pamiętam, nie opuszczałam {room} po kolacji." },
+      { "certainty": 100, "text": "Mój czas w {room} jest udokumentowany przez moją własną nudę." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 80, "text": "Widziałam, jak {suspect} wymyka się z {room}. To było żenujące widowisko." },
+      { "certainty": 100, "text": "Jestem pewna, że to {suspect} stał{em|am} przy oknie w {room}." },
+      { "certainty": 50, "text": "Wydaje mi się, że mignął mi {suspect}, ale po trzecim kieliszku wszystko jest mgliste." },
+      { "certainty": 90, "text": "{suspect} i ten nieszczęsny {weapon}... Widziałam ich razem w {room}." }
+    ],
+    "PODEJRZENIA": [
+      { "text": "Andrzej miał wielu wrogów, ale {suspect} jest najbardziej prostacki z nich wszystkich." },
+      { "text": "Gdybym miała zgadywać, wskazałabym na {suspect}. Ma w oczach ten błysk szaleństwa." },
+      { "text": "Przyjrzyj się {Pan|Pani} {suspect}. Takie osoby nie przychodzą na przyjęcia bez motywu." },
+      { "text": "To jasne jak słońce – {suspect} chciał śmierci mojego męża bardziej niż ja." }
+    ],
+    "NERWOWOSC": [
+      { "text": "Czy sugeruje {Pan|Pani}, że powinnam mieć z tym coś wspólnego? To bezczelne." },
+      { "text": "Moja cierpliwość ma swoje granice, nawet dla przedstawicieli prawa." },
+      { "text": "Proszę mnie nie irytować tymi insynuacjami. To poniżej mojego poziomu." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "Brzydki przedmiot. Pasuje do gustu {suspect}." },
+      { "requiresClue": true, "text": "Gdzie to {Pan|Pani} znalazł{em|am}? W {room}? To doprawdy fascynujące." },
+      { "requiresClue": true, "text": "{weapon}? Nie sądziłam, że ktoś faktycznie użyje tego do morderstwa." }
+    ]
+  }
+}

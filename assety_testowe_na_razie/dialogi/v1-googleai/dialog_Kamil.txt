@@ -1,0 +1,46 @@
+{
+  "characterId": "kamilKrakowski",
+  "speechStyle": "ELEGANT",
+  "categories": {
+    "POWITANIE": [
+      { "minTrust": 0, "text": "W czym mogę służyć {Panu|Pani}?" },
+      { "minTrust": 0, "text": "Słucham uważnie, {Panie Detektywie|Pani Detektyw}. Proszę pytać." },
+      { "minTrust": 10, "text": "Czy przed rozmową życzy sobie {Pan|Pani} herbaty? To będzie długi wieczór." },
+      { "minTrust": 0, "text": "Jestem do {Pańskiej|Pani} dyspozycji, choć wolałbym zajmować się teraz gośćmi." },
+      { "minTrust": 20, "text": "Cieszę się, że to właśnie {Pan|Pani} prowadzi tę sprawę. Dom Arciszewskich zasługuje na prawdę." }
+    ],
+    "ALIBI": [
+      { "certainty": 100, "text": "Zapewniam, że od godziny {time} przebywałem w {room}. Polerowałem srebra." },
+      { "certainty": 100, "text": "Wspomniany czas spędziłem w {room}. Można to zweryfikować w grafiku służby." },
+      { "certainty": 90, "text": "O ile pamięć mnie nie zwodzi, byłem wtedy w {room}. Szykowałem karafki z winem." },
+      { "certainty": 100, "text": "Przez całą godzinę {time} nie opuszczałem {room}. Obowiązki nie pozwalały mi na spacerowanie." },
+      { "certainty": 80, "text": "Wydaje mi się, że byłem w {room}, ale przy takim zamieszaniu trudno o absolutną pewność." }
+    ],
+    "OBSERWACJA_WIDZIAL": [
+      { "certainty": 100, "text": "Widziałem, jak {suspect} udawał{em|am} się w stronę {room}. Wyglądał{em|am} na zdenerwowan{ego|ą}." },
+      { "certainty": 70, "text": "Mignęła mi sylwetka {suspect} w okolicy korytarza prowadzącego do {room}." },
+      { "certainty": 40, "text": "Ktoś przemykał obok {room}. Postura pasowała do {suspect}, ale było ciemno." },
+      { "certainty": 95, "text": "Zauważyłem {suspect} w {room}. Trzymał{em|am} w dłoni coś, co przypominało {weapon}." },
+      { "certainty": 100, "text": "Jestem pewien, że {suspect} opuścił{em|am} {room} tuż przed odkryciem ciała." },
+      { "certainty": 60, "text": "Moim zdaniem {suspect} kręcił{em|am} się przy {room} bez wyraźnego powodu." }
+    ],
+    "OPINIA_O_INNYCH": [
+      { "text": "{suspect} zawsze wydawał mi się osobą zbyt głośną i niepasującą do tego domu." },
+      { "text": "Relacje między {suspect} a nieboszczykiem były, łagodnie mówiąc, szorstkie." },
+      { "text": "Nie mam w zwyczaju plotkować o gościach, ale {suspect} ma wyjątkowo złą sławę." },
+      { "text": "Proszę uważać na {suspect}. To człowiek, który potrafi manipulować faktami." },
+      { "text": "O ile wiem, {suspect} desperacko potrzebował pieniędzy, które obiecał mu pan Andrzej." }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      { "requiresClue": true, "text": "To doprawdy niepokojące. {weapon} nie powinien znajdować się w tym miejscu." },
+      { "requiresClue": true, "text": "Skąd u {Pana|Pani} {weapon}? Czy to pochodzi z {room}?" },
+      { "requiresClue": true, "text": "Widziałem ten przedmiot wcześniej. Leżał w {room} na blacie." },
+      { "requiresClue": true, "text": "Proszę zachować ostrożność. {weapon} to nie jest zabawka." }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      { "text": "Przyznaję, mój błąd. Emocje wzięły górę nad precyzją wypowiedzi." },
+      { "text": "Skoro {Pan|Pani} to zauważył{em|am}... Tak, skłamałem w kwestii pobytu w {room}." },
+      { "text": "To nie tak, jak {Pan|Pani} myśli. Próbowałem jedynie chronić dobre imię rodziny." }
+    ]
+  }
+}

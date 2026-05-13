@@ -1,0 +1,432 @@
+{
+  "npcId": "honorataHanska",
+  "npcName": "Honorata Hańska",
+  "speechStyle": "COLD",
+  "defaultEmotion": "COMPOSED",
+
+  "fragments": {
+    "openers": [
+      "Niech pan nie oczekuje, że będę udawać smutek —",
+      "Proszę bardzo,",
+      "Skoro już pan pyta,",
+      "To może być dla pana zaskoczeniem, ale",
+      "Kobiety mojego pokroju nauczyły się jednej rzeczy:"
+    ],
+    "certaintyMarkers": {
+      "high":   ["Jestem absolutnie pewna,", "Nie ma wątpliwości —", "Widziałam to na własne oczy."],
+      "medium": ["O ile dobrze pamiętam,", "Zdaje mi się,", "Mam wrażenie, że"],
+      "low":    ["Trudno mi powiedzieć z pewnością,", "To może być tylko moja interpretacja,", "Nie przysiągnę, ale"]
+    },
+    "closers": [
+      "— to wszystko, co mam do powiedzenia.",
+      "Proszę wyciągać własne wnioski.",
+      "Nie oczekuję, że pan to zrozumie.",
+      "I tak by pan nie uwierzył.",
+      "Mam nadzieję, że to wystarczy."
+    ]
+  },
+
+  "dialogues": [
+    {
+      "type": "GREETING",
+      "variants": [
+        {
+          "template": "Mój mąż nie żyje. Jeśli ma to pan jakoś uhonorować, proszę zadać pytania i wyjść.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Rozumiem, że musi pan rozmawiać z każdym. Postaram się nie marnować pańskiego czasu.",
+          "emotion": "COMPOSED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "To okropna noc. Dla wszystkich. Proszę — pytaj pan.",
+          "emotion": "CONTROLLED_GRIEF",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Policja już tu była. Nie wiem, czego pan może chcieć, czego oni nie zapytali.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Niech pan siada. Kieliszek wina? Nie? Jak pan woli.",
+          "emotion": "COMPOSED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "ALIBI",
+      "variants": [
+        {
+          "template": "Byłam w sali balowej. Widziało mnie tam przynajmniej dziesięć osób.",
+          "emotion": "CALM",
+          "certainty": 95,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Przez większość wieczoru rozmawiałam z gośćmi. Tego oczekuje się od gospodyni, nawet gdy gospodyni woli być gdzie indziej.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Koło {time} wyszłam na chwilę do ogrodu. Potrzebowałam powietrza. Czy to jest przestępstwo?",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie będę tłumaczyć każdej minuty wieczoru. Jestem wdową, nie aresztantką.",
+          "emotion": "CONTEMPTUOUS",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę zapytać Kamila — śledził każdego przez cały wieczór. To jego zawód.",
+          "emotion": "COLD",
+          "certainty": 70,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SAW_SOMETHING",
+      "variants": [
+        {
+          "template": "Widziałam {suspect} wychodzącego z {room}. Uznałam, że to nie moja sprawa.",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Był ktoś przy drzwiach do {room}. Nie interesowałam się, kto i po co.",
+          "emotion": "INDIFFERENT",
+          "certainty": 50,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} rozmawiał z moim mężem — przynajmniej przez chwilę. Oboje wyglądali na napiętych.",
+          "emotion": "OBSERVANT",
+          "certainty": 75,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Widziałam wiele rzeczy tej nocy, których nie zamierzam opisywać. Pewne sprawy są natury prywatnej.",
+          "emotion": "COLD",
+          "certainty": 90,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Mąż wyszedł w kierunku {room} około {time}. Nie wróciłam się, żeby sprawdzić, z kim.",
+          "emotion": "BITTER",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "HEARD_SOMETHING",
+      "variants": [
+        {
+          "template": "Nauczyłam się przez lata nie wsłuchiwać w rozmowy w tym domu. To lepsze dla zdrowia psychicznego.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Słyszałam coś z kierunku {room}. Głosy. Nie rozróżniłam słów.",
+          "emotion": "CALM",
+          "certainty": 60,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Ktoś się kłócił. Głos brzmiał jak głos Andrzeja — ale przy nim wszyscy w końcu podnosili głos.",
+          "emotion": "COLD",
+          "certainty": 65,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Słyszałam dźwięk z {room}. Uznałam, że to ktoś ze służby. Myliłam się najwyraźniej.",
+          "emotion": "COMPOSED",
+          "certainty": 50,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "OPINION_OF_OTHERS",
+      "variants": [
+        {
+          "template": "{suspect}? Mój mąż zapraszał rozmaitych ludzi. Nie wszystkich z powodów, które chciałabym znać.",
+          "emotion": "CONTEMPTUOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Między {victim} a {suspect} od dawna były... nieporozumienia. Andrzej lubił mieć nad ludźmi przewagę.",
+          "emotion": "COLD",
+          "certainty": 80,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} to człowiek, który stara się robić wrażenie. Andrzej to widział. I wykorzystywał.",
+          "emotion": "OBSERVANT",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie mam zwyczaju mówić źle o gościach pod własnym dachem. Nawet jeśli dach wkrótce będzie tylko mój.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "SUSPICION",
+      "variants": [
+        {
+          "template": "Gdybym miała wskazać kogoś, kto miał powód... lista byłaby długa. Andrzej był w tym niezrównany.",
+          "emotion": "COLD",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Nie jestem detektywem. Jestem wdową. Proszę się tym zająć pan.",
+          "emotion": "DISMISSIVE",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "{suspect} miał motyw. Niech pan sprawdzi, co łączyło go z Andrzejem finansowo.",
+          "emotion": "COLD",
+          "certainty": 75,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Powiem panu tyle: mój mąż nie robił przyjaciół. Robił dłużników i wrogów. Proszę wybrać sobie z tej listy.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_CLUE",
+      "variants": [
+        {
+          "template": "Skąd pan to ma? Tego nie powinno tu być.",
+          "emotion": "ALARMED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To niczego nie dowodzi. Proszę nie wyciągać pochopnych wniosków.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Widziałam to wcześniej. Wiedziałam, że w końcu wypłynie.",
+          "emotion": "RESIGNED",
+          "certainty": 90,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Proszę to odłożyć. To jest moja własność prywatna.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Dobrze. Wiedziałam o tym. Ale wiedzieć o czymś, a zrobić coś — to nie to samo.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "LIE",
+      "variants": [
+        {
+          "template": "Nie wiedziałam, że testament był zmieniany. Takie decyzje Andrzej podejmował sam.",
+          "emotion": "COMPOSED",
+          "certainty": 95,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Jego romanse mnie nie obchodziły. Długo temu przestały.",
+          "emotion": "COLD",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "Nie wiedziałam, że {suspect} miał z nim aż takie zatargi.",
+          "emotion": "COMPOSED",
+          "certainty": 85,
+          "requiresClue": false,
+          "isLie": true
+        },
+        {
+          "template": "O tej godzinie byłam w sali balowej. Pytałam o czas, bo buty mi uwierały i chciałam wiedzieć, kiedy skończy się ta groteska.",
+          "emotion": "COLD",
+          "certainty": 90,
+          "requiresClue": false,
+          "isLie": true
+        }
+      ]
+    },
+
+    {
+      "type": "NERVOUSNESS",
+      "variants": [
+        {
+          "template": "Nie zamierzam odpowiadać na każde pytanie bez obecności adwokata.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "To pytanie jest niestosowne biorąc pod uwagę okoliczności.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Wybaczy pan, że nie okazuję rozpaczy w sposób, który pan uważa za właściwy.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę nie mylić mojego spokoju z brakiem uczuć.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "CONTRADICTION",
+      "variants": [
+        {
+          "template": "Dobrze. Wiedziałam o testamencie wcześniej, niż powiedziałam. To nie czyni mnie morderczynią.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Zmodyfikowałam pewne szczegóły. Każda kobieta w moim położeniu by to zrobiła.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Niech pan nie triumfuje. Byłam w {room} — to prawda. Ale nie po to, o czym pan myśli.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        },
+        {
+          "template": "Powiedziałam, że mnie nie obchodziły jego romanse. To była grzeczna fikcja. I tak pan wiedział.",
+          "emotion": "BITTER",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    },
+
+    {
+      "type": "REACTION_TO_ACCUSATION",
+      "variants": [
+        {
+          "template": "Czy pan naprawdę sądzi, że kobieta z mojego środowiska brudzi sobie ręce osobiście?",
+          "emotion": "CONTEMPTUOUS",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "To oskarżenie jest śmieszne. Gdybym chciała się go pozbyć, dałabym mu rozwód.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Może chciałam jego śmierci. Wiele żon tak ma. To nie jest jeszcze zbrodnia.",
+          "emotion": "COLD",
+          "certainty": 100,
+          "requiresClue": false,
+          "isLie": false
+        },
+        {
+          "template": "Proszę porozmawiać z prawnikiem, zanim pójdzie pan dalej w tym kierunku.",
+          "emotion": "CONTROLLED",
+          "certainty": 100,
+          "requiresClue": true,
+          "isLie": false
+        }
+      ]
+    }
+  ]
+}
