@@ -33,16 +33,12 @@ public class InputHandler {
         }
     }
 
-    /**
-     * Czyta dowolną linię tekstu (np. do wyszukiwania, oskarżenia).
-     */
+    // Czyta dowolną linię tekstu (np. do wyszukiwania, oskarżenia).
     public String readLine() {
         return scanner.nextLine().trim();
     }
 
-    /**
-     * Czeka na dowolny klawisz (Enter) – używane przy komunikatach "naciśnij Enter".
-     */
+    // Czeka na dowolny klawisz (Enter) – używane przy komunikatach "naciśnij Enter".
     public void waitForEnter() {
         scanner.nextLine();
     }
