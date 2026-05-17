@@ -1,0 +1,74 @@
+package main.engine;
+
+import main.characters.PlayerCharacter;
+import main.characters.Suspect;
+import main.data.GameDataLoader;
+import main.world.Location;
+import main.world.MurderCase;
+import main.world.EventLog;
+
+import java.util.List;
+
+/**
+ * Centralny rejestr stanu gry.
+ * Przechowuje dane załadowane na starcie i udostępnia je innym systemom.
+ */
+public class GameEngine {
+
+    // Stan gry
+    private PlayerCharacter player;
+    private List<Suspect> suspects;
+    private List<Location> locations;
+    private Location currentLocation;
+    private MurderCase murderCase;
+    private EventLog eventLog;
+
+    // Podsystemy
+    private final SceneManager sceneManager;
+    private final GameLoop gameLoop;
+
+    // Flagi
+    private boolean running;
+
+    public GameEngine() {
+        this.sceneManager = SceneManager.createInitialScene(this);
+        this.gameLoop = new GameLoop(this, sceneManager);
+        this.eventLog = new EventLog();
+    }
+
+    // Inicjalizuje grę: ładuje dane, ustawia stan początkowy, uruchamia pętlę.
+    public void start() {
+        loadGameData();
+        running = true;
+        gameLoop.run();
+    }
+
+    public void stop() {
+        running = false;
+    }
+
+    // Ładowanie danych
+    private void loadGameData() {
+        GameDataLoader loader = new GameDataLoader();
+        this.suspects = loader.loadSuspects();
+        this.locations = loader.loadLocations();
+        this.murderCase = loader.loadMurderCase(suspects, locations);
+    }
+
+    // Gettery / settery stanu
+    public PlayerCharacter getPlayer() { return player; }
+    public void setPlayer(PlayerCharacter player) { this.player = player; }
+
+    public List<Suspect> getSuspects() { return suspects; }
+
+    public List<Location> getLocations() { return locations; }
+
+    public Location getCurrentLocation() { return currentLocation; }
+    public void setCurrentLocation(Location location) { this.currentLocation = location; }
+
+    public MurderCase getMurderCase() { return murderCase; }
+
+    public EventLog getEventLog() { return eventLog; }
+
+    public boolean isRunning() { return running; }
+}
