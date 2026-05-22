@@ -1,0 +1,186 @@
+{
+  "type": "RELACJE",
+  "description": "Szablony o relacjach z ofiara i innymi postaciami. NPC opisuje oficjalna wersje lub ukryta prawde.",
+  "templates": [
+    {
+      "id": "rel_001",
+      "template": "Znałem {victim} od lat. Nie powiedziałbym, że byliśmy przyjaciółmi, ale szanowaliśmy się.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        100
+      ],
+      "tags": [
+        "oficjalna",
+        "dystans"
+      ]
+    },
+    {
+      "id": "rel_002",
+      "template": "Nasza relacja była... skomplikowana. Jak to w biznesie.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "wymijajaca",
+        "biznes"
+      ]
+    },
+    {
+      "id": "rel_003",
+      "template": "{victim} był trudnym człowiekiem. Ale nie zasłużył na coś takiego.",
+      "emotion": "SMUTEK",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "uczciwa",
+        "wspolczujaca"
+      ]
+    },
+    {
+      "id": "rel_004",
+      "template": "Pracowałem dla {victim}. To wszystko. Nie łączyło nas nic poza obowiązkami.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        100
+      ],
+      "tags": [
+        "profesjonalna",
+        "chłodna"
+      ]
+    },
+    {
+      "id": "rel_005",
+      "template": "Byliśmy sobie bliscy, dawniej. Potem rzeczy się zmieniły. Nie chcę wchodzić w szczegóły.",
+      "emotion": "SMUTEK",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "intymna",
+        "przeszlosc"
+      ]
+    },
+    {
+      "id": "rel_006",
+      "template": "{victim} miał wielu znajomych, a niewielu prawdziwych przyjaciół. Nie wiem, czy ja byłem jednym z nich.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "refleksyjna",
+        "filozoficzna"
+      ]
+    },
+    {
+      "id": "rel_007",
+      "template": "Nienawidziłem go. Ale to nie znaczy, że go zabiłem.",
+      "emotion": "GNIEW",
+      "minTrust": 20,
+      "requiresClue": false,
+      "certaintyRange": [
+        80,
+        100
+      ],
+      "tags": [
+        "szczera",
+        "konfrontacyjna"
+      ]
+    },
+    {
+      "id": "rel_008",
+      "template": "{victim} wiele dla mnie zrobił. I wiele mi zabrał. Trudno to opisać jednym słowem.",
+      "emotion": "SMUTEK",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        85
+      ],
+      "tags": [
+        "złożona",
+        "emocjonalna"
+      ]
+    },
+    {
+      "id": "rel_009",
+      "template": "Nie znałem {victim} aż tak dobrze, jak pan myśli.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "dystansujaca",
+        "potencjalne_klamstwo"
+      ]
+    },
+    {
+      "id": "rel_010",
+      "template": "Byłem mu wdzięczny. Kiedyś. Potem zrozumiałem, że każda przysługa miała swoją cenę.",
+      "emotion": "POGARDA",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "rozczarowanie",
+        "manipulacja"
+      ]
+    },
+    {
+      "id": "rel_011",
+      "template": "Byliśmy wspólnikami. Ale {victim} miał swoje definicje partnerstwa.",
+      "emotion": "GORZKI",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        85
+      ],
+      "tags": [
+        "biznes",
+        "gorzka"
+      ]
+    },
+    {
+      "id": "rel_012",
+      "template": "{victim} był moim pracodawcą. W tej relacji nie ma miejsca na uczucia.",
+      "emotion": "ZIMNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        100
+      ],
+      "tags": [
+        "formalna",
+        "chlodna"
+      ]
+    }
+  ]
+}

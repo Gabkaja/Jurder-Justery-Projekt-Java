@@ -1,0 +1,177 @@
+{
+  "description": "System fragmentow zdan do dynamicznego skladania wypowiedzi. Generator losuje po jednym elemencie z kazdej grupy i skleja w naturalne zdanie.",
+  "usage": "opener + core + closer = pelna wypowiedz",
+  "openers": {
+    "neutral": [
+      "Szczerze mówiąc,",
+      "Jeśli mam być szczery,",
+      "Z tego co pamiętam,",
+      "Powiem panu tak —",
+      "No więc,",
+      "Proszę posłuchać,",
+      "Niech pan posłucha,",
+      "Tak się składa, że",
+      "Muszę powiedzieć, że",
+      "Prawdę mówiąc,"
+    ],
+    "nervous": [
+      "Nie wiem, czy to ważne, ale...",
+      "Nie chciałbym sprawiać kłopotów, ale...",
+      "Mogę się mylić, ale...",
+      "To pewnie nic takiego, ale...",
+      "Ja... to znaczy...",
+      "Proszę, niech pan mnie źle nie zrozumie, ale...",
+      "Wolałbym o tym nie mówić, ale...",
+      "To trochę niezręczne, ale..."
+    ],
+    "confident": [
+      "Jestem tego absolutnie pewien —",
+      "Widziałem to na własne oczy —",
+      "Mogę to potwierdzić —",
+      "Nie mam wątpliwości, że",
+      "Przysięgam na wszystko —",
+      "Niech pan zapisze —",
+      "To nie podlega dyskusji —",
+      "Wiem to na pewno —"
+    ],
+    "suspicious": [
+      "Niech pan sam oceni, ale...",
+      "Nie oskarżam nikogo, jednak...",
+      "Dziwnym trafem...",
+      "Przypadek czy nie, ale...",
+      "Nie mówię, że to coś znaczy, ale...",
+      "Proszę zwrócić uwagę, że...",
+      "To może nic nie znaczyć, ale..."
+    ],
+    "reluctant": [
+      "Nie chciałem o tym mówić, ale...",
+      "Wolałbym tego nie poruszać, ale...",
+      "Skoro pan pyta...",
+      "Skoro to ważne...",
+      "No dobrze, ale między nami...",
+      "Nikomu tego nie mówiłem, ale...",
+      "Obiecuję sobie, że to jedyny raz —"
+    ],
+    "emotional": [
+      "To mnie boli, ale...",
+      "Ciężko mi o tym mówić, ale...",
+      "Pan nie rozumie —",
+      "To nie jest łatwe dla mnie, ale...",
+      "Nie mogę dłużej milczeć —",
+      "Mam już dość ukrywania —"
+    ]
+  },
+  "cores": {
+    "saw_person_in_room": [
+      "widziałem {suspect} w {room}",
+      "{suspect} był wtedy w {room}",
+      "{suspect} wychodził właśnie z {room}",
+      "mignął mi {suspect} niedaleko {room}",
+      "{suspect} kręcił się koło {room}",
+      "zauważyłem {suspect} wchodzącego do {room}",
+      "{suspect} stał przy drzwiach do {room}",
+      "widziałem jak {suspect} wychodzi z {room}"
+    ],
+    "heard_sound_in_room": [
+      "słyszałem dziwny dźwięk z {room}",
+      "doszedł mnie hałas z kierunku {room}",
+      "coś się rozbiło w {room}",
+      "usłyszałem krzyk dochodzący z {room}",
+      "ktoś się kłócił gdzieś koło {room}",
+      "z {room} dobiegały podniesione głosy",
+      "coś upadło z hukiem w {room}",
+      "słyszałem trzaśnięcie drzwi od {room}"
+    ],
+    "alibi_was_in_room": [
+      "byłem w {room}",
+      "spędzałem czas w {room}",
+      "siedziałem w {room}",
+      "przebywałem w {room}",
+      "znajdowałem się w {room}",
+      "nie ruszałem się z {room}",
+      "cały czas byłem w {room}"
+    ],
+    "opinion_about_suspect": [
+      "nigdy nie ufałem {suspect}",
+      "{suspect} jest zdolny do wielu rzeczy",
+      "między {suspect} a {victim} od dawna było napięcie",
+      "{suspect} miał powód, żeby nienawidzić {victim}",
+      "{suspect} zachowywał się tego wieczoru bardzo dziwnie",
+      "nie zdziwiłbym się, gdyby {suspect} miał z tym coś wspólnego",
+      "{suspect} i {victim} mieli ze sobą na pieńku"
+    ],
+    "suspicion_points_to": [
+      "moim zdaniem to mógł być {suspect}",
+      "gdybym miał wskazać jedną osobę, wskazałbym {suspect}",
+      "wszystko wskazuje na {suspect}",
+      "{suspect} ma najsilniejszy motyw",
+      "nie oskarżam nikogo wprost, ale {suspect} zachowywał się podejrzanie",
+      "jeśli ktokolwiek miał powód, to {suspect}",
+      "niech pan się przyjrzy {suspect}"
+    ],
+    "weapon_related": [
+      "widziałem {weapon} niedaleko {room}",
+      "{weapon} leżał nie na swoim miejscu",
+      "ktoś przesunął {weapon}",
+      "zauważyłem, że brakuje {weapon}",
+      "{weapon} wcześniej tam nie było"
+    ],
+    "time_related": [
+      "to było mniej więcej o {time}",
+      "jakieś {time} minuty przed północą",
+      "stało się to koło {time}",
+      "zegarek wskazywał {time}, kiedy to zauważyłem",
+      "nie jestem pewien godziny, ale chyba koło {time}"
+    ],
+    "motive_related": [
+      "{suspect} miał powody finansowe",
+      "chodziło o pieniądze między {suspect} a {victim}",
+      "{suspect} coś ukrywał",
+      "między nimi była stara uraza",
+      "{victim} miał na {suspect} haka",
+      "{suspect} bał się, że {victim} go zdemaskuje"
+    ]
+  },
+  "closers": {
+    "temporal": [
+      "tuż przed północą.",
+      "niedługo przed krzykiem.",
+      "mniej więcej w czasie, gdy to się stało.",
+      "jakieś pół godziny przed... no, przed tym.",
+      "gdzieś koło dziesiątej.",
+      "kiedy impreza była w pełni.",
+      "pod koniec wieczoru."
+    ],
+    "uncertainty": [
+      "ale nie zwróciłem wtedy na to uwagi.",
+      "chociaż było ciemno i mogłem się pomylić.",
+      "ale nie jestem pewien szczegółów.",
+      "ale pamięć mnie może zawodzić.",
+      "chociaż wszystko wydarzyło się bardzo szybko.",
+      "ale proszę tego nie traktować jako pewnik.",
+      "choć mogę coś pokręcić."
+    ],
+    "dismissive": [
+      "ale to pewnie nic ważnego.",
+      "nie wiem, czy to w ogóle istotne.",
+      "ale co ja tam wiem.",
+      "ale to raczej bez znaczenia.",
+      "chociaż pewnie przesadzam.",
+      "ale to tylko takie moje przemyślenie."
+    ],
+    "dramatic": [
+      "a potem usłyszałem krzyk.",
+      "i wtedy wszystko się zaczęło.",
+      "i od tego momentu nic już nie było takie samo.",
+      "a chwilę później znaleźliśmy ciało.",
+      "i nigdy nie zapomnę tego wieczoru."
+    ],
+    "evasive": [
+      "ale nie chcę się w to mieszać.",
+      "ale to nie moja sprawa.",
+      "ale wolałbym nie wchodzić w szczegóły.",
+      "ale proszę, niech pan mnie w to nie wciąga.",
+      "ale ja naprawdę nie chcę mieć z tym nic wspólnego."
+    ]
+  }
+}

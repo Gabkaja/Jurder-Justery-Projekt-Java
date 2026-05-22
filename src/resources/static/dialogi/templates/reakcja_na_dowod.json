@@ -1,0 +1,186 @@
+{
+  "type": "REAKCJA_NA_DOWOD",
+  "description": "Szablony reakcji na przedstawiony dowod. Reakcja zalezy od tego czy dowod obciaza NPC, kogos innego, lub jest neutralny. Placeholdery: {suspect}, {room}, {weapon}, {victim}.",
+  "templates": [
+    {
+      "id": "rnd_001",
+      "template": "To niczego nie dowodzi.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "zaprzeczenie",
+        "defensywne"
+      ]
+    },
+    {
+      "id": "rnd_002",
+      "template": "Skąd pan to ma?",
+      "emotion": "ZASKOCZENIE",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "zaskoczenie",
+        "pytanie"
+      ]
+    },
+    {
+      "id": "rnd_003",
+      "template": "Nigdy wcześniej tego nie widziałem.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "NEUTRAL",
+      "tags": [
+        "zaprzeczenie",
+        "proste"
+      ]
+    },
+    {
+      "id": "rnd_004",
+      "template": "Dobrze... ukrywałem to. Ale to nie jest to, na co wygląda.",
+      "emotion": "POCZUCIE_WINY",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "przyznanie",
+        "wyjasnienie"
+      ]
+    },
+    {
+      "id": "rnd_005",
+      "template": "To dowód, że {suspect} tam był. Nie ja.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "INCRIMINATES_OTHER",
+      "tags": [
+        "odwrocenie",
+        "oskarżenie"
+      ]
+    },
+    {
+      "id": "rnd_006",
+      "template": "Ciekawe. Ale to nie zmienia tego, co powiedziałem.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "NEUTRAL",
+      "tags": [
+        "spokojna",
+        "niewzruszona"
+      ]
+    },
+    {
+      "id": "rnd_007",
+      "template": "Muszę przyznać, że nie spodziewałem się tego znaleziska. To... komplikuje sprawy.",
+      "emotion": "ZASKOCZENIE",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "NEUTRAL",
+      "tags": [
+        "zaskoczenie",
+        "refleksja"
+      ]
+    },
+    {
+      "id": "rnd_008",
+      "template": "Tak, to moje. I co z tego? Nie ma w tym nic nielegalnego.",
+      "emotion": "GNIEW",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "agresywne_przyznanie",
+        "konfrontacja"
+      ]
+    },
+    {
+      "id": "rnd_009",
+      "template": "A widzi pan — dokładnie o to chodziło. {suspect} miał dostęp do {room}, gdzie to znaleziono.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": true,
+      "evidenceRelevance": "INCRIMINATES_OTHER",
+      "tags": [
+        "przekierowanie",
+        "logiczne"
+      ]
+    },
+    {
+      "id": "rnd_010",
+      "template": "Proszę to schować. Jeśli ktoś to zobaczy... to może być niebezpieczne.",
+      "emotion": "STRACH",
+      "minTrust": 20,
+      "requiresClue": true,
+      "evidenceRelevance": "DANGEROUS",
+      "tags": [
+        "strach",
+        "ostrzezenie"
+      ]
+    },
+    {
+      "id": "rnd_011",
+      "template": "Nie mam pojęcia, jak to się tam znalazło. Ktoś musiał to podrzucić.",
+      "emotion": "PANIKA",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "panika",
+        "podrzucenie"
+      ]
+    },
+    {
+      "id": "rnd_012",
+      "template": "To interesujące. Bardzo interesujące. Proszę mi powiedzieć więcej.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 10,
+      "requiresClue": true,
+      "evidenceRelevance": "INCRIMINATES_OTHER",
+      "tags": [
+        "zainteresowanie",
+        "analityczne"
+      ]
+    },
+    {
+      "id": "rnd_013",
+      "template": "No i co? Każdy tu miał kontakt z {weapon}. To nic nie znaczy.",
+      "emotion": "GNIEW",
+      "minTrust": 0,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "bagatelizowanie",
+        "agresywne"
+      ]
+    },
+    {
+      "id": "rnd_014",
+      "template": "Mogę wytłumaczyć. Ale nie tutaj i nie przy świadkach.",
+      "emotion": "STRACH",
+      "minTrust": 15,
+      "requiresClue": true,
+      "evidenceRelevance": "SELF_INCRIMINATING",
+      "tags": [
+        "warunkowe_przyznanie",
+        "prywatnosc"
+      ]
+    },
+    {
+      "id": "rnd_015",
+      "template": "To zmienia wszystko. {suspect} kłamał.",
+      "emotion": "ZASKOCZENIE",
+      "minTrust": 10,
+      "requiresClue": true,
+      "evidenceRelevance": "INCRIMINATES_OTHER",
+      "tags": [
+        "rewelacja",
+        "oskarżenie"
+      ]
+    }
+  ]
+}

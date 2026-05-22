@@ -1,0 +1,232 @@
+{
+  "type": "OBSERWACJE_SLUCHOWE",
+  "description": "Szablony obserwacji sluchowych — NPC opisuje co slyszal. Czesto mniej wiarygodne niz obserwacje wzrokowe.",
+  "templates": [
+    {
+      "id": "obs_s_001",
+      "template": "Słyszałem krzyk dochodzący z {room}.",
+      "emotion": "STRACH",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        90
+      ],
+      "tags": [
+        "krzyk",
+        "alarmujace"
+      ]
+    },
+    {
+      "id": "obs_s_002",
+      "template": "Ktoś się kłócił niedaleko {room}. Podniesione głosy, ale nie rozróżniłem słów.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        70
+      ],
+      "tags": [
+        "klotnia",
+        "nieokreslone"
+      ]
+    },
+    {
+      "id": "obs_s_003",
+      "template": "Usłyszałem dźwięk tłuczonego szkła. Chyba z {room}.",
+      "emotion": "ZASKOCZENIE",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "dzwiek",
+        "szklo"
+      ]
+    },
+    {
+      "id": "obs_s_004",
+      "template": "Ktoś trzasnął drzwiami od {room}. Bardzo mocno.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "drzwi",
+        "huk"
+      ]
+    },
+    {
+      "id": "obs_s_005",
+      "template": "Słyszałem kroki na korytarzu, szybkie, jakby ktoś biegł. To było blisko {room}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "kroki",
+        "bieganie"
+      ]
+    },
+    {
+      "id": "obs_s_006",
+      "template": "Ktoś szeptał za drzwiami {room}. Nie wiem kto, ale słyszałem dwa głosy.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "szept",
+        "dwa_glosy"
+      ]
+    },
+    {
+      "id": "obs_s_007",
+      "template": "Usłyszałem głos {suspect}. Mówił coś ostro, ale nie słyszałem do kogo.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "glos_konkretny",
+        "ostry_ton"
+      ]
+    },
+    {
+      "id": "obs_s_008",
+      "template": "Coś ciężkiego upadło w {room}. Głuchy łomot.",
+      "emotion": "STRACH",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "upadek",
+        "ciezki_przedmiot"
+      ]
+    },
+    {
+      "id": "obs_s_009",
+      "template": "Słyszałem, jak ktoś otwiera i zamyka szuflady w {room}. Szybko, nerwowo.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "przeszukiwanie",
+        "nerwowe"
+      ]
+    },
+    {
+      "id": "obs_s_010",
+      "template": "{suspect} i {victim} rozmawiali w {room}. Zaczynało się spokojnie, potem {victim} podniósł głos.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "rozmowa",
+        "eskalacja"
+      ]
+    },
+    {
+      "id": "obs_s_011",
+      "template": "Słyszałem płacz. Nie wiem, kto to był, ale dochodził z kierunku {room}.",
+      "emotion": "SMUTEK",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "placz",
+        "emocjonalne"
+      ]
+    },
+    {
+      "id": "obs_s_012",
+      "template": "O {time} ktoś zamknął drzwi do {room} na klucz. Słyszałem przekręcanie zamka.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        85
+      ],
+      "tags": [
+        "zamykanie",
+        "klucz",
+        "precyzyjne"
+      ]
+    },
+    {
+      "id": "obs_s_013",
+      "template": "Było cicho, a potem nagle huk z {room}. Jakby coś eksplodowało. Albo ktoś coś przewrócił.",
+      "emotion": "ZASKOCZENIE",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "nagle",
+        "huk"
+      ]
+    },
+    {
+      "id": "obs_s_014",
+      "template": "Mogę przysiąc, że słyszałem jak {suspect} mówi: 'Nie zrobisz mi tego'. Ale nie wiem, do kogo.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        65
+      ],
+      "tags": [
+        "cytat",
+        "grozba"
+      ]
+    },
+    {
+      "id": "obs_s_015",
+      "template": "Ktoś szedł po schodach mniej więcej o {time}. Schody tutaj mocno skrzypią — to było wyraźne.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "schody",
+        "ruch"
+      ]
+    }
+  ]
+}

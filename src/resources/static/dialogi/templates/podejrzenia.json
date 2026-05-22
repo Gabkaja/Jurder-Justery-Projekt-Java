@@ -1,0 +1,186 @@
+{
+  "type": "PODEJRZENIA",
+  "description": "Szablony podejrzen — NPC wskazuje kogo podejrzewa. Czesto motywowane wlasnym interesem.",
+  "templates": [
+    {
+      "id": "pod_001",
+      "template": "Moim zdaniem to mógł być {suspect}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        70
+      ],
+      "tags": [
+        "bezposrednie",
+        "wskazanie"
+      ]
+    },
+    {
+      "id": "pod_002",
+      "template": "Gdybym miał wskazać jedną osobę... wskazałbym {suspect}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        80
+      ],
+      "tags": [
+        "bezposrednie",
+        "pewne"
+      ]
+    },
+    {
+      "id": "pod_003",
+      "template": "Nie oskarżam nikogo, ale {suspect} zachowywał się dziwnie tego wieczoru.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "ostrozne",
+        "dyplomatyczne"
+      ]
+    },
+    {
+      "id": "pod_004",
+      "template": "Proszę się przyjrzeć {suspect}. Ma motyw i nie ma alibi.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 20,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        85
+      ],
+      "tags": [
+        "analityczne",
+        "mocne"
+      ]
+    },
+    {
+      "id": "pod_005",
+      "template": "Nie chcę nikogo oskarżać, ale... kto inny miał powód?",
+      "emotion": "NEUTRALNY",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        20,
+        50
+      ],
+      "tags": [
+        "retoryczne",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "pod_006",
+      "template": "{suspect} zniknął na ponad godzinę. Nikt nie wie, gdzie był. To nie przypadek.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "alibi",
+        "nieobecnosc"
+      ]
+    },
+    {
+      "id": "pod_007",
+      "template": "Widziałem twarz {suspect} po tym, jak znaleźliśmy ciało. Nie wyglądał na zaskoczonego.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        65
+      ],
+      "tags": [
+        "reakcja",
+        "brak_emocji"
+      ]
+    },
+    {
+      "id": "pod_008",
+      "template": "{suspect} był ostatnią osobą, którą widziałem z {victim}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        85
+      ],
+      "tags": [
+        "chronologiczne",
+        "kluczowe"
+      ]
+    },
+    {
+      "id": "pod_009",
+      "template": "Jeśli ktoś miał dostęp do {room} o tej porze, to {suspect}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "dostep",
+        "logiczne"
+      ]
+    },
+    {
+      "id": "pod_010",
+      "template": "Nie mówię, że to {suspect}. Mówię, że warto zapytać {suspect}, dlaczego kłamie.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 20,
+      "requiresClue": true,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "klamstwo",
+        "konfrontacja"
+      ]
+    },
+    {
+      "id": "pod_011",
+      "template": "Pieniądze, zemsta, zazdrość — {suspect} ma wszystkie trzy.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "motywy",
+        "kompleksowe"
+      ]
+    },
+    {
+      "id": "pod_012",
+      "template": "Każdy tu ma powód, żeby kłamać. Ale {suspect} ma powód, żeby zabić.",
+      "emotion": "GNIEW",
+      "minTrust": 20,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        85
+      ],
+      "tags": [
+        "ostre",
+        "dobitne"
+      ]
+    }
+  ]
+}

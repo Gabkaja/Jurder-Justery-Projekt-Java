@@ -1,0 +1,366 @@
+{
+  "npcId": "konstantyKulczycki",
+  "name": "Konstanty Kulczycki",
+  "title": "Kucharz",
+  "speechProfile": {
+    "primaryStyle": "BEZPOSREDNI",
+    "secondaryStyle": "AGRESYWNY",
+    "defaultEmotion": "NEUTRALNY",
+    "speakingTraits": [
+      "bezposredni",
+      "glosny",
+      "emocjonalny",
+      "szczery",
+      "impulsywny"
+    ],
+    "vocabulary": "srednia",
+    "verbosity": "umiarkowana",
+    "quirks": [
+      "Mowi glosno i z pasja",
+      "Uzywa metafor kulinarnych",
+      "Pod presja wybucha — potem zaluuje",
+      "Mowi co mysli, zanim pomysli",
+      "Oddany swojemu rzemioslowi — bron go o kuchnie"
+    ]
+  },
+  "uniqueDialogues": {
+    "POWITANIA": [
+      {
+        "id": "konst_pow_001",
+        "text": "Niech pan wchodzi. Mogę zrobić kawę — w kuchni to ja rządzę, nie policja.",
+        "emotion": "NEUTRALNY",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "konst_pow_002",
+        "text": "Arciszewski nie żyje, a ja mam odpowiadać na pytania zamiast sprzątać kuchnię. Pięknie.",
+        "emotion": "GNIEW",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "konst_pow_003",
+        "text": "Pan znowu? Słuchaj, ja ci powiedziałem wszystko. Nie mam w zwyczaju dwa razy podgrzewać tego samego dania.",
+        "emotion": "GNIEW",
+        "context": "REPEATED_VISIT"
+      },
+      {
+        "id": "konst_pow_004",
+        "text": "Proszę, proszę. Kucharz jest gotowy do przesłuchania. Ale niech pan się pospieszy — kolacja sama się nie sprząta.",
+        "emotion": "NEUTRALNY",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "konst_pow_005",
+        "text": "Cała ta sprawa śmierdzi. I nie mówię o potrawach.",
+        "emotion": "PODEJRZLIWOSC",
+        "context": "FIRST_MEETING"
+      }
+    ],
+    "ALIBI": [
+      {
+        "id": "konst_ali_001",
+        "text": "Byłem w {room} przez większość wieczoru. Przyjęcie na trzydzieści osób — wie pan, ile to roboty?",
+        "emotion": "NEUTRALNY",
+        "certainty": 85
+      },
+      {
+        "id": "konst_ali_002",
+        "text": "O {time} serwowałem deser w {room}. Każdy to widział. Ciasto migdałowe — moja specjalność.",
+        "emotion": "NEUTRALNY",
+        "certainty": 90
+      },
+      {
+        "id": "konst_ali_003",
+        "text": "Wychodziłem do {room} po składniki. Dwa, może trzy razy. Rutyna.",
+        "emotion": "NEUTRALNY",
+        "certainty": 70
+      },
+      {
+        "id": "konst_ali_004",
+        "text": "Między daniami wypalałem papierosa w {room}. Sam. W ciszy. Bo kucharz też potrzebuje przerwy.",
+        "emotion": "NEUTRALNY",
+        "certainty": 75
+      },
+      {
+        "id": "konst_ali_005",
+        "text": "Nie ruszałem się z kuchni, chyba że musiałem. Moja kuchnia to moje królestwo — a królestwa się nie opuszcza.",
+        "emotion": "NEUTRALNY",
+        "certainty": 80
+      }
+    ],
+    "OBSERWACJE_WZROKOWE": [
+      {
+        "id": "konst_obs_w_001",
+        "text": "{suspect} wlazł do {room} jak do własnego domu. Bez pukania, bez pytania. Kto tak robi?",
+        "emotion": "GNIEW",
+        "certainty": 70
+      },
+      {
+        "id": "konst_obs_w_002",
+        "text": "Widziałem {suspect} z czymś w ręku, wychodząc z {room}. Chował to pod marynarką. Nie jestem ślepy.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 60
+      },
+      {
+        "id": "konst_obs_w_003",
+        "text": "{suspect} nie tknął mojego dania głównego. Kto nie je na przyjęciu? Ktoś, kto ma ważniejsze rzeczy na głowie.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 50
+      },
+      {
+        "id": "konst_obs_w_004",
+        "text": "Jak wynosiłem talerze, widziałem {suspect} przy drzwiach do {room}. Stał, jakby nasłuchiwał.",
+        "emotion": "NEUTRALNY",
+        "certainty": 65
+      },
+      {
+        "id": "konst_obs_w_005",
+        "text": "Na podłodze przy {room} była plama. Mokra. Świeża. Tego tam wcześniej nie było — moje oczy to nie od parady.",
+        "emotion": "NEUTRALNY",
+        "certainty": 80
+      },
+      {
+        "id": "konst_obs_w_006",
+        "text": "{suspect} wrócił do sali z podwiniętymi rękawami. Wcześniej miał je opuszczone. Dlaczego?",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 55
+      }
+    ],
+    "OBSERWACJE_SLUCHOWE": [
+      {
+        "id": "konst_obs_s_001",
+        "text": "Ktoś wrzeszczał w {room}. Jak oparzony. A ja znam się na oparzeniach.",
+        "emotion": "STRACH",
+        "certainty": 75
+      },
+      {
+        "id": "konst_obs_s_002",
+        "text": "Z {room} dobiegł łomot. Jakby ktoś przewrócił stół. Albo kogoś.",
+        "emotion": "ZASKOCZENIE",
+        "certainty": 65
+      },
+      {
+        "id": "konst_obs_s_003",
+        "text": "Arciszewski rzucał się na kogoś — słyszałem to przez ścianę. Używał słów, które nie pasują do kolacji za dwa tysiące złotych od osoby.",
+        "emotion": "NEUTRALNY",
+        "certainty": 60
+      },
+      {
+        "id": "konst_obs_s_004",
+        "text": "Ktoś szedł do {room} w pośpiechu. Słyszałem kroki — szybkie, nerwowe. Nie tak chodzi ktoś, kto idzie po dżem.",
+        "emotion": "NEUTRALNY",
+        "certainty": 55
+      }
+    ],
+    "OPINIE": [
+      {
+        "id": "konst_opi_001",
+        "text": "{suspect}? Nie lubię go. Ale to bez znaczenia — nie lubię większości gości. Za mało jedzą, za dużo gadają.",
+        "emotion": "POGARDA",
+        "certainty": 70
+      },
+      {
+        "id": "konst_opi_002",
+        "text": "Arciszewski? Krytykował moje danie główne przy gościach. Porównał je do cateringu z marketu. Nie przebaczam takich rzeczy.",
+        "emotion": "GNIEW",
+        "certainty": 95
+      },
+      {
+        "id": "konst_opi_003",
+        "text": "{suspect} to typ, który zjada twoje jedzenie, a potem narzeka na przyprawy. Nie znam gorszego sortu ludzi.",
+        "emotion": "POGARDA",
+        "certainty": 65
+      },
+      {
+        "id": "konst_opi_004",
+        "text": "Kuchnia nie kłamie. Ludzie kłamią. A {suspect} kłamie lepiej niż gotuje.",
+        "emotion": "NEUTRALNY",
+        "certainty": 60
+      }
+    ],
+    "PODEJRZENIA": [
+      {
+        "id": "konst_pod_001",
+        "text": "Powiem wprost — {suspect} miał coś na sumieniu tego wieczoru. Czułem to. Kucharz ma nos do takich rzeczy.",
+        "emotion": "NEUTRALNY",
+        "certainty": 55
+      },
+      {
+        "id": "konst_pod_002",
+        "text": "Kto miał motyw? Proszę bardzo — każdy w tym domu. Ale {suspect} miał motyw i okazję. To jak dobry przepis na katastrofę.",
+        "emotion": "NEUTRALNY",
+        "certainty": 65
+      },
+      {
+        "id": "konst_pod_003",
+        "text": "Niech pan sprawdzi, kto miał dostęp do kuchni. Bo niektóre trucizny wyglądają jak przyprawy.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 45
+      }
+    ],
+    "RELACJE": [
+      {
+        "id": "konst_rel_001",
+        "text": "Gotuję dla Arciszewskich od pięciu lat. To był kontrakt, nie przyjaźń. Ale szanowałem go — dopóki mnie nie upokorzył.",
+        "emotion": "GNIEW",
+        "certainty": 85
+      },
+      {
+        "id": "konst_rel_002",
+        "text": "Arciszewski obiecał mi restaurację. Własną. Z moim nazwiskiem. A potem wycofał się bez słowa.",
+        "emotion": "SMUTEK",
+        "certainty": 90
+      },
+      {
+        "id": "konst_rel_003",
+        "text": "Nie byliśmy kumplami. On był szefem, ja byłem kucharzem. Ale na kuchennym gruncie — nie istnieje hierarchia.",
+        "emotion": "NEUTRALNY",
+        "certainty": 80
+      }
+    ],
+    "MOTYWY": [
+      {
+        "id": "konst_mot_001",
+        "text": "Zaległe rachunki? Tak, Arciszewski mi nie zapłacił. Ale nie morduje się ludzi za kilka tysięcy. Pozywa się ich.",
+        "emotion": "GNIEW",
+        "certainty": 75
+      },
+      {
+        "id": "konst_mot_002",
+        "text": "Upokorzenie publiczne? Owszem, boli. Ale kucharz taki jak ja odpowiada talerzem, nie pięścią.",
+        "emotion": "GNIEW",
+        "certainty": 80
+      }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      {
+        "id": "konst_rnd_001",
+        "text": "I co z tego? To nóż kuchenny — mam ich dwadzieścia. Nie znaczy, że któregokolwiek użyłem do... no, do tego.",
+        "emotion": "GNIEW"
+      },
+      {
+        "id": "konst_rnd_002",
+        "text": "Skąd to pan ma? Z mojej kuchni?! Nikt nie wchodzi do mojej kuchni bez pozwolenia!",
+        "emotion": "GNIEW"
+      }
+    ],
+    "KLAMSTWA": [
+      {
+        "id": "konst_klam_001",
+        "text": "Nie wiem nic o żadnych specjalnych składnikach. Gotuję z tego, co mi dadzą.",
+        "lieType": "UKRYWANIE_WIEDZY",
+        "contradictedBy": [
+          "LISTA_ZAMOWIEN",
+          "SWIADEK_DOSTAWY"
+        ]
+      },
+      {
+        "id": "konst_klam_002",
+        "text": "Nie wychodziłem z kuchni. Cały wieczór stałem przy garnkach.",
+        "lieType": "FALSZYWE_ALIBI",
+        "contradictedBy": [
+          "SWIADEK_W_OGRODZIE",
+          "NIEDOPALEK_PAPIEROSA"
+        ]
+      },
+      {
+        "id": "konst_klam_003",
+        "text": "Nie mam żadnych problemów z prawem. To przeszłość. Zamknięta sprawa.",
+        "lieType": "UKRYWANIE_PRZESZLOSCI",
+        "contradictedBy": [
+          "AKTA_SPRAWY",
+          "ARTYKUL_PRASOWY"
+        ]
+      }
+    ],
+    "NERWOWOSC": [
+      {
+        "id": "konst_ner_001",
+        "text": "Proszę przestać! Nic nie wiem! Ile razy mam to powtarzać?!",
+        "emotion": "GNIEW",
+        "stressLevel": "HIGH"
+      },
+      {
+        "id": "konst_ner_002",
+        "text": "Trzęsą mi się ręce. Ale to ze złości, nie ze strachu. Różnica.",
+        "emotion": "GNIEW",
+        "stressLevel": "MEDIUM"
+      }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      {
+        "id": "konst_sprz_001",
+        "text": "Dobra, wychwyciłeś mnie. Nie byłem cały czas w kuchni. Wychodziłem. Ale nie tam, gdzie pan myśli.",
+        "emotion": "POCZUCIE_WINY",
+        "responseType": "PARTIAL_ADMISSION"
+      },
+      {
+        "id": "konst_sprz_002",
+        "text": "No skłamałem! I co?! Bo się bałem, że pomyślicie, że to ja! A ja nikogo nie zabijałem!",
+        "emotion": "GNIEW",
+        "responseType": "ANGRY_ADMISSION"
+      }
+    ],
+    "SEKRETY": [
+      {
+        "id": "konst_sek_001",
+        "text": "Wiem, co trafiało do niektórych specjalnych dań. Nie pytałem — Arciszewski nie lubił pytań. Ale rozumiałem więcej, niż powinienem.",
+        "emotion": "STRACH",
+        "minTrust": 35
+      },
+      {
+        "id": "konst_sek_002",
+        "text": "Przed laty miałem... incydent. W poprzedniej restauracji. Oficjalnie wypadek. Arciszewski się dowiedział. Używał tego przeciwko mnie.",
+        "emotion": "POCZUCIE_WINY",
+        "minTrust": 45
+      }
+    ],
+    "REAKCJA_NA_OSKARZENIE": [
+      {
+        "id": "konst_rno_001",
+        "text": "JA?! Pan oszalał! Ja gotuję dla ludzi, nie zabijam ich!",
+        "emotion": "GNIEW"
+      },
+      {
+        "id": "konst_rno_002",
+        "text": "Niech pan mnie posłucha — nie jestem mordercą. Jestem kucharzem, któremu nie zapłacono. To różnica.",
+        "emotion": "GNIEW"
+      }
+    ],
+    "REAKCJA_NA_PRESJE": [
+      {
+        "id": "konst_rnp_001",
+        "text": "Proszę na mnie nie wrzeszczeć. Ja wrzeszczę głośniej. Trzydzieści lat przy garach — mam kondycję.",
+        "emotion": "GNIEW"
+      },
+      {
+        "id": "konst_rnp_002",
+        "text": "Chce pan mnie złamać? Niech pan spróbuje. Gorętsze rzeczy niż przesłuchanie próbowały mnie złamać — patelnie, ogień, Arciszewski.",
+        "emotion": "POGARDA"
+      }
+    ]
+  },
+  "personalFragments": {
+    "openers": [
+      "Powiem panu wprost —",
+      "Nie będę owijał w bawełnę:",
+      "Słuchaj, bo mówię to raz —",
+      "Bez kręcenia —",
+      "W kuchni mówi się jak jest:",
+      "Jak w dobrym przepisie — krótko i na temat:"
+    ],
+    "fillers": [
+      "...do cholery...",
+      "...i to jest fakt...",
+      "...na litość boską...",
+      "...jak bóg mi miły...",
+      "...i nie mam zamiaru przepraszać za to, co powiem..."
+    ],
+    "closers": [
+      "I koniec. Tyle wiem.",
+      "Mam nadzieję, że to wystarczy, bo nie zamierzam się powtarzać.",
+      "A teraz niech mnie pan zostawi w spokoju.",
+      "Będę w kuchni. Jak zawsze."
+    ]
+  }
+}

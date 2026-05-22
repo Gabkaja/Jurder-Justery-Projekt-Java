@@ -1,0 +1,186 @@
+{
+  "type": "MOTYWY",
+  "description": "Szablony o motywach — NPC odnosi sie do potencjalnych motywow (wlasnych lub cudzych). Placeholdery: {suspect}, {victim}.",
+  "templates": [
+    {
+      "id": "mot_001",
+      "template": "Pieniądze? Nie mam pojęcia, co jest w testamencie {victim}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "finansowy",
+        "zaprzeczenie"
+      ]
+    },
+    {
+      "id": "mot_002",
+      "template": "Wiele osób miało powody, żeby nienawidzić {victim}. Nie tylko ja.",
+      "emotion": "GNIEW",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "odwracanie",
+        "obrona"
+      ]
+    },
+    {
+      "id": "mot_003",
+      "template": "{suspect} stracił przez {victim} więcej, niż ktokolwiek tu wie.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "cudzy_motyw",
+        "sugestia"
+      ]
+    },
+    {
+      "id": "mot_004",
+      "template": "Między {suspect} a {victim} chodziło o pieniądze. Duże pieniądze.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "finansowy",
+        "relacja"
+      ]
+    },
+    {
+      "id": "mot_005",
+      "template": "Zemsta? Kto by zabijał z zemsty w dzisiejszych czasach? ...Choć {suspect} nie wyglądał na człowieka, który wybacza.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "zemsta",
+        "spekulacja"
+      ]
+    },
+    {
+      "id": "mot_006",
+      "template": "Nie miałem żadnego powodu, żeby życzyć {victim} źle. Co bym z tego miał?",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "zaprzeczenie",
+        "retoryczne"
+      ]
+    },
+    {
+      "id": "mot_007",
+      "template": "{victim} wiedział o {suspect} rzeczy, których ten wolałby nie ujawniać. To wystarczający motyw.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 20,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "szantaz",
+        "tajemnica"
+      ]
+    },
+    {
+      "id": "mot_008",
+      "template": "Ktokolwiek to zrobił, miał powód. W tym domu nikt niczego nie robi bez powodu.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "filozoficzne",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "mot_009",
+      "template": "Mówi pan o motywach? Proszę bardzo — {suspect} miał ambicje, których {victim} blokował od lat.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 15,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "ambicja",
+        "blokada"
+      ]
+    },
+    {
+      "id": "mot_010",
+      "template": "Zazdrość to potężna siła. A {suspect} miał powody, żeby zazdrościć {victim} więcej niż jednej rzeczy.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        65
+      ],
+      "tags": [
+        "zazdrosc",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "mot_011",
+      "template": "Nie chcę mówić o motywach. Każdy tu ma swoje brudy.",
+      "emotion": "GNIEW",
+      "minTrust": -10,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "unikanie",
+        "defensywne"
+      ]
+    },
+    {
+      "id": "mot_012",
+      "template": "{victim} miał talent do robienia sobie wrogów. Pytanie, kto miał dość pierwszy.",
+      "emotion": "POGARDA",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "ogolne",
+        "gorzkie"
+      ]
+    }
+  ]
+}

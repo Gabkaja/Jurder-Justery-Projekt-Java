@@ -1,0 +1,231 @@
+{
+  "type": "OPINIE",
+  "description": "Szablony opinii o innych postaciach. NPC wyrazaja zdanie — uprzedzenia, sympatie, podejrzenia. Placeholdery: {suspect}, {victim}.",
+  "templates": [
+    {
+      "id": "opi_001",
+      "template": "Nigdy nie ufałem {suspect}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        100
+      ],
+      "tags": [
+        "negatywna",
+        "brak_zaufania"
+      ]
+    },
+    {
+      "id": "opi_002",
+      "template": "{suspect} miał powód, żeby nienawidzić {victim}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        80
+      ],
+      "tags": [
+        "motyw",
+        "negatywna"
+      ]
+    },
+    {
+      "id": "opi_003",
+      "template": "Między {suspect} a {victim} od dawna było napięcie. Każdy to widział.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        85
+      ],
+      "tags": [
+        "relacja",
+        "napiecie"
+      ]
+    },
+    {
+      "id": "opi_004",
+      "template": "{suspect} to porządny człowiek. Nie wierzę, żeby mógł to zrobić.",
+      "emotion": "SMUTEK",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        80
+      ],
+      "tags": [
+        "pozytywna",
+        "obrona"
+      ]
+    },
+    {
+      "id": "opi_005",
+      "template": "Nie mam nic przeciwko {suspect}, ale ten wieczór zmienił wiele w moim postrzeganiu.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "zmiana_opinii",
+        "neutralna"
+      ]
+    },
+    {
+      "id": "opi_006",
+      "template": "{suspect} zawsze był ambitny. Może zbyt ambitny.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "charakter",
+        "ambicja"
+      ]
+    },
+    {
+      "id": "opi_007",
+      "template": "Ludzie mówią różne rzeczy o {suspect}. Nie wiem, co prawda, a co plotka.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        10,
+        40
+      ],
+      "tags": [
+        "plotka",
+        "dystans"
+      ]
+    },
+    {
+      "id": "opi_008",
+      "template": "{suspect} i {victim} robili razem interesy. Takie relacje rzadko kończą się dobrze.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "biznes",
+        "relacja"
+      ]
+    },
+    {
+      "id": "opi_009",
+      "template": "{suspect} ma twarz pokerową. Nigdy nie wiadomo, co naprawdę myśli.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "charakter",
+        "tajemniczy"
+      ]
+    },
+    {
+      "id": "opi_010",
+      "template": "Nie lubię {suspect}. Ale to nie znaczy, że jest mordercą.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "negatywna",
+        "uczciwa"
+      ]
+    },
+    {
+      "id": "opi_011",
+      "template": "{suspect} zachowywał się tego wieczoru inaczej niż zwykle. Jakby coś go gryzło.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "zachowanie",
+        "zmiana"
+      ]
+    },
+    {
+      "id": "opi_012",
+      "template": "{victim} traktował {suspect} jak powietrze. To musiało boleć.",
+      "emotion": "SMUTEK",
+      "minTrust": 5,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        75
+      ],
+      "tags": [
+        "relacja",
+        "upokorzenie"
+      ]
+    },
+    {
+      "id": "opi_013",
+      "template": "{suspect} za dużo pije. A po alkoholu ludzie robią rzeczy, których normalnie by nie zrobili.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "alkohol",
+        "charakter"
+      ]
+    },
+    {
+      "id": "opi_014",
+      "template": "Nie powiem złego słowa o {suspect}. Ale nie powiem też dobrego.",
+      "emotion": "POGARDA",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "wymijajaca",
+        "dyplomatyczna"
+      ]
+    },
+    {
+      "id": "opi_015",
+      "template": "{suspect} jest zdolny do wielu rzeczy. I nie mówię tego jako komplement.",
+      "emotion": "PODEJRZLIWOSC",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "negatywna",
+        "sugestywna"
+      ]
+    }
+  ]
+}

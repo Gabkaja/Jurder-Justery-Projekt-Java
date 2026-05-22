@@ -1,0 +1,32 @@
+[
+  {
+    "id": "DZIEDZICZENIE",
+    "label": "Dziedziczenie",
+    "description": "Finansowy zysk ze śmierci."
+  },
+  {
+    "id": "ZEMSTA",
+    "label": "Zemsta",
+    "description": "Wyrównanie rachunków za przeszłość."
+  },
+  {
+    "id": "SZANTAZ",
+    "label": "Szantaż",
+    "description": "Ochrona lub wykorzystanie kompromitujących informacji."
+  },
+  {
+    "id": "ZAZDROSC",
+    "label": "Zazdrość",
+    "description": "Zawiść romantyczna lub zawodowa."
+  },
+  {
+    "id": "AMBICJA",
+    "label": "Ambicja",
+    "description": "Ofiara stała na drodze do osiągnięcia celu."
+  },
+  {
+    "id": "OCHRONA_TAJEMNICY",
+    "label": "Ochrona tajemnicy",
+    "description": "Ofiara wiedziała zbyt wiele."
+  }
+]
