@@ -1,0 +1,226 @@
+[
+  {
+    "id": "kamilKrakowski",
+    "name": "Kamil Krakowski",
+    "title": "Kamerdyner",
+    "description": "Sztywny jak brukselska biurokracja, lojalny jak golden retriever — przynajmniej na pierwszy rzut oka. Kamil służy rodzinie Arciszewskich od dwudziestu dwóch lat. Perfekcyjny przedziałek, nienaganny frak i oczy, które widzą wszystko. Jest żywą encyklopedią willi oraz wszystkich jej sekretów. Mówi niewiele, ale pamięta wszystko.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Przez dwie dekady służby Kamil nigdy nie otrzymał obiecanego zapisu w testamencie, mimo wielokrotnych sugestii Andrzeja. Ostatnio dowiedział się, że testament został ponownie zmieniony, a jego nazwisko zniknęło z dokumentu. Lata służby na darmo? Nie do zniesienia."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Andrzej Arciszewski publicznie upokorzył Kamila podczas poprzedniego przyjęcia, ganiąc go za nieodpowiednie podanie wina w obecności wszystkich gości. Dla człowieka, którego jedynym kapitałem jest godność, była to rana głęboka jak piwnica."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Kamil wie o praniu brudnych pieniędzy przez Arciszewskiego. Widział dokumenty, podpisywał paczki i odbierał telefony. Być może przez lata był jedynie narzędziem. Być może ofiara zaczęła obawiać się, że kamerdyner wie zbyt wiele."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Andrzej nigdy nie docenił Kamila. Awansował obcych i zatrudniał nowych ludzi. Kamil patrzył, jak kolejne osoby zbierają pochwały za rzeczy, które sam organizował. Zawodowa zawiść tli się w nim od lat."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Kamil od dawna marzy o otwarciu własnej agencji kamerdynerskiej dla krakowskiej elity. Potrzebuje do tego referencji i kapitału początkowego. Śmierć pracodawcy może być katastrofą albo szansą — zależnie od tego, co znajduje się w sejfie w gabinecie."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Kilka lat temu Kamil popełnił poważny błąd — sfałszował podpis Arciszewskiego na jednym z dokumentów, aby załatwić sprawę rodzinną. Andrzej odkrył to i od tamtej pory trzymał go na krótkiej smyczy. Śmierć pracodawcy oznacza wyzwolenie."
+      }
+    ]
+  },
+  {
+    "id": "honorataHanska",
+    "name": "Honorata Hańska",
+    "title": "Hrabina",
+    "description": "Elegancka, chłodna, z diamentami na szyi i lodem w oczach. Żona Andrzeja z rozsądku, a nie z miłości — przynajmniej od pewnego czasu. Pochodzi ze starej, zubożałej rodziny szlacheckiej i wyszła za Arciszewskiego w chwili, gdy rodzinny majątek topniał szybciej niż śnieg w Krakowie w marcu. Honorata jest zbyt inteligentna, by dać po sobie cokolwiek poznać, i zbyt dumna, by prosić o coś wprost.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Jest główną beneficjentką testamentu — odziedziczy willę, konta, kolekcję sztuki oraz udziały w spółkach. Wszystko przechodzi na nią. Prawnicy potwierdzili to tydzień przed śmiercią Andrzeja, po tym jak sama nalegała na weryfikację dokumentów."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Andrzej wielokrotnie ją zdradzał, nawet nie próbując tego ukrywać. Ostatni romans z Klaudią był kroplą, która przelała czarę goryczy. Honorata nie wybucha — Honorata planuje."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Andrzej znał sekret z jej przeszłości, który mógłby zniszczyć jej reputację i pozycję towarzyską. Przez lata ich relacja opierała się na kruchej równowadze strachu. Tej nocy ktoś tę równowagę przerwał."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Klaudia nie była jedyną kochanką Andrzeja, ale była pierwszą, którą zaczął traktować poważnie. Honorata szybko to zauważyła. Kobieta o jej statusie nie dzieli się tym, co uważa za swoje."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Od lat pragnie objąć stanowisko przewodniczącej Fundacji Arciszewskich i przekształcić ją z narzędzia wizerunkowego w realną siłę kształtującą politykę kulturalną Krakowa. Andrzej blokował ten pomysł, ponieważ nie chciał utracić kontroli nad funduszami."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Honorata od dwóch lat prowadzi dyskretny romans. Andrzej zaczął nabierać podejrzeń. Gdyby prawda wyszła na jaw, pozycja społeczna budowana przez całe życie ległaby w gruzach."
+      }
+    ]
+  },
+  {
+    "id": "cyprianCzerwinski",
+    "name": "Cyprian Czerwiński",
+    "title": "Celebryta",
+    "description": "Internetowa twarz wszystkiego: influencer, podcaster i felietonista tygodnika, którego nikt nie czyta, ale wszyscy cytują. Cyprian ma 380 tysięcy obserwujących oraz równie imponującą liczbę długów, starannie ukrywanych przed fanami. Zawsze znajduje się tam, gdzie dzieje się coś ważnego, zawsze z telefonem w dłoni i uśmiechem przyklejonym do twarzy niczym filtr na Instagramie. Na przyjęcie Arciszewskiego dostał się jako współprowadzący medialny.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Cyprian był cichym udziałowcem jednej z inwestycji Arciszewskiego — spółki, która miała wkrótce przynieść znaczne zyski. Zamiast tego Andrzej przeniósł aktywa, pozostawiając Cypriana z udziałami wartymi mniej więcej tyle, co jego zestaw do nagrywania podcastów. Nie istniały żadne dokumenty, a jedynym świadkiem ustnej umowy był teraz martwy człowiek."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Dwa lata temu Andrzej sfinansował kampanię oszczerstw wymierzoną w Cypriana — anonimowe konta, kontrolowane przecieki i kompromitujące artykuły. Cyprian stracił wówczas lukratywny kontrakt sponsorski. Nigdy nie zdobył dowodów, ale zawsze wiedział, kto za tym stoi."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Cyprian nagrywa wszystko i wszystkich. Posiada nagranie rozmowy z Andrzejem, które może być warte fortunę — zarówno jako polisa bezpieczeństwa, jak i narzędzie nacisku. Pytanie brzmi, czy Andrzej dowiedział się o istnieniu nagrania i postanowił działać pierwszy."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Andrzej był uosobieniem tego, kim Cyprian chciał się stać — prawdziwą elitą, a nie jej internetową imitacją. Każde zaproszenie do willi przypominało mu, że pozostaje jedynie gościem w świecie, do którego desperacko chce należeć."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Cyprian negocjował kontrakt na książkę o krakowskiej elicie. Potrzebował dostępu do nazwisk, sekretów i skandali. Andrzej obiecał współpracę, lecz później publicznie odciął się od projektu, odbierając Cyprianowi połowę potencjalnych rozmówców."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Cyprian kreuje się na symbol autentyczności i niezależności. Rzeczywistość wygląda inaczej — jego kanał jest częściowo finansowany przez podmiot powiązany z jedną z szemranych działalności biznesowych Arciszewskiego. Gdyby ta informacja ujrzała światło dzienne, jego kariera zakończyłaby się w ciągu jednej doby."
+      }
+    ]
+  },
+  {
+    "id": "piotrPawlowski",
+    "name": "Piotr Pawłowski",
+    "title": "Polityk",
+    "description": "Radny miejski z ambicjami parlamentarnymi i uśmiechem, który ćwiczył przed lustrem. Piotr należy do tego rodzaju polityków, którzy nigdy nie mówią niczego wprost, ale zawsze dokładnie wiedzą, co chcą osiągnąć. Sweter polo, mocny uścisk dłoni i deklarowana troska o dialog z obywatelami. Na przyjęcie przyszedł z żoną Klaudią, którą zostawił w sali balowej zaledwie kwadrans po wejściu. Utrzymuje, że jego małżeństwo układa się znakomicie. Nikt mu nie wierzy.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Pawłowski i Arciszewski realizowali wspólny projekt deweloperski — działkę na Kazimierzu, której wartość gwałtownie wzrosła po zatwierdzeniu miejscowego planu zagospodarowania przestrzennego. Andrzej zablokował Piotrowi możliwość wyjścia ze spółki, powołując się na przekroczenie terminów określonych w umowie. Śmierć wspólnika jednocześnie komplikuje i upraszcza sytuację."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Trzy lata temu Arciszewski finansował kampanię wyborczą jego przeciwnika w wyborach samorządowych. Piotr wygrał, ale nie zapomniał. W polityce urazy się nie wybacza — odkłada się je na odpowiedni moment."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Arciszewski posiadał dokumentację dotyczącą decyzji planistycznych wyjątkowo korzystnych dla Pawłowskiego w sposób trudny do publicznego wyjaśnienia. Traktował ją jako polisę ubezpieczeniową. Śmierć właściciela mogła oznaczać wygaśnięcie tej polisy."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Andrzej obracał się w środowisku, do którego Piotr dopiero aspirował. Stare pieniądze kontra nowe wpływy. Arciszewski dawał mu to do zrozumienia przy każdej okazji — subtelnie, lecz boleśnie dla politycznego ego."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Za rok Pawłowski zamierza kandydować do parlamentu. Potrzebuje nieskazitelnego wizerunku, znaczących funduszy i dyskretnego zaplecza. Andrzej wiedział zbyt wiele, by być wygodnym sojusznikiem, i zbyt dużo, by pozostawać bezpiecznym przeciwnikiem."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Piotr posiada zagraniczne konto zasilane w sposób, który jego wyborcy uznaliby za sprzeczny z deklarowanymi wartościami. Arciszewski znał ten sekret dzięki wspólnemu księgowemu. Martwy człowiek nie zadzwoni do dziennikarzy. A żona nie może się o tym dowiedzieć."
+      }
+    ]
+  },
+  {
+    "id": "konstantyKulczycki",
+    "name": "Konstanty Kulczycki",
+    "title": "Kucharz",
+    "description": "Postawny, głośny i genialny. Konstanty gotuje od trzydziestu lat i uważa, że kuchnia to jedyne miejsce na świecie, w którym naprawdę panuje porządek. Od pięciu lat pracuje dla Arciszewskich jako kucharz obsługujący zarówno wystawne przyjęcia, jak i kameralne kolacje. Ma temperament wulkanu i serce dobrego człowieka, ale wyznaje jedną zasadę: nie dotykaj jego kuchni bez pozwolenia.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Konstanty nie odziedziczy niczego, ale od roku bezskutecznie walczy o zapłatę za organizację kilku przyjęć. Arciszewski przeciągał termin, odmawiał i składał kolejne obietnice. Kwota urosła do sumy, która dla Kulczyckiego ma ogromne znaczenie."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Podczas ostatniej kolacji Andrzej publicznie skrytykował jego danie główne w obecności gości, porównując je do cateringu z supermarketu. Dla kucharza z ambicjami była to zniewaga porównywalna z obrazą honoru. Konstanty nie należy do ludzi, którzy łatwo zapominają."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Kulczycki wie, co trafiało do niektórych specjalnych potraw serwowanych podczas kameralnych spotkań Arciszewskiego — składniki, których próżno szukać w oficjalnym menu. Nigdy nie zadawał pytań, ale rozumiał więcej, niż mówił."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Konstanty marzył o własnej restauracji — ambitnej, krakowskiej i sygnowanej własnym nazwiskiem. Arciszewski obiecał sfinansować przedsięwzięcie, lecz w ostatniej chwili bez wyjaśnienia wycofał się z inwestycji, pozostawiając kucharza z podpisaną umową najmu i pustym kontem."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Kulczycki zgłosił się do prestiżowego programu kulinarnego. Potrzebował rekomendacji, o którą poprosił Arciszewskiego. Ten obiecał pomoc, lecz list nigdy nie został wysłany. Program odbył się bez niego."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Konstanty ma za sobą sprawę sprzed lat, związaną z incydentem w poprzedniej restauracji, który oficjalnie uznano za nieszczęśliwy wypadek. Arciszewski dowiedział się o tym od wspólnego znajomego i od tego czasu dysponował skutecznym narzędziem nacisku."
+      }
+    ]
+  },
+  {
+    "id": "wieslawWydra",
+    "name": "Wiesław Wydra",
+    "title": "Wspólnik",
+    "description": "Był człowiekiem Arciszewskiego — nie przyjacielem, nie partnerem, ale kimś kto wykonywał brudną robotę za odpowiednie pieniądze. Prowadził dla niego spółkę-słup przez cztery lata, dopóki nie okazało się, że potrzebny jest kozioł ofiarny. Spędził osiemnaście miesięcy w areszcie za coś, co było robotą Andrzeja. Wyszedł dwa lata temu z niczym — bez mieszkania, bez małżeństwa, bez nazwiska które cokolwiek znaczy. Na tę imprezę nie wszedł przez przypadek.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Przed aresztem miał ustną umowę z Andrzejem — w razie wpadki zostanie zabezpieczony finansowo po wyjściu. Nie dostał nic. Nawet prawnika opłacił z własnej kieszeni."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Osiemnaście miesięcy aresztu, rozpad małżeństwa, utrata wszystkiego. Arciszewski przez ten czas chodził na przyjęcia i kupował sztukę. Wiesław miał cztery lata na spokojne przemyślenie sprawy."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Wie dokładnie co podpisywał i na czyje polecenie. Część dokumentów zachował — kopie, wydruki, jeden pendrive schowany poza Krakowem. Próbował negocjować przez pośrednika. Andrzej przestał odbierać telefony."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Nie o willę ani wino. O to, że ludzie tacy jak Arciszewski zawsze lądują na nogach. Zawsze znajdzie się ktoś inny do aresztu."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Chce tylko jednego — żeby jego nazwisko zniknęło z akt sprawy, która zniszczyła mu życie. Do tego potrzebuje dokumentów z gabinetu Andrzeja albo kogoś kto je podpisze. Martwi ludzie nie podpisują, ale zostawiają sejfy."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Torba, której nikomu nie pokazuje, zawiera rzeczy których nie powinien mieć na imprezie. Co dokładnie — do ustalenia przez gracza."
+      }
+    ]
+  },
+  {
+    "id": "patrycjaPawlowska",
+    "name": "Patrycja Pawłowska",
+    "title": "Pisarka",
+    "description": "Żona Piotra Pawłowskiego. Pisze powieści obyczajowe o krakowskiej elicie, które sprzedają się dobrze i są cytowane przez ludzi, którzy nie przyznaliby się do czytania. Na przyjęciu pojawia się jako połowa pary politycznej — uśmiechnięta, uprzejma, z kieliszkiem wina i anegdotą zawsze pod ręką. Łatwo ją polubić. Trudniej zapamiętać, co konkretnie powiedziała. Rozmawia z każdym po trochu i nikomu nie poświęca zbyt wiele uwagi — albo tak to wygląda.",
+    "motives": [
+      {
+        "type": "DZIEDZICZENIE",
+        "description": "Andrzej obiecał przepisać na nią jeden z apartamentów w centrum Krakowa — osobisty, dyskretny, tylko dla niej. Papierów nigdy nie podpisał. Tydzień przed śmiercią powiedział jej, że sytuacja się komplikuje. Patrycja jest w prawie wystarczająco dobrze zorientowana, żeby wiedzieć, co to znaczy."
+      },
+      {
+        "type": "ZEMSTA",
+        "description": "Andrzej zaczął się od niej odsuwać — powoli, elegancko, tak jak robią to mężczyźni, którzy nie chcą konfrontacji. Patrycja zorientowała się, że jest zastępowana. To boli w zupełnie specyficzny sposób, zwłaszcza kiedy nie można tego nikomu powiedzieć."
+      },
+      {
+        "type": "SZANTAZ",
+        "description": "Patrycja przez lata zbierała materiały do książek — rozmowy, notatki, nagrania. Ma wystarczająco dużo na Andrzeja, żeby zniszczyć jego reputację w jednym rozdziale. On o tym wiedział. Ostatnio zaczął naciskać, żeby pewne rzeczy nigdy nie trafiły do druku."
+      },
+      {
+        "type": "ZAZDROSC",
+        "description": "Honorata. Hrabina. Kobieta, z którą Andrzej wraca do domu, której nazwisko nosi, przy której siedzi na imprezach. Patrycja była ważna, ale nigdy pierwsza. Ironia jest podwójna — bo sama też ma przy boku kogoś, przy kim nie jest pierwszą myślą."
+      },
+      {
+        "type": "AMBICJA",
+        "description": "Patrycja od roku negocjuje kontrakt na powieść z dużym wydawnictwem — tę prawdziwą, tę z nazwiskami ledwo zmienionymi. Andrzej obiecał nie blokować projektu. A potem zadzwonił do wydawcy. Książka przepadła. Mąż o niczym nie wie."
+      },
+      {
+        "type": "OCHRONA_TAJEMNICY",
+        "description": "Jedna z jej wcześniejszych powieści — ta, która zrobiła jej karierę — ma współautora, którego nazwisko nigdzie nie figuruje. Andrzej to wiedział. Gdyby wyszło na jaw, jej reputacja literacka rozpadłaby się w ciągu doby. A Piotr, gdyby się dowiedział o całości — i o romansie, i o plagiacie — straciłby kandydaturę. I ona straciłaby wszystko razem z nim."
+      }
+    ]
+  }
+]

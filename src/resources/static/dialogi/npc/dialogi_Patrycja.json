@@ -1,0 +1,386 @@
+{
+  "npcId": "patrycjaPawlowska",
+  "name": "Patrycja Pawłowska",
+  "title": "Pisarka",
+  "speechProfile": {
+    "primaryStyle": "SPOSTRZEGAWCZY",
+    "secondaryStyle": "SPOKOJNY",
+    "defaultEmotion": "NEUTRALNY",
+    "speakingTraits": [
+      "obserwacyjna",
+      "artykułowana",
+      "subtelna",
+      "inteligentna",
+      "powściągliwa"
+    ],
+    "vocabulary": "wysoka",
+    "verbosity": "umiarkowana",
+    "quirks": [
+      "Mowi jak pisarka — opisowo, z dbałością o detale",
+      "Obserwuje ludzi zawodowo — czyta mikrogesty",
+      "Unika bezposrednich odpowiedzi — woli narrację",
+      "Porównuje sytuacje do fabuły powiesci",
+      "Pod fasadą kryje sie kobieta z wieloma tajemnicami"
+    ]
+  },
+  "uniqueDialogues": {
+    "POWITANIA": [
+      {
+        "id": "patr_pow_001",
+        "text": "Proszę, proszę. Piszę powieści kryminalne, a teraz jestem w jednej. Ironia godna pióra lepszego niż moje.",
+        "emotion": "NEUTRALNY",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "patr_pow_002",
+        "text": "Dobry wieczór. Albo raczej — zły wieczór. Bardzo zły. Ale proszę pytać.",
+        "emotion": "SMUTEK",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "patr_pow_003",
+        "text": "Pan znowu. Wie pan, w moich powieściach detektyw wraca do świadka, kiedy znajdzie nowy trop. Co pan znalazł?",
+        "emotion": "NEUTRALNY",
+        "context": "REPEATED_VISIT"
+      },
+      {
+        "id": "patr_pow_004",
+        "text": "Pisarka na miejscu zbrodni. Brzmi jak tytuł rozdziału. Rozdział, którego wolałabym nie przeżywać.",
+        "emotion": "SMUTEK",
+        "context": "FIRST_MEETING"
+      },
+      {
+        "id": "patr_pow_005",
+        "text": "Jestem żoną polityka i pisarką. Dwie profesje, które wymagają umiejętności obserwacji. Może coś panu powiem, czego sam pan nie zauważył.",
+        "emotion": "NEUTRALNY",
+        "context": "FIRST_MEETING"
+      }
+    ],
+    "ALIBI": [
+      {
+        "id": "patr_ali_001",
+        "text": "Spędzałam wieczór, robiąc to, co zawsze na przyjęciach — obserwowałam. Z kieliszkiem wina w {room}.",
+        "emotion": "NEUTRALNY",
+        "certainty": 70
+      },
+      {
+        "id": "patr_ali_002",
+        "text": "Byłam w {room} z mężem... a raczej: byłam w {room}, a mąż gdzieś zniknął. Jak zwykle.",
+        "emotion": "POGARDA",
+        "certainty": 65
+      },
+      {
+        "id": "patr_ali_003",
+        "text": "O {time} stałam przy oknie w {room} i notowałam w telefonie. Piszę do notatek obserwacje z przyjęć — zawodowa deformacja.",
+        "emotion": "NEUTRALNY",
+        "certainty": 80
+      },
+      {
+        "id": "patr_ali_004",
+        "text": "Wyszłam do {room} na kilka minut. Potrzebowałam ciszy — hałas na przyjęciu był nie do zniesienia.",
+        "emotion": "NEUTRALNY",
+        "certainty": 60
+      },
+      {
+        "id": "patr_ali_005",
+        "text": "Nie mam świadka, który potwierdziłby każdą minutę. Ale pisarze są przyzwyczajeni do bycia niewidocznymi.",
+        "emotion": "NEUTRALNY",
+        "certainty": 50
+      }
+    ],
+    "OBSERWACJE_WZROKOWE": [
+      {
+        "id": "patr_obs_w_001",
+        "text": "{suspect} wyglądał jak postać z mojej ostatniej powieści — ktoś, kto stoi za blisko przepaści i udaje, że podziwia widok.",
+        "emotion": "NEUTRALNY",
+        "certainty": 55
+      },
+      {
+        "id": "patr_obs_w_002",
+        "text": "Zauważyłam, że {suspect} wychodzi z {room}. Szedł szybko, ale nie biegł. Kontrolowany pośpiech — to interesująca kombinacja.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 65
+      },
+      {
+        "id": "patr_obs_w_003",
+        "text": "{suspect} i {victim} rozmawiali w {room}. Cicho, nachyleni ku sobie. Pisarka wie, jak wygląda sekretna rozmowa.",
+        "emotion": "NEUTRALNY",
+        "certainty": 70
+      },
+      {
+        "id": "patr_obs_w_004",
+        "text": "Ręce. Zawsze patrzę na ręce. {suspect} miał zaciśnięte pięści przez cały wieczór. To nie jest gest spokojnego człowieka.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 60
+      },
+      {
+        "id": "patr_obs_w_005",
+        "text": "Ktoś stał przy drzwiach {room} i nasłuchiwał. Nie widziałam twarzy — tylko sylwetkę. Ale zapamiętałam postawę.",
+        "emotion": "NEUTRALNY",
+        "certainty": 40
+      },
+      {
+        "id": "patr_obs_w_006",
+        "text": "W {room} ktoś zostawił kieliszek z odciskiem szminki. Nie mój odcień. Ciekawe, czyj.",
+        "emotion": "NEUTRALNY",
+        "certainty": 75
+      },
+      {
+        "id": "patr_obs_w_007",
+        "text": "{suspect} wymieniał znaczące spojrzenia z Honoratą. Takie spojrzenia, które w powieści zapowiadają trzeci akt.",
+        "emotion": "NEUTRALNY",
+        "certainty": 50
+      }
+    ],
+    "OBSERWACJE_SLUCHOWE": [
+      {
+        "id": "patr_obs_s_001",
+        "text": "Usłyszałam strzępki rozmowy z {room}. Ktoś mówił: 'To ostatni raz'. Nie wiem, kto — ale ton był ostateczny.",
+        "emotion": "STRACH",
+        "certainty": 50
+      },
+      {
+        "id": "patr_obs_s_002",
+        "text": "Z {room} dobiegał szept — szybki, nerwowy. Dwa głosy. Nie rozpoznałam ich, ale jeden był wyższy. Kobiecy? Może.",
+        "emotion": "NEUTRALNY",
+        "certainty": 40
+      },
+      {
+        "id": "patr_obs_s_003",
+        "text": "Cisza przed burzą — tak to opisałabym w książce. Nagle wszystko ucichło, a potem usłyszałam krzyk.",
+        "emotion": "STRACH",
+        "certainty": 65
+      },
+      {
+        "id": "patr_obs_s_004",
+        "text": "Ktoś skrzypnął drzwiami do {room}. Cicho, ostrożnie. Tak się otwiera drzwi, kiedy nie chcesz być usłyszany.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 55
+      }
+    ],
+    "OPINIE": [
+      {
+        "id": "patr_opi_001",
+        "text": "{suspect}? Gdybym miała go opisać w powieści, byłby postacią, której nie ufasz od pierwszego rozdziału.",
+        "emotion": "NEUTRALNY",
+        "certainty": 55
+      },
+      {
+        "id": "patr_opi_002",
+        "text": "Andrzej był... magnetyczny. I niebezpieczny. Jak ogień, przy którym chcesz się ogrzać, ale wiesz, że możesz się poparzyć.",
+        "emotion": "SMUTEK",
+        "certainty": 80
+      },
+      {
+        "id": "patr_opi_003",
+        "text": "{suspect} gra rolę, którą sam sobie napisał. Problem w tym, że scenariusz ma dziury.",
+        "emotion": "PODEJRZLIWOSC",
+        "certainty": 60
+      },
+      {
+        "id": "patr_opi_004",
+        "text": "Honorata jest zimna jak marmur w tym przedsionku. Ale pod marmurem zawsze coś żyje.",
+        "emotion": "NEUTRALNY",
+        "certainty": 65
+      },
+      {
+        "id": "patr_opi_005",
+        "text": "Nie ufam nikomu w tym domu. Ale jako pisarka — uwielbiam ich wszystkich. Każdy z nich to gotowy rozdział.",
+        "emotion": "NEUTRALNY",
+        "certainty": 70
+      }
+    ],
+    "PODEJRZENIA": [
+      {
+        "id": "patr_pod_001",
+        "text": "W powieści mordercą jest zawsze ten, kogo najmniej podejrzewasz. W życiu... chyba też.",
+        "emotion": "NEUTRALNY",
+        "certainty": 40
+      },
+      {
+        "id": "patr_pod_002",
+        "text": "{suspect} miał motyw, środki i okazję. W powieści wystarczyłoby to na akt oskarżenia. W życiu — nie wiem.",
+        "emotion": "NEUTRALNY",
+        "certainty": 55
+      },
+      {
+        "id": "patr_pod_003",
+        "text": "Proszę sprawdzić, kto ostatnio rozmawiał z Andrzejem na osobności. Ten ktoś wie więcej, niż mówi.",
+        "emotion": "NEUTRALNY",
+        "certainty": 60
+      }
+    ],
+    "RELACJE": [
+      {
+        "id": "patr_rel_001",
+        "text": "Jestem żoną Piotra. Byłam gościem na przyjęciu. I... znałam Andrzeja lepiej, niż to wypadało publicznie.",
+        "emotion": "POCZUCIE_WINY",
+        "certainty": 70
+      },
+      {
+        "id": "patr_rel_002",
+        "text": "Andrzej inspirował moje powieści. Dosłownie. Niektóre postacie to ledwo zmienione kopie niego samego.",
+        "emotion": "NEUTRALNY",
+        "certainty": 80
+      },
+      {
+        "id": "patr_rel_003",
+        "text": "Mieliśmy relację, która nie mieści się w jednym słowie. Przyjaciel? Nie. Kochanek? Nie pytaj. Inspiracja? Tak.",
+        "emotion": "SMUTEK",
+        "certainty": 60
+      }
+    ],
+    "MOTYWY": [
+      {
+        "id": "patr_mot_001",
+        "text": "Motyw? Andrzej zablokował moją książkę. Zadzwonił do wydawcy i zabił projekt. Czy to motyw? Dla pisarki — absolutnie.",
+        "emotion": "GNIEW",
+        "certainty": 80
+      },
+      {
+        "id": "patr_mot_002",
+        "text": "Obiecał mi apartament. Nie podpisał papierów. Ale to nie jest powód do morderstwa — to jest powód do rozwodu z mężem, żeby się dowiedzieć dlaczego.",
+        "emotion": "POGARDA",
+        "certainty": 65
+      }
+    ],
+    "REAKCJA_NA_DOWOD": [
+      {
+        "id": "patr_rnd_001",
+        "text": "To ciekawe znalezisko. W mojej powieści taki dowód zmieniłby bieg fabuły w rozdziale szóstym. A tu?",
+        "emotion": "NEUTRALNY"
+      },
+      {
+        "id": "patr_rnd_002",
+        "text": "Znam ten przedmiot. I znam historię, która za nim stoi. Czy chce pan ją usłyszeć?",
+        "emotion": "NEUTRALNY"
+      }
+    ],
+    "KLAMSTWA": [
+      {
+        "id": "patr_klam_001",
+        "text": "Nie mam żadnych nagrań ani notatek o ludziach z tego przyjęcia. To fikcja, nie reportaż.",
+        "lieType": "UKRYWANIE_DOWODU",
+        "contradictedBy": [
+          "NOTATNIK_ZNALEZIONY",
+          "NAGRANIA_W_TELEFONIE"
+        ]
+      },
+      {
+        "id": "patr_klam_002",
+        "text": "Moja relacja z Andrzejem? Czysto towarzyska. Spotykaliśmy się na przyjęciach, nic więcej.",
+        "lieType": "MINIMALIZACJA_RELACJI",
+        "contradictedBy": [
+          "LISTY_MILOSNE",
+          "ZEZNANIE_KAMERDYNERA",
+          "APARTAMENT"
+        ]
+      },
+      {
+        "id": "patr_klam_003",
+        "text": "Moja pierwsza powieść? Napisałam ją sama. Każde słowo. Nie potrzebowałam niczyjej pomocy.",
+        "lieType": "UKRYWANIE_WSPÓLAUTORA",
+        "contradictedBy": [
+          "ZEZNANIE_GHOSTWRITERA",
+          "MAILE_EDYCYJNE"
+        ]
+      }
+    ],
+    "NERWOWOSC": [
+      {
+        "id": "patr_ner_001",
+        "text": "Pisarze obserwują — nie są obserwowani. Nie jestem przyzwyczajona do bycia po tej stronie lupy.",
+        "emotion": "STRACH",
+        "stressLevel": "MEDIUM"
+      },
+      {
+        "id": "patr_ner_002",
+        "text": "Proszę przestać. Zaczynam czuć, że jestem postacią we własnej powieści. I ta postać nie ma dobrego zakończenia.",
+        "emotion": "STRACH",
+        "stressLevel": "HIGH"
+      }
+    ],
+    "ODKRYCIE_SPRZECZNOSCI": [
+      {
+        "id": "patr_sprz_001",
+        "text": "Wie pan, każda powieść ma wersje robocze. Moje zeznanie też. Pozwolę sobie na poprawkę.",
+        "emotion": "POCZUCIE_WINY",
+        "responseType": "ELEGANT_ADMISSION"
+      },
+      {
+        "id": "patr_sprz_002",
+        "text": "Dobrze. Napisałam panu wersję, która chroniła pewne... delikatne szczegóły. Prawda jest mniej literacka i bardziej bolesna.",
+        "emotion": "REZYGNACJA",
+        "responseType": "FULL_REVEAL"
+      }
+    ],
+    "SEKRETY": [
+      {
+        "id": "patr_sek_001",
+        "text": "Moja pierwsza powieść — ta, która zrobiła mi karierę — ma współautora. Andrzej o tym wiedział. Gdyby to ujawnił...",
+        "emotion": "STRACH",
+        "minTrust": 45
+      },
+      {
+        "id": "patr_sek_002",
+        "text": "Andrzej i ja byliśmy... blisko. Bliżej niż mąż wie. Bliżej niż Honorata się domyśla. To komplikuje wszystko.",
+        "emotion": "POCZUCIE_WINY",
+        "minTrust": 50
+      },
+      {
+        "id": "patr_sek_003",
+        "text": "Mam notatki. Lata obserwacji. Nagrania rozmów. Wystarczająco na książkę, która zniszczyłaby reputacje połowy tego pokoju.",
+        "emotion": "NEUTRALNY",
+        "minTrust": 40
+      }
+    ],
+    "REAKCJA_NA_OSKARZENIE": [
+      {
+        "id": "patr_rno_001",
+        "text": "Morderca? Ja piszę o morderstwach — nie popełniam ich. Choć rozumiem, jak kuszące może być mieszanie fikcji z rzeczywistością.",
+        "emotion": "POGARDA"
+      },
+      {
+        "id": "patr_rno_002",
+        "text": "Gdybym to ja zabiła Andrzeja, zostawiłabym mniej śladów. Znam się na tym — zawodowo.",
+        "emotion": "POGARDA"
+      }
+    ],
+    "REAKCJA_NA_PRESJE": [
+      {
+        "id": "patr_rnp_001",
+        "text": "Proszę nie naciskać. Pisarze mają własne tempo. I nie reagują dobrze na pośpiech.",
+        "emotion": "NEUTRALNY"
+      },
+      {
+        "id": "patr_rnp_002",
+        "text": "Im bardziej pan naciska, tym lepszy materiał mi pan daje. Ale jeśli pan chce odpowiedzi — proszę pytać grzeczniej.",
+        "emotion": "POGARDA"
+      }
+    ]
+  },
+  "personalFragments": {
+    "openers": [
+      "Zauważyłam coś ciekawego —",
+      "Pisarka we mnie mówi, że...",
+      "Jeśli zwróci pan uwagę na detale...",
+      "To interesujące, bo...",
+      "W powieści napisałabym to tak —",
+      "Obserwowałam tego wieczoru uważnie i..."
+    ],
+    "fillers": [
+      "...co ciekawe...",
+      "...i to jest właśnie interesujące...",
+      "...gdybym miała to opisać...",
+      "...co mnie uderzyło...",
+      "...jak w dobrym kryminale..."
+    ],
+    "closers": [
+      "...ale to pewnie tylko moja wyobraźnia.",
+      "...chociaż, kto wie.",
+      "...zwróciłam na to uwagę, bo to nietypowe.",
+      "...ale niech pan sam oceni.",
+      "...i to jest materiał na rozdział, którego wolałabym nie pisać."
+    ]
+  }
+}

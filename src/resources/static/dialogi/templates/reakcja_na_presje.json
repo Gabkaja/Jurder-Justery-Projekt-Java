@@ -1,0 +1,126 @@
+{
+  "type": "REAKCJA_NA_PRESJE",
+  "description": "Szablony reakcji na presje — gracz powtarza pytania, grozi, manipuluje. Reakcja zalezy od osobowosci NPC.",
+  "templates": [
+    {
+      "id": "rnp_001",
+      "template": "Proszę na mnie nie naciskać. Nie zmieni to moich odpowiedzi.",
+      "emotion": "GNIEW",
+      "minTrust": -10,
+      "requiresClue": false,
+      "pressureResponse": "RESISTANCE",
+      "tags": [
+        "opor",
+        "spokojny"
+      ]
+    },
+    {
+      "id": "rnp_002",
+      "template": "Im bardziej pan naciska, tym mniej chcę rozmawiać.",
+      "emotion": "GNIEW",
+      "minTrust": -20,
+      "requiresClue": false,
+      "pressureResponse": "RESISTANCE",
+      "tags": [
+        "opor",
+        "ostrzezenie"
+      ]
+    },
+    {
+      "id": "rnp_003",
+      "template": "Dobrze! Dobrze... powiem panu. Ale niech pan przestanie.",
+      "emotion": "PANIKA",
+      "minTrust": 0,
+      "requiresClue": false,
+      "pressureResponse": "BREAKING",
+      "tags": [
+        "zalamanie",
+        "poddanie"
+      ]
+    },
+    {
+      "id": "rnp_004",
+      "template": "Grozi mi pan? Naprawdę? W takiej sytuacji?",
+      "emotion": "GNIEW",
+      "minTrust": -20,
+      "requiresClue": false,
+      "pressureResponse": "COUNTER_ATTACK",
+      "tags": [
+        "kontratak",
+        "niedowierzanie"
+      ]
+    },
+    {
+      "id": "rnp_005",
+      "template": "Mam prawo odmówić odpowiedzi. I to właśnie robię.",
+      "emotion": "NEUTRALNY",
+      "minTrust": -30,
+      "requiresClue": false,
+      "pressureResponse": "SHUTDOWN",
+      "tags": [
+        "odmowa",
+        "formalne"
+      ]
+    },
+    {
+      "id": "rnp_006",
+      "template": "Widzę, że nie odpuści pan... Niech będzie. Ale ostrzegam — nie spodoba się to panu.",
+      "emotion": "REZYGNACJA",
+      "minTrust": 0,
+      "requiresClue": false,
+      "pressureResponse": "RELUCTANT_REVEAL",
+      "tags": [
+        "niechętne_ujawnienie",
+        "ostrzeżenie"
+      ]
+    },
+    {
+      "id": "rnp_007",
+      "template": "Może pan się wydzierać. Nic mi to nie robi. Widziałem gorsze przesłuchania.",
+      "emotion": "POGARDA",
+      "minTrust": -20,
+      "requiresClue": false,
+      "pressureResponse": "IMMUNITY",
+      "tags": [
+        "niewzruszony",
+        "doswiadczony"
+      ]
+    },
+    {
+      "id": "rnp_008",
+      "template": "Pan... pan mnie przeraża. Proszę, odejdź.",
+      "emotion": "STRACH",
+      "minTrust": -30,
+      "requiresClue": false,
+      "pressureResponse": "FEAR",
+      "tags": [
+        "strach",
+        "ucieczka"
+      ]
+    },
+    {
+      "id": "rnp_009",
+      "template": "Wie pan co? Mam to gdzieś. Powinienem był od razu wszystko powiedzieć.",
+      "emotion": "GNIEW",
+      "minTrust": 0,
+      "requiresClue": false,
+      "pressureResponse": "ANGER_REVEAL",
+      "tags": [
+        "zlosc",
+        "spontaniczne_ujawnienie"
+      ]
+    },
+    {
+      "id": "rnp_010",
+      "template": "Powtórzę jeszcze raz, powoli: nie — wiem — nic — więcej.",
+      "emotion": "GNIEW",
+      "minTrust": -20,
+      "requiresClue": false,
+      "pressureResponse": "FIRM_DENIAL",
+      "tags": [
+        "kategoryczna_odmowa",
+        "podkreslenie"
+      ]
+    }
+  ]
+}

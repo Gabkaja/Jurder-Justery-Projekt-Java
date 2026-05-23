@@ -1,0 +1,277 @@
+{
+  "type": "ALIBI",
+  "description": "Szablony alibi — NPC opisuje gdzie byl w kluczowych momentach. Placeholdery: {room}, {time}, {suspect}, {victim}. Nie wpisuj na sztywno lokacji ani czasu — te dane sa losowane.",
+  "templates": [
+    {
+      "id": "ali_001",
+      "template": "Przez większość wieczoru byłem w {room}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        100
+      ],
+      "tags": [
+        "proste",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "ali_002",
+      "template": "Nie opuszczałem {room} aż do momentu, kiedy usłyszałem zamieszanie.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        100
+      ],
+      "tags": [
+        "szczegolowe",
+        "mocne"
+      ]
+    },
+    {
+      "id": "ali_003",
+      "template": "Około {time} byłem w {room}. Mogę to potwierdzić.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        80,
+        100
+      ],
+      "tags": [
+        "precyzyjne",
+        "mocne"
+      ]
+    },
+    {
+      "id": "ali_004",
+      "template": "Przeszedłem z {room} do drugiego pokoju, ale nie pamiętam dokładnie kiedy.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        30,
+        60
+      ],
+      "tags": [
+        "niejasne",
+        "watpliwe"
+      ]
+    },
+    {
+      "id": "ali_005",
+      "template": "Cały wieczór kręciłem się między {room} a resztą domu. Trudno powiedzieć, gdzie byłem o konkretnej godzinie.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        20,
+        50
+      ],
+      "tags": [
+        "wymijajace",
+        "nieprecyzyjne"
+      ]
+    },
+    {
+      "id": "ali_006",
+      "template": "Byłem w {room} i rozmawiałem z {suspect}. Może to potwierdzi.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "ze_swiadkiem",
+        "weryfikowalne"
+      ]
+    },
+    {
+      "id": "ali_007",
+      "template": "Wyszedłem na chwilę do {room}, żeby odetchnąć. Było mi duszno.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "wyjasniajace",
+        "naturalne"
+      ]
+    },
+    {
+      "id": "ali_008",
+      "template": "Nikt mnie nie widział w {room}, ale tam właśnie byłem. Sam.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "bez_swiadkow",
+        "podejrzane"
+      ]
+    },
+    {
+      "id": "ali_009",
+      "template": "Siedziałem w {room} i czytałem. Nie zwracałem uwagi na nic poza książką.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        80
+      ],
+      "tags": [
+        "szczegolowe",
+        "aktywnosc"
+      ]
+    },
+    {
+      "id": "ali_010",
+      "template": "Po kolacji poszedłem do {room}. Zostałem tam do momentu, kiedy ktoś zaczął krzyczeć.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        90
+      ],
+      "tags": [
+        "chronologiczne",
+        "precyzyjne"
+      ]
+    },
+    {
+      "id": "ali_011",
+      "template": "Nie pamiętam dokładnie. Było dużo ludzi, dużo pokojów... Chyba {room}.",
+      "emotion": "NERWOWY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        10,
+        40
+      ],
+      "tags": [
+        "niejasne",
+        "nerwowe"
+      ]
+    },
+    {
+      "id": "ali_012",
+      "template": "Między {time} a północą nie ruszałem się z {room}.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        100
+      ],
+      "tags": [
+        "precyzyjne",
+        "ramy_czasowe"
+      ]
+    },
+    {
+      "id": "ali_013",
+      "template": "Paliłem papierosa w {room}. Mogło to zająć dziesięć minut, może piętnaście.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        50,
+        75
+      ],
+      "tags": [
+        "szczegolowe",
+        "aktywnosc"
+      ]
+    },
+    {
+      "id": "ali_014",
+      "template": "Szedłem właśnie do {room}, kiedy usłyszałem hałas. Zawróciłem.",
+      "emotion": "STRACH",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        60,
+        85
+      ],
+      "tags": [
+        "chronologiczne",
+        "reakcja"
+      ]
+    },
+    {
+      "id": "ali_015",
+      "template": "Przyznam, że wypiłem kilka kieliszków. Nie pamiętam wszystkiego, ale na pewno byłem w {room} przez jakiś czas.",
+      "emotion": "POCZUCIE_WINY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        20,
+        50
+      ],
+      "tags": [
+        "niepewne",
+        "alkohol"
+      ]
+    },
+    {
+      "id": "ali_016",
+      "template": "Rozmawiałem z kelnerem w {room}. Może go pan zapytać.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 10,
+      "requiresClue": false,
+      "certaintyRange": [
+        70,
+        95
+      ],
+      "tags": [
+        "ze_swiadkiem",
+        "weryfikowalne"
+      ]
+    },
+    {
+      "id": "ali_017",
+      "template": "Wiem, że to wygląda podejrzanie, ale naprawdę byłem sam w {room}.",
+      "emotion": "STRACH",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        40,
+        70
+      ],
+      "tags": [
+        "defensywne",
+        "bez_swiadkow"
+      ]
+    },
+    {
+      "id": "ali_018",
+      "template": "Wychodziłem z {room} dokładnie wtedy, kiedy zegar wybił {time}. Pamiętam, bo się spieszyłem.",
+      "emotion": "NEUTRALNY",
+      "minTrust": 0,
+      "requiresClue": false,
+      "certaintyRange": [
+        80,
+        100
+      ],
+      "tags": [
+        "precyzyjne",
+        "chronologiczne",
+        "zbyt_dokladne"
+      ]
+    }
+  ]
+}
