@@ -5,6 +5,7 @@ import main.engine.SceneManager;
 
 import java.util.List;
 
+// odpowiada za wybranie poziomu trudności
 public class DifficultySystem extends SceneManager {
 
     public enum Difficulty {
