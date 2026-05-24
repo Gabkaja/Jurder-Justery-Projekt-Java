@@ -3,6 +3,7 @@ package main.engine;
 import main.characters.PlayerCharacter;
 import main.characters.Suspect;
 import main.data.GameDataLoader;
+import main.gameplay.DifficultySystem;
 import main.world.Location;
 import main.world.MurderCase;
 import main.world.EventLog;
@@ -26,6 +27,9 @@ public class GameEngine {
     // Podsystemy
     private final SceneManager sceneManager;
     private final GameLoop gameLoop;
+
+    // Poziom trudności
+    private DifficultySystem.Difficulty difficulty = DifficultySystem.Difficulty.NORMAL;
 
     // Flagi
     private boolean running;
@@ -71,4 +75,7 @@ public class GameEngine {
     public EventLog getEventLog() { return eventLog; }
 
     public boolean isRunning() { return running; }
+
+    public DifficultySystem.Difficulty getDifficulty() { return difficulty; }
+    public void setDifficulty(DifficultySystem.Difficulty difficulty) { this.difficulty = difficulty; }
 }

@@ -5,8 +5,13 @@ import java.util.List;
 import main.engine.GameEngine;
 import main.engine.SceneManager;
 
+// odpowiada za przemieszczanie się pomiędzy lokacajmi
 public class ExplorationSystem extends SceneManager {
-    
+
+    public ExplorationSystem(GameEngine engine) {
+        super(engine);
+    }
+
     public String getNarration() {
         // zwróć tekst, dla eksploracji to proste "wybierz dokąd chcesz iść"
         // TODO: obiekt Location powinien przechowywać i zwracać swój tekst
