@@ -51,7 +51,7 @@ public abstract class SceneManager {
 
         @Override
         public String getNarration() {
-            return "=== JURDER MYSTERY ===";
+            return "=== JURDER JYSTERY ===";
         }
 
         @Override
@@ -119,12 +119,7 @@ public abstract class SceneManager {
 
         @Override
         public SceneManager onChoice(int choice) {
-            // TODO: zapis wybranego poziomu trudności w stanie gry.
-            return new PlaceholderScene(
-                engine,
-                "Eksploracja",
-                "To miejsce na ExplorationSystem dziedziczący po SceneManager."
-            );
+            return new main.gameplay.DifficultySystem(engine);
         }
     }
 
