@@ -12,18 +12,21 @@ public class ExplorationSystem extends SceneManager {
         super(engine);
     }
 
+    @Override
     public String getNarration() {
         // zwróć tekst, dla eksploracji to proste "wybierz dokąd chcesz iść"
         // TODO: obiekt Location powinien przechowywać i zwracać swój tekst
         return "Dokąd chcesz pójść?";
     }
 
+    @Override
     public List<String> getOptions() {
         // zwróć opcje, dla eksploracji to lista lokacji, do których możesz dojść + wróć
         // TODO: obiekt Location powinien przechowywać i zwracać swój tekst
         return engine.getCurrentLocation().getOptions();
     }
 
+    @Override
     public SceneManager onChoice(int choice) {
         // jeśli wybrana opcja odpowiada lokacji, zmień currentLocation
         // jeśli cofnij, zwróć siebie
