@@ -1,0 +1,55 @@
+# Skompilowane pliki
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Katalog wynikowy Maven
+target/
+
+# Pliki IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Pliki IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Pliki IDE - NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Pliki IDE - VS Code
+.vscode/
+
+# Pliki systemowe macOS
+.DS_Store
+
+# Pliki systemowe Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logi
+*.log
+logs/
+
+# Pliki tymczasowe
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Maven Wrapper
+!.mvn/wrapper/maven-wrapper.jar

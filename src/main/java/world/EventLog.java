@@ -25,4 +25,14 @@ public class EventLog {
         this.entries.add(entry);
     }
 
+    private final List<String> clues = new ArrayList<>();
+
+    public List<String> getClues() {
+        return clues;
+    }
+
+    public void addClue(String clue) {
+        this.clues.add(clue);
+    }
+
 }
