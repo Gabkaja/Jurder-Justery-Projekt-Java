@@ -1,16 +1,18 @@
 ﻿package data;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import world.Location;
 
-import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LocationFactory {
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final Gson gson = new Gson();
 
     public List<Location> loadLocations(String resourcePath) {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resourcePath)) {
@@ -18,9 +20,13 @@ public class LocationFactory {
                 System.err.println("Nie znaleziono pliku w resources: " + resourcePath);
                 return new ArrayList<>();
             }
-            return objectMapper.readValue(inputStream, new TypeReference<List<Location>>() {});
-        } catch (IOException e) {
-            System.err.println("Błąd podczas wczytywania lokacji: " + e.getMessage());
+
+            Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            // Jedna linijka od Google Gson i plik JSON zamienia się w listę obiektów Java
+            return gson.fromJson(reader, new TypeToken<List<Location>>(){}.getType());
+
+        } catch (Exception e) {
+            System.err.println("Blad podczas wczytywania lokacji przy uzyciu Gson: " + e.getMessage());
             return new ArrayList<>();
         }
     }
