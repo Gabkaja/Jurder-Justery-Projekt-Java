@@ -1,6 +1,7 @@
 package engine;
 
 import java.util.List;
+import ui.TerminalUI;
 
 /**
  * Bazowa klasa sceny.
@@ -20,6 +21,9 @@ public abstract class SceneManager {
         return new MainMenuScene(engine);
     }
 
+    // Tytuł aktualnej sceny (nagłówek ekranu).
+    public abstract String getTitle();
+
     // Tekst kontekstowy aktualnej sceny.
     public abstract String getNarration();
 
@@ -29,16 +33,10 @@ public abstract class SceneManager {
     // Obsługuje wybór opcji i zwraca następną scenę.
     public abstract SceneManager onChoice(int choice);
 
-    // TODO: podpiąć moduł ui, kiedy ten będzie gotowy
-    // Wspólne renderowanie: wypisz tekst i opcje, zwróć liczbę opcji.
+    // Wspólne renderowanie: czyści ekran, wypisuje nagłówek, tekst i opcje, zwraca liczbę opcji.
     public final int render() {
-        System.out.println(getNarration());
-
         List<String> options = getOptions();
-        for (int i = 0; i < options.size(); i++) {
-            System.out.println((i + 1) + ". " + options.get(i));
-        }
-
+        TerminalUI.showLocationScreen(getTitle(), getNarration(), options);
         return options.size();
     }
 
@@ -50,8 +48,13 @@ public abstract class SceneManager {
         }
 
         @Override
+        public String getTitle() {
+            return "JURDER MYSTERY";
+        }
+
+        @Override
         public String getNarration() {
-            return "=== JURDER JYSTERY ===";
+            return "";
         }
 
         @Override
@@ -79,8 +82,13 @@ public abstract class SceneManager {
         }
 
         @Override
+        public String getTitle() {
+            return "Wybór postaci";
+        }
+
+        @Override
         public String getNarration() {
-            return "=== Wybór postaci ===";
+            return "";
         }
 
         @Override
@@ -108,8 +116,13 @@ public abstract class SceneManager {
         }
 
         @Override
+        public String getTitle() {
+            return "Poziom trudności";
+        }
+
+        @Override
         public String getNarration() {
-            return "=== Poziom trudności ===";
+            return "";
         }
 
         @Override
@@ -136,8 +149,13 @@ public abstract class SceneManager {
         }
 
         @Override
+        public String getTitle() {
+            return title;
+        }
+
+        @Override
         public String getNarration() {
-            return "=== " + title + " ===\n" + message;
+            return message;
         }
 
         @Override

@@ -10,20 +10,26 @@ public class ExplorationSystem extends SceneManager {
 
     public ExplorationSystem(GameEngine engine) {
         super(engine);
+        if (engine.getCurrentLocation() == null && engine.getLocations() != null && !engine.getLocations().isEmpty()) {
+            engine.setCurrentLocation(engine.getLocations().get(0));
+        }
+    }
+
+    @Override
+    public String getTitle() {
+        return "Eksploracja";
     }
 
     @Override
     public String getNarration() {
         // zwróć tekst, dla eksploracji to proste "wybierz dokąd chcesz iść"
-        // TODO: obiekt Location powinien przechowywać i zwracać swój tekst
         return "Dokąd chcesz pójść?";
     }
 
     @Override
     public List<String> getOptions() {
         // zwróć opcje, dla eksploracji to lista lokacji, do których możesz dojść + wróć
-        // TODO: obiekt Location powinien przechowywać i zwracać swój tekst
-        return engine.getCurrentLocation().getOptions();
+        return engine.getCurrentLocation().getPassages();
     }
 
     @Override

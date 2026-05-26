@@ -29,8 +29,13 @@ public class DifficultySystem extends SceneManager {
     }
 
     @Override
+    public String getTitle() {
+        return "Poziom trudności";
+    }
+
+    @Override
     public String getNarration() {
-        return "=== Poziom trudności ===";
+        return "";
     }
 
     @Override
