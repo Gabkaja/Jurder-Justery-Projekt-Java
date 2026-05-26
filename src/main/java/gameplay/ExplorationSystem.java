@@ -1,9 +1,9 @@
-package main.gameplay;
+package gameplay;
 
 import java.util.List;
 
-import main.engine.GameEngine;
-import main.engine.SceneManager;
+import engine.GameEngine;
+import engine.SceneManager;
 
 // odpowiada za przemieszczanie się pomiędzy lokacajmi
 public class ExplorationSystem extends SceneManager {

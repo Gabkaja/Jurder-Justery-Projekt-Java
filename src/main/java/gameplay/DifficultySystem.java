@@ -1,7 +1,7 @@
-package main.gameplay;
+package gameplay;
 
-import main.engine.GameEngine;
-import main.engine.SceneManager;
+import engine.GameEngine;
+import engine.SceneManager;
 
 import java.util.List;
 

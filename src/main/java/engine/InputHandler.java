@@ -1,4 +1,4 @@
-package main.engine;
+package engine;
 
 import java.util.Scanner;
 

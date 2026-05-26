@@ -1,12 +1,12 @@
-package main.engine;
+package engine;
 
-import main.characters.PlayerCharacter;
-import main.characters.Suspect;
-import main.data.GameDataLoader;
-import main.gameplay.DifficultySystem;
-import main.world.Location;
-import main.world.MurderCase;
-import main.world.EventLog;
+import characters.PlayerCharacter;
+import characters.Suspect;
+import data.GameDataLoader;
+import gameplay.DifficultySystem;
+import world.Location;
+import world.MurderCase;
+import world.EventLog;
 
 import java.util.List;
 
