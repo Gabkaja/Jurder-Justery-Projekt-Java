@@ -18,7 +18,7 @@ public class GameDataLoader {
     private final Gson gson = new Gson();
 
     // Ścieżki do plików JSON schowane w jednym miejscu
-    private static final String LOCATIONS_PATH = "locations.json";
+    private static final String LOCATIONS_PATH = "lokacje.json";
     private static final String NPC_PATH = "npc.json";
     private static final String PC_PATH = "pc.json";
 

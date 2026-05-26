@@ -21,4 +21,12 @@
             <version>2.11.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/resources/static</directory>
+            </resource>
+        </resources>
+    </build>
 </project>

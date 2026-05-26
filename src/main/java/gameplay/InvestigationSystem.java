@@ -4,7 +4,6 @@ import characters.Suspect;
 import engine.GameEngine;
 import engine.SceneManager;
 import world.EventLog;
-import world.MurderCase;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,8 +27,13 @@ public class InvestigationSystem extends SceneManager {
     }
 
     @Override
+    public String getTitle() {
+        return "Dziennik śledztwa";
+    }
+
+    @Override
     public String getNarration() {
-        return "=== Dziennik śledztwa ===\nCo chcesz sprawdzić?";
+        return "Co chcesz sprawdzić?";
     }
 
     @Override
@@ -65,11 +69,11 @@ public class InvestigationSystem extends SceneManager {
     }
 
     private List<String> getClues() {
-        MurderCase murderCase = engine.getMurderCase();
-        if (murderCase == null) return List.of("(Brak znalezionych poszlak)");
-        List<String> evidence = murderCase.getFoundEvidence();
-        if (evidence.isEmpty()) return List.of("(Brak znalezionych poszlak)");
-        return evidence;
+        EventLog log = engine.getEventLog();
+        if (log == null) return List.of("(Brak znalezionych poszlak)");
+        List<String> clues = log.getClues();
+        if (clues.isEmpty()) return List.of("(Brak znalezionych poszlak)");
+        return clues;
     }
 
     private List<String> getNpcNames() {
@@ -102,8 +106,13 @@ public class InvestigationSystem extends SceneManager {
         }
 
         @Override
+        public String getTitle() {
+            return title;
+        }
+
+        @Override
         public String getNarration() {
-            StringBuilder sb = new StringBuilder("=== ").append(title).append(" ===\n");
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < items.size(); i++) {
                 sb.append(i + 1).append(". ").append(items.get(i)).append('\n');
             }

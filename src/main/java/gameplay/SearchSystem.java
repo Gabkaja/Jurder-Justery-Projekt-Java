@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import engine.GameEngine;
+import engine.MainMenuScene;
 import engine.SceneManager;
 
 // odpowiada za przeszukiwanie aktualnego pomieszczenia
@@ -22,14 +23,18 @@ public class SearchSystem extends SceneManager {
 	}
 
 	@Override
+	public String getTitle() {
+		return "Przeszukiwanie pomieszczenia";
+	}
+
+	@Override
 	public String getNarration() {
 		String roomName = engine.getCurrentLocation() == null
 			? "Nieznane pomieszczenie"
 			: engine.getCurrentLocation().toString();
 		int attempts = searchCountByRoom.getOrDefault(roomName, 0);
 
-		return "=== Przeszukiwanie pomieszczenia ===\n"
-			+ "Aktualna lokacja: " + roomName + "\n"
+		return "Aktualna lokacja: " + roomName + "\n"
 			+ "Liczba prób przeszukania: " + attempts + "\n\n"
 			+ lastActionMessage;
 	}
@@ -54,7 +59,7 @@ public class SearchSystem extends SceneManager {
 				handleMinigame();
 				yield this;
 			}
-			case 3 -> new SceneManager.MainMenuScene(engine);
+			case 3 -> new MainMenuScene(engine);
 			default -> this;
 		};
 	}
@@ -71,6 +76,7 @@ public class SearchSystem extends SceneManager {
 		if (!clueAlreadyFound) {
 			String clue = generateClueForRoom(roomName);
 			clueFoundByRoom.put(roomName, true);
+			engine.getEventLog().addClue(clue);
 			lastActionMessage = "Udalo sie! Znalazles nowy trop: " + clue;
 			return;
 		}
