@@ -1,4 +1,4 @@
-﻿package ui;
+package ui;
 
 public class ScreenCleaner {
     // Czyści konsolę terminala i resetuje pozycję kursora.

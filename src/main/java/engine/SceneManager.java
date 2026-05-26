@@ -1,4 +1,4 @@
-package main.engine;
+package engine;
 
 import java.util.List;
 
@@ -119,7 +119,7 @@ public abstract class SceneManager {
 
         @Override
         public SceneManager onChoice(int choice) {
-            return new main.gameplay.DifficultySystem(engine);
+            return new gameplay.DifficultySystem(engine);
         }
     }
 

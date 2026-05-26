@@ -1,11 +1,11 @@
-package main.gameplay;
+package gameplay;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import main.engine.GameEngine;
-import main.engine.SceneManager;
+import engine.GameEngine;
+import engine.SceneManager;
 
 // odpowiada za przeszukiwanie aktualnego pomieszczenia
 public class SearchSystem extends SceneManager {

@@ -1,4 +1,4 @@
-﻿package ui;
+package ui;
 
 public class ColorManager {
     // Standardowe kolory tekstowe ANSI

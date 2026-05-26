@@ -1,10 +1,10 @@
-package main.gameplay;
+package gameplay;
 
-import main.characters.Suspect;
-import main.engine.GameEngine;
-import main.engine.SceneManager;
-import main.world.EventLog;
-import main.world.MurderCase;
+import characters.Suspect;
+import engine.GameEngine;
+import engine.SceneManager;
+import world.EventLog;
+import world.MurderCase;
 
 import java.util.List;
 import java.util.stream.Collectors;

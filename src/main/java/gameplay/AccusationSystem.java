@@ -1,4 +1,4 @@
-package main.gameplay;
+package gameplay;
 
 // odpowiada za końcowe oskarżenie
 public class AccusationSystem {

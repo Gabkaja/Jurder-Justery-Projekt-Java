@@ -1,5 +1,8 @@
 package world;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MurderCase {
     private String killer;
     private String weapon;
