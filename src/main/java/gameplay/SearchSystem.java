@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import engine.GameEngine;
+import engine.MainMenuScene;
 import engine.SceneManager;
 
 // odpowiada za przeszukiwanie aktualnego pomieszczenia
@@ -58,7 +59,7 @@ public class SearchSystem extends SceneManager {
 				handleMinigame();
 				yield this;
 			}
-			case 3 -> new SceneManager.MainMenuScene(engine);
+			case 3 -> new MainMenuScene(engine);
 			default -> this;
 		};
 	}
