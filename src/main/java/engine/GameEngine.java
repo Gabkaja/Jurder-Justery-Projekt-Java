@@ -3,7 +3,6 @@ package engine;
 import characters.PlayerCharacter;
 import characters.Suspect;
 import data.GameDataLoader;
-import gameplay.DifficultySystem;
 import world.Location;
 import world.MurderCase;
 import world.EventLog;
@@ -29,7 +28,7 @@ public class GameEngine {
     private final GameLoop gameLoop;
 
     // Poziom trudności
-    private DifficultySystem.Difficulty difficulty = DifficultySystem.Difficulty.NORMAL;
+    private Difficulty difficulty = Difficulty.MEDIUM;
 
     // Flagi
     private boolean running;
@@ -57,11 +56,31 @@ public class GameEngine {
         this.suspects = loader.loadSuspects();
         this.locations = loader.loadLocations();
         this.murderCase = loader.loadMurderCase(suspects, locations);
+
+        if (this.locations != null && !this.locations.isEmpty()) {
+            this.currentLocation = this.locations.get(0);
+        }
     }
 
     // Gettery / settery stanu
     public PlayerCharacter getPlayer() { return player; }
-    public void setPlayer(PlayerCharacter player) { this.player = player; }
+
+    /**
+     * Ustawia postać gracza i AUTOMATYCZNIE dopasowuje poziom trudności gry
+     * na podstawie konfiguracji zapisanej w pliku pc.json.
+     */
+    public void setPlayer(PlayerCharacter player) {
+        this.player = player;
+
+        if (player != null && player.getDifficulty() != null) {
+            try {
+                this.difficulty = Difficulty.valueOf(player.getDifficulty().toUpperCase());
+            } catch (IllegalArgumentException e) {
+                System.err.println("[GameEngine] Nieznany poziom trudności: " + player.getDifficulty() + ". Ustawiono domyślny (MEDIUM).");
+                this.difficulty = Difficulty.MEDIUM;
+            }
+        }
+    }
 
     public List<Suspect> getSuspects() { return suspects; }
 
@@ -76,6 +95,6 @@ public class GameEngine {
 
     public boolean isRunning() { return running; }
 
-    public DifficultySystem.Difficulty getDifficulty() { return difficulty; }
-    public void setDifficulty(DifficultySystem.Difficulty difficulty) { this.difficulty = difficulty; }
+    public Difficulty getDifficulty() { return difficulty; }
+    public void setDifficulty(Difficulty difficulty) { this.difficulty = difficulty; }
 }

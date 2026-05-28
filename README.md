@@ -117,7 +117,7 @@ Menu w terminalu z kolorowym wyróżnieniem kluczowych informacji. Ekran czyści
       - `SearchSystem.java`
       - `DifficultySystem.java`
 
-    - `minigames/`
+    - `gameplay.minigames/`
       - `Minigame.java`
       - `GuessNumberGame.java`
       - `CipherGame.java`
@@ -144,7 +144,7 @@ Menu w terminalu z kolorowym wyróżnieniem kluczowych informacji. Ekran czyści
 
   - `test/`
     - `gameplay/`
-    - `minigames/`
+    - `gameplay.minigames/`
     - `dialogue/`
     - `world/`
 

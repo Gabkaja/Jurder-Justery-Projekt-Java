@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import characters.Suspect;
 import characters.PlayerCharacter;
 import world.Location;
+import world.Motive;
 import world.MurderCase;
 
 import java.io.InputStream;
@@ -37,18 +38,42 @@ public class GameDataLoader {
         return loadList(PC_PATH, new TypeToken<List<PlayerCharacter>>(){});
     }
 
-    // Ładowanie sprawy morderstwa
+    // Ładowanie i losowanie sprawy morderstwa
     public MurderCase loadMurderCase(List<Suspect> suspects, List<Location> locations) {
-        try {
-            // Wyciągamy pierwszą lepszą lokację z listy jako miejsce zbrodni (jeśli lista nie jest pusta)
-            Location defaultScene = locations.isEmpty() ? null : locations.get(0);
-
-            // Tworzymy testową sprawę morderstwa
-            return new MurderCase("Nieznany", "Noż", null, defaultScene);
-        } catch (Exception e) {
-            System.err.println("[GameDataLoader] Blad podczas tworzenia MurderCase: " + e.getMessage());
+        if (suspects == null || suspects.isEmpty() || locations == null || locations.isEmpty()) {
+            System.err.println("[GameDataLoader] Brakuje danych do wygenerowania sprawy morderstwa!");
             return null;
         }
+
+        java.util.Random random = new java.util.Random();
+
+        // 1. GDZIE: Najpierw losujemy miejsce zbrodni
+        Location crimeScene = locations.get(random.nextInt(locations.size()));
+
+        // 2. CZYM: Losujemy broń wyłącznie z listy przypisanej do wylosowanej lokacji
+        List<String> availableWeapons = crimeScene.getWeapons();
+        String weapon = "Nieznane narzędzie";
+
+        if (availableWeapons != null && !availableWeapons.isEmpty()) {
+            weapon = availableWeapons.get(random.nextInt(availableWeapons.size()));
+        } else {
+            System.err.println("[GameDataLoader] Blad: Lokacja " + crimeScene.getName() + " nie ma przypisanych broni!");
+        }
+
+        // 3. KTO: Losujemy mordercę
+        Suspect killer = suspects.get(random.nextInt(suspects.size()));
+
+        // 4. DLACZEGO: Losujemy motyw należący do tego konkretnego mordercy
+        Motive selectedMotive = null;
+        if (killer.getMotives() != null && !killer.getMotives().isEmpty()) {
+            // Wyciągamy losowy motyw z puli podejrzanego
+            var chosenOption = killer.getMotives().get(random.nextInt(killer.getMotives().size()));
+
+            // Zamieniamy na obiekt Motive (ID z typu, etykieta z typu, oryginalny opis z NPC)
+            selectedMotive = new Motive(chosenOption.getType(), chosenOption.getType(), chosenOption.getDescription());
+        }
+
+        return new MurderCase(killer.getName(), weapon, selectedMotive, crimeScene);
     }
 
     private <T> List<T> loadList(String resourcePath, TypeToken<List<T>> typeToken) {
