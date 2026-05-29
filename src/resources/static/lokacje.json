@@ -3,11 +3,11 @@
     "id": "przedsionek",
     "name": "Przedsionek",
     "description": "Wysoki marmurowy hol wejściowy z posadzką w czarno-białą szachownicę. Na ścianie wisi ogromne lustro w złoconej ramie, a przy drzwiach znajduje się wieszak na płaszcze i torebki gości. Przy wejściu stoi mała konsola ze srebrną tacą pełną wizytówek. Kręcone schody prowadzą na piętro. Po prawej stronie holu, za ozdobnymi drzwiami z matowego szkła, mieści się gabinet gospodarza.",
-    "passages": ["salaBelowa", "biblioteka", "gabinet", "lazienka", "sypialnia"],
+    "passages": ["salaBalowa", "biblioteka", "gabinet", "lazienka", "sypialnia"],
     "weapons": ["Laska", "Wieszak", "Świecznik"]
   },
   {
-    "id": "salaBelowa",
+    "id": "salaBalowa",
     "name": "Sala Balowa",
     "description": "Największe pomieszczenie w willi z lustrzaną podłogą i kryształowym żyrandolem. Wzdłuż ścian ustawione są stoły z przekąskami oraz rzędy krzeseł. Wysokie dwuskrzydłowe drzwi po zachodniej stronie prowadzą bezpośrednio do ogrodu.",
     "passages": ["przedsionek", "jadalnia", "ogrod"],
@@ -39,14 +39,14 @@
     "id": "ogrod",
     "name": "Ogród",
     "description": "Niewielki ogród otoczony kamiennym murem z lampionami zawieszonymi na drucie. Pośrodku znajduje się kamienna fontanna, przy żywopłocie stoi ławka, a na stoliku popielniczka. W murze znajduje się brama prowadząca na ulicę. Wzdłuż muru biegnie boczna ścieżka do garażu.",
-    "passages": ["salaBelowa", "kuchnia", "garaz"],
+    "passages": ["salaBalowa", "kuchnia", "garaz"],
     "weapons": ["Łopata", "Grabie", "Sekator"]
   },
   {
     "id": "jadalnia",
     "name": "Jadalnia",
     "description": "Podłużne pomieszczenie z mahoniowym stołem nakrytym dla czternastu osób. Wzdłuż ściany stoi kredens z zastawą, a dwa okna wychodzą na ogród. Wahadłowe drzwi prowadzą od strony kuchni, a szerokie wejście od strony sali balowej.",
-    "passages": ["salaBelowa", "kuchnia"],
+    "passages": ["salaBalowa", "kuchnia"],
     "weapons": ["Widelec do mięsa", "Zatrute wino"]
   },
   {

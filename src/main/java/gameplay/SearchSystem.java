@@ -3,104 +3,203 @@ package gameplay;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import engine.GameEngine;
-import engine.MainMenuScene;
 import engine.SceneManager;
+import world.Location;
+import world.MurderCase;
+import gameplay.minigames.*;
 
-// odpowiada za przeszukiwanie aktualnego pomieszczenia
 public class SearchSystem extends SceneManager {
 
 	private final Map<String, Integer> searchCountByRoom;
 	private final Map<String, Boolean> clueFoundByRoom;
+	private final Map<String, Boolean> minigameDoneByRoom;
 	private String lastActionMessage;
+	private final Random random = new Random();
 
 	public SearchSystem(GameEngine engine) {
 		super(engine);
 		this.searchCountByRoom = new HashMap<>();
 		this.clueFoundByRoom = new HashMap<>();
-		this.lastActionMessage = "Rozejrzyj się i wybierz, jak chcesz przeszukać pomieszczenie.";
+		this.minigameDoneByRoom = new HashMap<>();
+		this.lastActionMessage = "Co chcesz zrobić w tym pomieszczeniu?";
 	}
 
 	@Override
 	public String getTitle() {
-		return "Przeszukiwanie pomieszczenia";
+		return "Interakcja z otoczeniem";
 	}
 
 	@Override
 	public String getNarration() {
-		String roomName = engine.getCurrentLocation() == null
-			? "Nieznane pomieszczenie"
-			: engine.getCurrentLocation().toString();
+		Location current = engine.getCurrentLocation();
+		String roomName = (current == null) ? "Nieznane pomieszczenie" : current.getName();
 		int attempts = searchCountByRoom.getOrDefault(roomName, 0);
 
 		return "Aktualna lokacja: " + roomName + "\n"
-			+ "Liczba prób przeszukania: " + attempts + "\n\n"
-			+ lastActionMessage;
+				+ "Liczba przeszukań tego pokoju: " + attempts + "\n\n"
+				+ lastActionMessage;
 	}
 
 	@Override
 	public List<String> getOptions() {
 		return List.of(
-			"Przeszukaj pomieszczenie",
-			"Uruchom minigre sledcza",
-			"Wroc do menu glownego"
+				"Przeszukaj zakamarki pomieszczenia (Zwykłe szukanie)",
+				"Podejmij wyzwanie śledcze (Minigra dedykowana lokacji)",
+				"Przejdź do innego pomieszczenia",
+				"Otwórz Dziennik Śledztwa",
+				"Sformułuj Finałowe Oskarżenie"
 		);
 	}
 
 	@Override
 	public SceneManager onChoice(int choice) {
 		return switch (choice) {
-			case 1 -> {
-				handleRoomSearch();
+			case 1 -> { handleRoomSearch(); yield this; }
+			case 2 -> handleMinigame();
+			case 3 -> new ExplorationSystem(engine, this);
+			case 4 -> new InvestigationSystem(engine, this);
+			case 5 -> {
+				this.lastActionMessage = "[System Oskarżeń nie jest jeszcze zaimplementowany]";
 				yield this;
 			}
-			case 2 -> {
-				handleMinigame();
-				yield this;
-			}
-			case 3 -> new MainMenuScene(engine);
 			default -> this;
 		};
 	}
 
-	private void handleRoomSearch() {
-        // TODO: zaimplementowane przed obiektem Location, nie wiem jaki getter zwraca nazwe pokoju
-		String roomName = engine.getCurrentLocation() == null
-			? "Nieznane pomieszczenie"
-			: engine.getCurrentLocation().toString();
-		int newCount = searchCountByRoom.getOrDefault(roomName, 0) + 1;
-		searchCountByRoom.put(roomName, newCount);
+	private String getWeaponCategoryFromJSON(String weaponName) {
+		if (weaponName == null) return "NIEZNANA";
 
-		boolean clueAlreadyFound = clueFoundByRoom.getOrDefault(roomName, false);
-		if (!clueAlreadyFound) {
-			String clue = generateClueForRoom(roomName);
-			clueFoundByRoom.put(roomName, true);
-			engine.getEventLog().addClue(clue);
-			lastActionMessage = "Udalo sie! Znalazles nowy trop: " + clue;
+		String weapon = weaponName.trim();
+
+		if (List.of("Nóż kuchenny", "Tasak", "Żyletka", "Sekator", "Nożyk do listów").contains(weapon)) {
+			return "OSTRE";
+		}
+
+		if (List.of("Świecznik", "Ciężka książka", "Posążek", "Łopata", "Popielniczka", "Młotek").contains(weapon)) {
+			return "TĘPE";
+		}
+
+		if (List.of("Lina od kotary", "Kabel od suszarki", "Łańcuch", "Lina", "Poduszka", "Pasek").contains(weapon)) {
+			return "DUSZĄCE";
+		}
+
+		if (List.of("Trucizna", "Środki chemiczne", "Zatrute wino", "Tabletki nasenne", "Kanister").contains(weapon)) {
+			return "TRUJĄCE_CHEMICZNE";
+		}
+
+		if (List.of("Pistolet", "Klucz francuski", "Kilof").contains(weapon)) {
+			return "MECHANICZNE";
+		}
+
+		if (List.of("Laska", "Wieszak", "Rozbita butelka", "Grabie", "Widelec do mięsa").contains(weapon)) {
+			return "IMPROWIZOWANE";
+		}
+
+		return "NIEZNANA";
+	}
+	private SceneManager handleMinigame() {
+		Location current = engine.getCurrentLocation();
+		if (current == null) return this;
+
+		String roomId = current.getId().toLowerCase().trim();
+
+		if (minigameDoneByRoom.getOrDefault(roomId, false)) {
+			lastActionMessage = "Wyczerpałeś już limit wyzwań w tym pokoju.";
+			return this;
+		}
+
+		return switch (roomId) {
+			case "lazienka" -> new CipherGame(engine, this);
+			case "biblioteka" -> new RiddleGame(engine, this);
+			case "gabinet" -> new VigenereGame(engine, this);
+			case "garaz", "strych" -> new LockpickingGame(engine, this);
+			case "jadalnia", "pokoj_goscinny" -> new AlibiCheckGame(engine, this);
+			case "przedsionek", "ogrod" -> new BoobyTrapGame(engine, this);
+
+			default -> new GuessNumberGame(engine, this);
+		};
+	}
+
+	public void setMinigameResult(boolean success, String message) {
+		Location current = engine.getCurrentLocation();
+		if (current != null && success) {
+			minigameDoneByRoom.put(current.getId(), true);
+		}
+		this.lastActionMessage = message;
+	}
+
+	private void handleRoomSearch() {
+		Location current = engine.getCurrentLocation();
+		if (current == null) return;
+
+		String roomName = current.getName();
+		searchCountByRoom.put(roomName, searchCountByRoom.getOrDefault(roomName, 0) + 1);
+
+		if (clueFoundByRoom.getOrDefault(roomName, false)) {
+			lastActionMessage = "Przetrząsnąłeś już każdy kąt w tym pokoju. Nic więcej tu nie ma.";
 			return;
 		}
 
-		lastActionMessage = "Po dokladnym sprawdzeniu nic nowego nie znaleziono.";
+		String clue = generateSpecificClue(current, "RANDOM");
+		clueFoundByRoom.put(roomName, true);
+		engine.getEventLog().addClue(clue);
+		lastActionMessage = "Udało się! Znajdujesz coś ciekawego: " + clue;
 	}
 
-	private void handleMinigame() {
-		// TODO: podpiąć minigry
-		String reward = "Dodatkowa poszlaka z minigry";
-		lastActionMessage = "Minigra zakonczona sukcesem. Otrzymujesz: " + reward;
-	}
+	public String generateSpecificClue(Location currentRoom, String clueCategory) {
+		MurderCase caseInfo = engine.getMurderCase();
+		if (caseInfo == null) return "Niewyraźny ślad buta.";
 
-    // TODO: placeholder, trzeba to przemyśleć
-	private String generateClueForRoom(String roomName) {
-		List<String> clues = List.of(
-			"odcisk palca na kieliszku",
-			"strzep pergaminu z zapiskami",
-			"fragment tkaniny pasujacy do marynarki podejrzanego",
-			"slady blota prowadzace do bocznego wyjscia",
-			"zarys klucza od tajnej szuflady"
-		);
+		if (currentRoom.getId().equalsIgnoreCase(caseInfo.getCrimeScene().getId())) {
+			return "Silne ślady walki oraz krew na podłodze. To " + currentRoom.getName() + " jest miejscem zbrodni!";
+		}
 
-		int index = Math.abs(roomName.hashCode()) % clues.size();
-		return clues.get(index);
+		String targetCategory = clueCategory.toUpperCase();
+
+		if ("RANDOM".equals(targetCategory)) {
+			String[] pools = {"MOTIVE", "WEAPON", "KILLER"};
+			targetCategory = pools[random.nextInt(pools.length)];
+		}
+
+		return switch (targetCategory) {
+			case "MOTIVE" -> "Zapiski księgowe wskazują na motyw: " + caseInfo.getMotive().getDescription();
+			case "WEAPON" -> {
+				String weaponCat = getWeaponCategoryFromJSON(caseInfo.getWeapon());
+
+				yield switch (weaponCat) {
+					case "OSTRE" ->
+							"POSZLAKA MEDYCZNA: Ofiara posiada precyzyjne rany kłute o równych krawędziach. " +
+									"Lekarz twierdzi, że sprawca użył fabrycznego, bardzo ostrego ostrza.";
+
+					case "TĘPE" ->
+							"POSZLAKA MEDYCZNA: Sekcja wykazuje rozległe pęknięcie kości czaszki od uderzenia. " +
+									"Na miejscu zbrodni nie ma krwi na ścianach, co sugeruje ciężki przedmiot tępy.";
+
+					case "DUSZĄCE" ->
+							"POSZLAKA MEDYCZNA: Charakterystyczna sina bruzda wokół szyi oraz wybroczyny wywołane niedotlenieniem. " +
+									"Morderca musiał udusić ofiarę.";
+
+					case "TRUJĄCE_CHEMICZNE" ->
+							"POSZLAKA TOKSYKOLOGICZNA: Brak jakichkolwiek śladów zewnętrznych. Toksykologia wykryła " +
+									"gwałtowne zatrzymanie akcji serca spowodowane substancją chemiczną lub trucizną.";
+
+					case "MECHANICZNE" ->
+							"POSZLAKA BALISTYCZNA: Ślady zniszczeń, metalowe opiłki lub rany wskazują na użycie " +
+									"ciężkiego narzędzia mechanicznego bądź broni miotającej.";
+
+					case "IMPROWIZOWANE" ->
+							"POSZLAKA KRYMINALISTYCZNA: Rany są nieregularne i poszarpane. Wygląda na to, że sprawca panikował " +
+									"i złapał pierwszy lepszy przedmiot improwizowany, który nawinął mu się pod rękę.";
+
+					default ->
+							"POSZLAKA: Ślady na ciele ofiary są niejednoznaczne. Narzędzie zbrodni pozostaje zagadką.";
+				};
+			}
+			case "KILLER" -> "Świadek zeznał, że w sprawę zamieszany jest bezpośrednio: " + caseInfo.getKiller();
+			default -> "W koszu leży podarty papier ze strzępami motywu: '" + caseInfo.getMotive().getLabel() + "'";
+		};
 	}
 }
