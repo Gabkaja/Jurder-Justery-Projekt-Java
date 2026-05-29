@@ -60,6 +60,7 @@ public class PigpenGame extends Minigame {
     @Override
     public SceneManager onChoice(int choice) {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return endMinigame("Skrytka wolnomularska skrywała mroczną tajemnicę:", "Mechanizm zatrzasnął się na amen.", "MOTIVE");
         }
 

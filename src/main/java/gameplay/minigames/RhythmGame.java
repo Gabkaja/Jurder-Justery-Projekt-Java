@@ -54,6 +54,7 @@ public class RhythmGame extends Minigame {
     @Override
     public SceneManager onChoice(int choice) {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return endMinigame("W rytmie walca wyłowiłeś z szumu cenną informację!", "Z powodu wpadki towarzyskiej niczego się nie dowiedziałeś.", "WEAPON");
         }
 

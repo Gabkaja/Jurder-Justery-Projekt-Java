@@ -14,4 +14,9 @@ public class Location {
     public String getDescription() { return description; }
     public List<String> getPassages() { return passages; }
     public List<String> getWeapons() { return weapons; }
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

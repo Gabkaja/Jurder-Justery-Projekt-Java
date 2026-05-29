@@ -51,6 +51,7 @@ public class LockpickingGame extends Minigame {
             } else {
                 returnScene.setMinigameResult(false, "Zamek zablokowany.");
             }
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return returnScene;
         }
 

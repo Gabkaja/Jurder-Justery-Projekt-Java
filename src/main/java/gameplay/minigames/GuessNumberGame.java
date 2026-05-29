@@ -55,6 +55,7 @@ public class GuessNumberGame extends Minigame {
     @Override
     public SceneManager onChoice(int choice) {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return endMinigame("Udało Ci się sforsować zamek! W środku znajdujesz:", "Niestety, zamek został zablokowany na amen.");
         }
 

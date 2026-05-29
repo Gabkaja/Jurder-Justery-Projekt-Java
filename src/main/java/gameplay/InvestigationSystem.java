@@ -5,6 +5,7 @@ import engine.GameEngine;
 import engine.SceneManager;
 import world.EventLog;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,6 +44,7 @@ public class InvestigationSystem extends SceneManager {
             "Lista poszlak",
             "Lista postaci",
             "Lista lokacji",
+            "Lista narzędzi zbrodni",
             "Powrót"
         );
     }
@@ -54,7 +56,8 @@ public class InvestigationSystem extends SceneManager {
             case 2 -> new ListScene(engine, this, "Lista poszlak",   getClues());
             case 3 -> new ListScene(engine, this, "Lista postaci",   getNpcNames());
             case 4 -> new ListScene(engine, this, "Lista lokacji",   getLocationNames());
-            case 5 -> previousScene;
+            case 5 -> new ListScene(engine, this, "Lista narzędzi zbrodni", getWeaponRegistry());
+            case 6 -> previousScene;
             default -> this;
         };
     }
@@ -92,6 +95,25 @@ public class InvestigationSystem extends SceneManager {
             .collect(Collectors.toList());
     }
 
+    private List<String> getWeaponRegistry() {
+        world.WeaponData data = engine.getWeaponData();
+        if (data == null || data.getByType() == null) {
+            return List.of("Błąd: Nie udało się wczytać rejestru narzędzi.");
+        }
+
+        List<String> displayList = new ArrayList<>();
+
+        for (world.WeaponGroupByType group : data.getByType()) {
+            displayList.add(group.getTypeName().toUpperCase() + ":");
+            for (String weapon : group.getWeapons()) {
+                displayList.add("  - " + weapon);
+            }
+
+            displayList.add(" ");
+        }
+        return displayList;
+    }
+
     private static class ListScene extends SceneManager {
 
         private final SceneManager returnScene;
@@ -113,8 +135,8 @@ public class InvestigationSystem extends SceneManager {
         @Override
         public String getNarration() {
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < items.size(); i++) {
-                sb.append(i + 1).append(". ").append(items.get(i)).append('\n');
+            for (String item : items) {
+                sb.append(item).append('\n');
             }
             return sb.toString().stripTrailing();
         }
