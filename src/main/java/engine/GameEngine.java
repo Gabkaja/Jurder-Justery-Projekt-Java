@@ -6,6 +6,7 @@ import data.GameDataLoader;
 import world.Location;
 import world.MurderCase;
 import world.EventLog;
+import world.WeaponData; // Pamiętaj o imporcie
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class GameEngine {
     private PlayerCharacter player;
     private List<Suspect> suspects;
     private List<Location> locations;
+    private WeaponData weaponData;
     private Location currentLocation;
     private MurderCase murderCase;
     private EventLog eventLog;
@@ -55,6 +57,7 @@ public class GameEngine {
         GameDataLoader loader = new GameDataLoader();
         this.suspects = loader.loadSuspects();
         this.locations = loader.loadLocations();
+        this.weaponData = loader.loadWeaponData(); // Ładowanie rejestru narzędzi
         this.murderCase = loader.loadMurderCase(suspects, locations);
 
         if (this.locations != null && !this.locations.isEmpty()) {
@@ -65,10 +68,6 @@ public class GameEngine {
     // Gettery / settery stanu
     public PlayerCharacter getPlayer() { return player; }
 
-    /**
-     * Ustawia postać gracza i AUTOMATYCZNIE dopasowuje poziom trudności gry
-     * na podstawie konfiguracji zapisanej w pliku pc.json.
-     */
     public void setPlayer(PlayerCharacter player) {
         this.player = player;
 
@@ -85,6 +84,8 @@ public class GameEngine {
     public List<Suspect> getSuspects() { return suspects; }
 
     public List<Location> getLocations() { return locations; }
+
+    public WeaponData getWeaponData() { return weaponData; }
 
     public Location getCurrentLocation() { return currentLocation; }
     public void setCurrentLocation(Location location) { this.currentLocation = location; }

@@ -19,6 +19,6 @@ public class Suspect {
 
     @Override
     public String toString() {
-        return "Suspect{id='" + id + "', name='" + name + "', title='" + title + "'}";
+        return name + " (" + title + ")";
     }
 }

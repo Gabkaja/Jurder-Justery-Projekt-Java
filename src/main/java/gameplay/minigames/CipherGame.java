@@ -44,6 +44,7 @@ public class CipherGame extends Minigame {
     @Override
     public SceneManager onChoice(int choice) {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return endMinigame("Rozszyfrowałeś intencje uciekiniera! Zabezpieczony dowód to:", "Wiadomość z lustra spłynęła wraz z parą wodną.", "KILLER");
         }
 

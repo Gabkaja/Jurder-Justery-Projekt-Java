@@ -22,6 +22,7 @@ public class GameDataLoader {
     private static final String LOCATIONS_PATH = "lokacje.json";
     private static final String NPC_PATH = "npc.json";
     private static final String PC_PATH = "pc.json";
+    private static final String WEAPONS_PATH = "narzedzia_zbrodni.json";
 
     // Ładowanie lokacji
     public List<Location> loadLocations() {
@@ -76,6 +77,19 @@ public class GameDataLoader {
         return new MurderCase(killer.getName(), weapon, selectedMotive, crimeScene);
     }
 
+    public world.WeaponData loadWeaponData() {
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(WEAPONS_PATH)) {
+            if (inputStream == null) {
+                System.err.println("[GameDataLoader] Nie znaleziono pliku: " + WEAPONS_PATH);
+                return null;
+            }
+            Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            return gson.fromJson(reader, world.WeaponData.class);
+        } catch (Exception e) {
+            System.err.println("[GameDataLoader] Blad podczas parsowania " + WEAPONS_PATH + ": " + e.getMessage());
+            return null;
+        }
+    }
     private <T> List<T> loadList(String resourcePath, TypeToken<List<T>> typeToken) {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resourcePath)) {
             if (inputStream == null) {

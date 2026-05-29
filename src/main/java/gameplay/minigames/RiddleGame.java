@@ -48,6 +48,7 @@ public class RiddleGame extends Minigame {
     @Override
     public SceneManager onChoice(int choice) {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return endMinigame("Rozwiązałeś zagadkę notesu! Ukryty dokument ujawnia:", "Zamek pozostał zamknięty.", "MOTIVE");
         }
 

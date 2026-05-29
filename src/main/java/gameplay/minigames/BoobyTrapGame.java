@@ -47,6 +47,7 @@ public class BoobyTrapGame extends Minigame {
             if (!won) {
                 engine.getEventLog().addClue("ZDARZENIE: Zostałeś ranny w pułapce. Eksploracja staje się trudniejsza.");
             }
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return returnScene;
         }
 

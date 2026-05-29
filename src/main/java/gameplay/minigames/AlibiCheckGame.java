@@ -58,6 +58,9 @@ public class AlibiCheckGame extends Minigame {
             } else {
                 returnScene.setMinigameResult(false, "Nie udało Ci się zweryfikować alibi.");
             }
+
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
+
             return returnScene;
         }
 

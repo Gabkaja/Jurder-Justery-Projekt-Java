@@ -116,6 +116,7 @@ public class VigenereGame extends Minigame {
     @Override
     public List<String> getOptions() {
         if (gameOver) {
+            returnScene.markRoomAsDone(engine.getCurrentLocation().getId());
             return List.of("Kontynuuj i wróć do pokoju");
         }
         return generatedOptions;
