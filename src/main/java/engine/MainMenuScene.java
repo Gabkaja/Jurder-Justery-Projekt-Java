@@ -10,7 +10,7 @@ public class MainMenuScene extends SceneManager {
 
     @Override
     public String getTitle() {
-        return "JURDER MYSTERY";
+        return "JURDER JYSTERY";
     }
 
     @Override
