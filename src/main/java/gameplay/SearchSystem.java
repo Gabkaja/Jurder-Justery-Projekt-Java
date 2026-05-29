@@ -68,7 +68,8 @@ public class SearchSystem extends SceneManager {
 			case 3 -> new ExplorationSystem(engine, this);
 			case 4 -> new InvestigationSystem(engine, this);
 			case 5 -> {
-				this.lastActionMessage = "[System Oskarżeń nie jest jeszcze zaimplementowany]";
+				AccusationSystem accusation = new AccusationSystem(engine);
+				accusation.makeAccusation();
 				yield this;
 			}
 			default -> this;
