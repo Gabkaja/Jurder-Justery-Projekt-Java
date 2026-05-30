@@ -25,7 +25,7 @@
     <build>
         <resources>
             <resource>
-                <directory>src/resources/static</directory>
+                <directory>src/main/resources/static</directory>
             </resource>
         </resources>
     </build>

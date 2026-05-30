@@ -9,7 +9,7 @@ import engine.GameEngine;
 import engine.SceneManager;
 import world.Location;
 import world.MurderCase;
-import gameplay.minigames.*;
+import characters.Suspect;
 
 public class SearchSystem extends SceneManager {
 
@@ -54,6 +54,7 @@ public class SearchSystem extends SceneManager {
 		return List.of(
 				"Przeszukaj zakamarki pomieszczenia (Zwykłe szukanie)",
 				"Podejmij wyzwanie śledcze (Minigra dedykowana lokacji)",
+				"Porozmawiaj z podejrzanym", // <--- NOWOŚĆ
 				"Przejdź do innego pomieszczenia",
 				"Otwórz Dziennik Śledztwa",
 				"Sformułuj Finałowe Oskarżenie"
@@ -65,9 +66,10 @@ public class SearchSystem extends SceneManager {
 		return switch (choice) {
 			case 1 -> { handleRoomSearch(); yield this; }
 			case 2 -> handleMinigame();
-			case 3 -> new ExplorationSystem(engine, this);
-			case 4 -> new InvestigationSystem(engine, this);
-			case 5 -> {
+			case 3 -> new SuspectSelectionScene(engine, this);
+			case 4 -> new ExplorationSystem(engine, this);
+			case 5 -> new InvestigationSystem(engine, this);
+			case 6 -> {
 				AccusationSystem accusation = new AccusationSystem(engine);
 				accusation.makeAccusation();
 				yield this;
@@ -106,15 +108,15 @@ public class SearchSystem extends SceneManager {
 		}
 
 		return switch (roomId) {
-			case "lazienka" -> new CipherGame(engine, this);
-			case "biblioteka" -> new RiddleGame(engine, this);
-			case "gabinet" -> new VigenereGame(engine, this);
-			case "piwnica" -> new LockpickingGame(engine, this);
-			case "sypialnia" -> new AlibiCheckGame(engine, this);
-			case "przedsionek", "ogrod" -> new BoobyTrapGame(engine, this);
-			case "salabalowa" -> new RhythmGame(engine, this);
-			case "garaz" -> new PigpenGame(engine, this);
-			default -> new GuessNumberGame(engine, this);
+			case "lazienka" -> new gameplay.minigames.CipherGame(engine, this);
+			case "biblioteka" -> new gameplay.minigames.RiddleGame(engine, this);
+			case "gabinet" -> new gameplay.minigames.VigenereGame(engine, this);
+			case "piwnica" -> new gameplay.minigames.LockpickingGame(engine, this);
+			case "sypialnia" -> new gameplay.minigames.AlibiCheckGame(engine, this);
+			case "przedsionek", "ogrod" -> new gameplay.minigames.BoobyTrapGame(engine, this);
+			case "salabalowa" -> new gameplay.minigames.RhythmGame(engine, this);
+			case "garaz" -> new gameplay.minigames.PigpenGame(engine, this);
+			default -> new gameplay.minigames.GuessNumberGame(engine, this);
 		};
 	}
 
@@ -155,5 +157,53 @@ public class SearchSystem extends SceneManager {
 			case "KILLER" -> "Świadek zeznał, że w sprawę zamieszany jest bezpośrednio: " + caseInfo.getKiller();
 			default -> "W koszu leży podarty papier ze strzępami motywu: '" + caseInfo.getMotive().getLabel() + "'";
 		};
+	}
+
+	private static class SuspectSelectionScene extends SceneManager {
+		private final SceneManager returnScene;
+		private List<Suspect> suspectsInThisRoom;
+
+		public SuspectSelectionScene(GameEngine engine, SceneManager returnScene) {
+			super(engine);
+			this.returnScene = returnScene;
+
+			Location currentRoom = engine.getCurrentLocation();
+			if (currentRoom != null && engine.getSuspects() != null) {
+				this.suspectsInThisRoom = engine.getSuspects().stream()
+						.filter(s -> s.getLocationId() != null && s.getLocationId().equalsIgnoreCase(currentRoom.getId()))
+						.toList();
+			} else {
+				this.suspectsInThisRoom = java.util.List.of();
+			}
+		}
+
+		@Override
+		public String getTitle() { return "Obecni w pomieszczeniu"; }
+
+		@Override
+		public String getNarration() {
+			if (suspectsInThisRoom.isEmpty()) {
+				return "Rozejrzałeś się dookoła. W tym pomieszczeniu nie ma żywej duszy.";
+			}
+			return "W tym pokoju przebywają następujące osoby. Z kim chcesz porozmawiać?";
+		}
+
+		@Override
+		public List<String> getOptions() {
+			List<String> options = new java.util.ArrayList<>();
+			for (Suspect s : suspectsInThisRoom) {
+				options.add(s.getName() + " [" + s.getTitle() + "]");
+			}
+			options.add("Powrót");
+			return options;
+		}
+
+		@Override
+		public SceneManager onChoice(int choice) {
+			if (choice >= 1 && choice <= suspectsInThisRoom.size()) {
+				return new InterrogationSystem(engine, this, suspectsInThisRoom.get(choice - 1));
+			}
+			return returnScene;
+		}
 	}
 }
