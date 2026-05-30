@@ -6,14 +6,12 @@ import data.GameDataLoader;
 import world.Location;
 import world.MurderCase;
 import world.EventLog;
-import world.WeaponData; // Pamiętaj o imporcie
+import world.WeaponData;
+import dialogue.DialogueGenerator;
+import dialogue.SpeechStyleConfig;
 
 import java.util.List;
 
-/**
- * Centralny rejestr stanu gry.
- * Przechowuje dane załadowane na starcie i udostępnia je innym systemom.
- */
 public class GameEngine {
 
     // Stan gry
@@ -25,14 +23,13 @@ public class GameEngine {
     private MurderCase murderCase;
     private EventLog eventLog;
 
-    // Podsystemy
+    private DialogueGenerator dialogueGenerator;
+
     private final SceneManager sceneManager;
     private final GameLoop gameLoop;
 
-    // Poziom trudności
     private Difficulty difficulty = Difficulty.MEDIUM;
 
-    // Flagi
     private boolean running;
 
     public GameEngine() {
@@ -41,7 +38,6 @@ public class GameEngine {
         this.eventLog = new EventLog();
     }
 
-    // Inicjalizuje grę: ładuje dane, ustawia stan początkowy, uruchamia pętlę.
     public void start() {
         loadGameData();
         running = true;
@@ -52,25 +48,50 @@ public class GameEngine {
         running = false;
     }
 
-    // Ładowanie danych
     private void loadGameData() {
         GameDataLoader loader = new GameDataLoader();
         this.suspects = loader.loadSuspects();
         this.locations = loader.loadLocations();
-        this.weaponData = loader.loadWeaponData(); // Ładowanie rejestru narzędzi
+        this.weaponData = loader.loadWeaponData();
         this.murderCase = loader.loadMurderCase(suspects, locations);
+
+        dialogue.SpeechStyleConfig styles = loader.loadSpeechStyles();
+        if (styles != null) {
+            this.dialogueGenerator = new dialogue.DialogueGenerator(styles);
+        } else {
+            System.err.println("[GameEngine] Krytyczny błąd: Nie udało się stworzyć DialogueGenerator (brak stylów mowy)!");
+        }
+
+        if (this.suspects != null && !this.suspects.isEmpty()) {
+            for (Suspect suspect : this.suspects) {
+                var dialogueConfig = loader.loadNpcDialogue(suspect.getId());
+                if (dialogueConfig != null) {
+                    suspect.setDialogueConfig(dialogueConfig);
+                } else {
+                    System.err.println("[GameEngine] Ostrzeżenie: Brak pliku dialogowego dla NPC o ID: " + suspect.getId());
+                }
+            }
+        }
+
+        if (this.suspects != null && this.locations != null && !this.locations.isEmpty()) {
+            java.util.Random rand = new java.util.Random();
+            for (Suspect suspect : this.suspects) {
+                Location randomLoc = this.locations.get(rand.nextInt(this.locations.size()));
+                suspect.setLocationId(randomLoc.getId());
+            }
+        }
 
         if (this.locations != null && !this.locations.isEmpty()) {
             this.currentLocation = this.locations.get(0);
         }
     }
+    public DialogueGenerator getDialogueGenerator() {
+        return dialogueGenerator;
+    }
 
-    // Gettery / settery stanu
     public PlayerCharacter getPlayer() { return player; }
-
     public void setPlayer(PlayerCharacter player) {
         this.player = player;
-
         if (player != null && player.getDifficulty() != null) {
             try {
                 this.difficulty = Difficulty.valueOf(player.getDifficulty().toUpperCase());
@@ -80,22 +101,14 @@ public class GameEngine {
             }
         }
     }
-
     public List<Suspect> getSuspects() { return suspects; }
-
     public List<Location> getLocations() { return locations; }
-
     public WeaponData getWeaponData() { return weaponData; }
-
     public Location getCurrentLocation() { return currentLocation; }
     public void setCurrentLocation(Location location) { this.currentLocation = location; }
-
     public MurderCase getMurderCase() { return murderCase; }
-
     public EventLog getEventLog() { return eventLog; }
-
     public boolean isRunning() { return running; }
-
     public Difficulty getDifficulty() { return difficulty; }
     public void setDifficulty(Difficulty difficulty) { this.difficulty = difficulty; }
 }
