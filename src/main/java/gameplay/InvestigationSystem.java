@@ -62,7 +62,6 @@ public class InvestigationSystem extends SceneManager {
         };
     }
 
-    // TODO: nie ma jeszcze modułu data, więc nic tutaj nie działa
     private List<String> getEventLogEntries() {
         EventLog log = engine.getEventLog();
         if (log == null) return List.of("(Dziennik jest pusty)");
