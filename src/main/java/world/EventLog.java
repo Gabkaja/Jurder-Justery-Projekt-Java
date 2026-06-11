@@ -1,14 +1,12 @@
 package world;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class EventLog {
 
     private final List<String> entries = new ArrayList<>();
-    private final Set<String> uniqueClues = new HashSet<>();
+    private final List<String> clues = new ArrayList<>();
 
     public EventLog() {
     }
@@ -22,12 +20,10 @@ public class EventLog {
     }
 
     public List<String> getClues() {
-        return new ArrayList<>(uniqueClues);
+        return clues;
     }
 
     public void addClue(String clue) {
-        if (uniqueClues.add(clue)) {
-            this.entries.add("Znaleziono nowy dowód: " + clue);
-        }
+        this.clues.add(clue);
     }
 }

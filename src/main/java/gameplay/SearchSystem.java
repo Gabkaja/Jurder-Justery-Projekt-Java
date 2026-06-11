@@ -191,13 +191,20 @@ public class SearchSystem extends SceneManager {
 		if (caseInfo == null) return "Niewyraźny ślad buta.";
 
 		if (currentRoom.getId().equalsIgnoreCase(caseInfo.getCrimeScene().getId())) {
-			return "Ślady walki na podłodze. To miejsce zbrodni!";
+			return "Ślady walki na podłodze. Ten pokój jest miejscem zbrodni!";
 		}
 
-		String[] pools = {"MOTIVE", "WEAPON"};
-		String targetCategory = pools[random.nextInt(pools.length)];
+		String targetCategory = (clueCategory == null || clueCategory.isBlank())
+				? "RANDOM"
+				: clueCategory.trim().toUpperCase(Locale.ROOT);
+
+		if ("RANDOM".equals(targetCategory)) {
+			String[] pools = {"KILLER", "MOTIVE", "WEAPON"};
+			targetCategory = pools[random.nextInt(pools.length)];
+		}
 
 		return switch (targetCategory) {
+			case "KILLER" -> "Na zakurzonym fragmencie lustra ktoś zapisał jedno imię: " + caseInfo.getKiller();
 			case "MOTIVE" -> "Znaleziono skrawek papieru z notatką: " + caseInfo.getMotive().getDescription();
 			case "WEAPON" -> "Znaleziono przedmiot, który może mieć związek z narzędziem typu: " + getWeaponCategoryFromJSON(caseInfo.getWeapon());
 			default -> "Dziwny ślad na podłodze, którego nie potrafisz zidentyfikować.";
