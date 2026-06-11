@@ -95,37 +95,60 @@ public class InterrogationSystem extends SceneManager {
 
     private void triggerDialogue(String category) {
         DialogueGenerator generator = engine.getDialogueGenerator();
-        if (generator == null) {
-            this.lastNpcSpeech = suspect.getName() + ": (System dialogowy nieaktywny)";
+        MurderCase caseInfo = engine.getMurderCase();
+
+        if (generator == null || caseInfo == null) {
+            this.lastNpcSpeech = suspect.getName() + ": (Brak danych do rozmowy)";
             return;
         }
 
-        // Przygotowanie danych do wstrzyknięcia w tekst (placeholdery z pliku JSON)
         Map<String, String> placeholders = new HashMap<>();
-        MurderCase caseInfo = engine.getMurderCase();
-
-        if (caseInfo != null) {
-            placeholders.put("room", caseInfo.getCrimeScene().getName());
-            placeholders.put("weapon", caseInfo.getWeapon());
-            placeholders.put("motive", caseInfo.getMotive().getDescription());
-            placeholders.put("killer", caseInfo.getKiller());
-        }
         placeholders.put("time", "22:00");
+        placeholders.put("room", caseInfo.getCrimeScene().getName());
         placeholders.put("npc", suspect.getName());
 
-        String dynamicSuspectName = "ktoś podejrzany";
-        if (engine.getSuspects() != null && engine.getSuspects().size() > 1) {
-            List<Suspect> otherSuspects = engine.getSuspects().stream()
-                    .filter(s -> !s.getId().equals(suspect.getId()))
-                    .toList();
+        // 1. Sprawdzamy, czy ten NPC jest poszukiwanym mordercą
+        boolean isKiller = suspect.getName().equalsIgnoreCase(caseInfo.getKiller());
 
-            if (!otherSuspects.isEmpty()) {
-                int randomIndex = new java.util.Random().nextInt(otherSuspects.size());
-                dynamicSuspectName = otherSuspects.get(randomIndex).getName();
+        // Pobieramy listę pozostałych (niewinnych) podejrzanych do manipulacji plotkami
+        List<Suspect> innocentSuspects = engine.getSuspects().stream()
+                .filter(s -> !s.getName().equalsIgnoreCase(caseInfo.getKiller()))
+                .toList();
+
+        // 2. LOGIKA GENEROWANIA POSZLAK I KŁAMSTW
+        if (isKiller) {
+            // MORDERCA: Próbuje wrobić kogoś niewinnego!
+            if (!innocentSuspects.isEmpty()) {
+                int randIdx = new java.util.Random().nextInt(innocentSuspects.size());
+                placeholders.put("suspect", innocentSuspects.get(randIdx).getName()); // Wskazuje palcem na niewinnego
+            }
+            placeholders.put("weapon", "czymś innym niż " + caseInfo.getWeapon()); // Myli trop co do broni
+            placeholders.put("motive", "jakichś starych porachunkach");
+
+            // Jeśli gracz pyta o poszlaki, wymuszamy kategorię kłamstwa
+            if (category.equalsIgnoreCase("poszlaki") || category.equalsIgnoreCase("clues")) {
+                category = "klamstwa"; // Silnik dialogowy sięgnie do klamstwa.json!
+            }
+        } else {
+            // NIEWINNY ŚWIADEK: Mówi prawdę, ale tylko jeśli zaufanie (trust) jest wysokie!
+            placeholders.put("killer", caseInfo.getKiller());
+            placeholders.put("weapon", caseInfo.getWeapon());
+            placeholders.put("motive", caseInfo.getMotive().getDescription());
+
+            // Dynamiczny dobór kogo widział świadek (kręcącego się obok miejsca zbrodni)
+            placeholders.put("suspect", caseInfo.getKiller()); // Świadek widział mordercę!
+            placeholders.put("victim", "ofiary");
+
+            if (category.equalsIgnoreCase("poszlaki") || category.equalsIgnoreCase("clues")) {
+                if (suspect.getTrust() >= 60) {
+                    category = "obserwacje_wzrokowe"; // Daje kluczową poszlakę!
+                } else {
+                    category = "alibi"; // Jest nieufny, mówi tylko o sobie
+                }
             }
         }
-        placeholders.put("suspect", dynamicSuspectName);
 
+        // 3. Pobieranie wpisu dialogowego z odpowiedniej (przepisanej wyżej) kategorii
         if (suspect.getDialogueConfig() != null && suspect.getDialogueConfig().getUniqueDialogues() != null) {
             List<NpcDialogueConfig.DialogueEntry> entries = suspect.getDialogueConfig().getUniqueDialogues().get(category);
             if (entries != null && !entries.isEmpty()) {
@@ -135,6 +158,7 @@ public class InterrogationSystem extends SceneManager {
             }
         }
 
+        // Generowanie tekstu (wstrzyknięcie cech mowy i gotowych, logicznych placeholderów)
         this.lastNpcSpeech = generator.generateResponse(suspect, category, placeholders);
     }
 

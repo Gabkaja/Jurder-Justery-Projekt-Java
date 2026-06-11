@@ -1,9 +1,6 @@
 package gameplay;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 import engine.GameEngine;
 import engine.SceneManager;
@@ -17,6 +14,9 @@ public class SearchSystem extends SceneManager {
 	private final Map<String, Boolean> clueFoundByRoom;
 	private final Map<String, Boolean> minigameDoneByRoom;
 	private String lastActionMessage;
+
+	// Globalna pula dowodów dla całej gry
+	private static List<String> globalCluePool = null;
 	private final Random random = new Random();
 
 	public SearchSystem(GameEngine engine) {
@@ -25,8 +25,29 @@ public class SearchSystem extends SceneManager {
 		this.clueFoundByRoom = new HashMap<>();
 		this.minigameDoneByRoom = new HashMap<>();
 		this.lastActionMessage = "Co chcesz zrobić w tym pomieszczeniu?";
+
+		if (globalCluePool == null) {
+			initializeGlobalPool();
+		}
 	}
 
+	private void initializeGlobalPool() {
+		globalCluePool = new ArrayList<>();
+		MurderCase caseInfo = engine.getMurderCase();
+
+		if (caseInfo != null) {
+			// Dodajemy dowody kluczowe
+			globalCluePool.add("Zapiski wskazują na motyw: " + caseInfo.getMotive().getDescription());
+			globalCluePool.add("Narzędzie zbrodni pasuje do kategorii: " + getWeaponCategoryFromJSON(caseInfo.getWeapon()));
+			globalCluePool.add("W szafce leży zakurzony przedmiot, który może mieć znaczenie dla sprawy.");
+		}
+
+		// Dodajemy "wypełniacze", żeby gracz zawsze coś znalazł
+		globalCluePool.add("Znajdujesz stary paragon, ale nie wydaje się istotny.");
+		globalCluePool.add("W kącie wala się trochę kurzu i pajęczyny.");
+		globalCluePool.add("Nic ciekawego, tylko sterta starych gazet.");
+		globalCluePool.add("Znajdujesz niedopaloną zapałkę.");
+	}
 	public void markRoomAsDone(String roomId) {
 		if (roomId != null) {
 			this.minigameDoneByRoom.put(roomId.toLowerCase().trim(), true);
@@ -85,15 +106,40 @@ public class SearchSystem extends SceneManager {
 		String roomName = current.getName();
 		searchCountByRoom.put(roomName, searchCountByRoom.getOrDefault(roomName, 0) + 1);
 
+		// 1. Sprawdź, czy to miejsce zbrodni
+		MurderCase caseInfo = engine.getMurderCase();
+		if (caseInfo != null && current.getId().equalsIgnoreCase(caseInfo.getCrimeScene().getId())) {
+			if (!clueFoundByRoom.getOrDefault(roomName, false)) {
+				String[] hints = {
+						"Czujesz tu dziwny, duszący zapach środków czystości, jakby ktoś próbował coś zmyć z podłogi.",
+						"Zauważasz nienaturalne ślady przesuwania mebli – jakby rozegrała się tu szamotanina.",
+						"W rogu pomieszczenia leży dziwnie porzucony przedmiot osobisty ofiary.",
+						"Coś w tym pokoju wydaje się... niespokojne. Ślady na dywanie wskazują na gwałtowny ruch."
+				};
+
+				String crimeSceneClue = hints[random.nextInt(hints.length)];
+				clueFoundByRoom.put(roomName, true);
+				engine.getEventLog().addClue("Poszlaka w pokoju: " + crimeSceneClue);
+				lastActionMessage = "Udało się! Znajdujesz coś ciekawego: " + crimeSceneClue;
+				return;
+			}
+		}
+
+		// 2. Jeśli nie miejsce zbrodni (lub już przeszukane), sprawdź standardową blokadę
 		if (clueFoundByRoom.getOrDefault(roomName, false)) {
 			lastActionMessage = "Przetrząsnąłeś już każdy kąt w tym pokoju. Nic więcej tu nie ma.";
 			return;
 		}
 
-		String clue = generateSpecificClue(current, "RANDOM");
-		clueFoundByRoom.put(roomName, true);
-		engine.getEventLog().addClue(clue);
-		lastActionMessage = "Udało się! Znajdujesz coś ciekawego: " + clue;
+		// 3. Pobranie dowodu z globalnej puli (reszta logiki bez zmian)
+		if (globalCluePool.isEmpty()) {
+			lastActionMessage = "Przeszukałeś już wszystkie możliwe miejsca w domu. Nie ma tu już nic nowego.";
+		} else {
+			String clue = globalCluePool.remove(random.nextInt(globalCluePool.size()));
+			clueFoundByRoom.put(roomName, true);
+			engine.getEventLog().addClue(clue);
+			lastActionMessage = "Udało się! Znajdujesz coś ciekawego: " + clue;
+		}
 	}
 
 	private SceneManager handleMinigame() {
@@ -143,19 +189,25 @@ public class SearchSystem extends SceneManager {
 	public String generateSpecificClue(Location currentRoom, String clueCategory) {
 		MurderCase caseInfo = engine.getMurderCase();
 		if (caseInfo == null) return "Niewyraźny ślad buta.";
+
 		if (currentRoom.getId().equalsIgnoreCase(caseInfo.getCrimeScene().getId())) {
-			return "Silne ślady walki oraz krew na podłodze. To " + currentRoom.getName() + " jest miejscem zbrodni!";
+			return "Ślady walki na podłodze. Ten pokój jest miejscem zbrodni!";
 		}
-		String targetCategory = clueCategory.toUpperCase();
+
+		String targetCategory = (clueCategory == null || clueCategory.isBlank())
+				? "RANDOM"
+				: clueCategory.trim().toUpperCase(Locale.ROOT);
+
 		if ("RANDOM".equals(targetCategory)) {
-			String[] pools = {"MOTIVE", "WEAPON", "KILLER"};
+			String[] pools = {"KILLER", "MOTIVE", "WEAPON"};
 			targetCategory = pools[random.nextInt(pools.length)];
 		}
+
 		return switch (targetCategory) {
-			case "MOTIVE" -> "Zapiski księgowe wskazują na motyw: " + caseInfo.getMotive().getDescription();
-			case "WEAPON" -> "POSZLAKA: Narzędzie zbrodni pasuje do kategorii: " + getWeaponCategoryFromJSON(caseInfo.getWeapon());
-			case "KILLER" -> "Świadek zeznał, że w sprawę zamieszany jest bezpośrednio: " + caseInfo.getKiller();
-			default -> "W koszu leży podarty papier ze strzępami motywu: '" + caseInfo.getMotive().getLabel() + "'";
+			case "KILLER" -> "Na zakurzonym fragmencie lustra ktoś zapisał jedno imię: " + caseInfo.getKiller();
+			case "MOTIVE" -> "Znaleziono skrawek papieru z notatką: " + caseInfo.getMotive().getDescription();
+			case "WEAPON" -> "Znaleziono przedmiot, który może mieć związek z narzędziem typu: " + getWeaponCategoryFromJSON(caseInfo.getWeapon());
+			default -> "Dziwny ślad na podłodze, którego nie potrafisz zidentyfikować.";
 		};
 	}
 
